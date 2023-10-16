@@ -31,10 +31,11 @@ if (option && typeof option === 'object') {
 }
 
 window.addEventListener('resize', myChart.resize);
+
+// AJAX
 myChart.showLoading();
 $.get('data.json').done(function(data) {
   myChart.hideLoading();
-  // 填入数据
   myChart.setOption({
     xAxis: {
       data: data.categories
