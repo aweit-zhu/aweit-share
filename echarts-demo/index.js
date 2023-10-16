@@ -1,50 +1,35 @@
+
 var dom = document.getElementById('chart-container');
-var myChart = echarts.init(dom);
+var myChart = echarts.init(dom); // 第二個參數可以放 'dark' ，代表主題為暗色系。
 var option;
 
 option = {
-  xAxis: {
-    type: 'category',
-    data: []
-  },
-  yAxis: {
-    type: 'value'
-  },
-  tooltip: {
-    trigger: 'item'
-  },
-  series: [
-    {
-      data: [],
-      type: 'bar',
-      showBackground: true,
-      backgroundStyle: {
-        color: 'rgba(180, 180, 180, 0.2)'
-      }
-    }
-  ]
+    xAxis: {
+        type: 'category',
+        data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+    },
+    yAxis: {
+        type: 'value',
+    },
+    grid: {
+        show:true,
+        backgroundColor: 'red',
+    },
+    series: [
+        {
+            data: [120, 200, 150, 80, 70, 110, 130],
+            type: 'bar',
+            showBackground: true,
+            backgroundStyle: {
+                color: 'rgba(180, 180, 180, 0.2)'
+            }
+        }
+    ]
 };
 
 
 if (option && typeof option === 'object') {
-  myChart.setOption(option);
+    myChart.setOption(option);
 }
 
 window.addEventListener('resize', myChart.resize);
-
-// AJAX
-myChart.showLoading();
-$.get('data.json').done(function(data) {
-  myChart.hideLoading();
-  myChart.setOption({
-    xAxis: {
-      data: data.categories
-    },
-    series: [
-      {
-        data: data.data
-      }
-    ]
-  });
-});
-

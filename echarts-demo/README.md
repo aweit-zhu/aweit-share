@@ -1,11 +1,13 @@
 
 ![Alt text](image.png)
 
-#### Apache ECharts 官網連結 [#Link](https://echarts.apache.org/)
+#### 1. Apache ECharts 官網連結 [#Link](https://echarts.apache.org/)
 
-#### Apache ECharts 範例 [#Link](https://echarts.apache.org/examples/zh/index.html#chart-type-pie)
+#### 2. Apache ECharts 範例 [#Link](https://echarts.apache.org/examples/zh/index.html#chart-type-pie)
 
-#### VS Code 外掛 - Echarts Enhanced Completion [#Link](https://marketplace.visualstudio.com/items?itemName=ren-wei.echarts-enhanced-completion)
+#### 3. vscode extension for ECharts [#Link](https://marketplace.visualstudio.com/items?itemName=susiwen8.vscode-echarts-extension)
+
+  > PS: From 0.1.2, extension won't provide completion at first, because JS file may not import ECharts. User need to execute echarts.activate at command panel.
 
 ---
 
