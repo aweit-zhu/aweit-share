@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="vh-100">
+    <header class="d-flex align-items-center">
+        <button class="btn btn-light  align-self-center m-2 rounded-circle">
+            <i class="bi bi-list"></i>
+        </button>
+        <div style="width: 192px;">
+            <img src="./img/gmail_logo.png" alt="" width="109px" height="40px">
+        </div>
+        <div style="width: 800px;" class="d-flex align-items-center bg-light">
+            <span class="input-group-text search-icon">
+                <i class="bi bi-search"></i>
+            </span>
+            <input class="form-control search" id="email" name="email" type="text" placeholder="搜尋文件"/>
+            <span class="input-group-text search-icon">
+                <i class="bi bi-filter"></i>
+            </span>
+        </div>
+        <div class="flex-grow-1 d-flex justify-content-end align-items-center">
+            <button class="btn btn-lg btn-light mx-2 rounded-circle">
+                <i class="bi bi-question-circle"></i>
+            </button>
+            <button class="btn btn-lg btn-light mx-2 rounded-circle">
+                <i class="bi bi-sticky"></i>
+            </button>
+            <button class="btn btn-lg btn-light mx-2 rounded-circle">
+                <i class="bi bi-check2-circle"></i>
+            </button>
+            <button class="btn btn-lg btn-light mx-2 rounded-circle">
+                <i class="bi bi-person-circle"></i>
+            </button>
+        </div>
+    </header>
+    <main class="d-flex mt-2 position-relative">
+        <aside class="text-center" style="width: 256px;">
+        
+            <button class="btn btn-lg me-auto ms-2 mb-2 d-block write shadow"> <i class="bi bi-pencil-fill"></i> 撰寫</button>
+
+            <div class="d-flex align-items-center justify-content-center pe-3 mail-function">
+                <button class="btn btn-sm btn-light rounded-circle m-2"><i class="bi bi-envelope-paper"></i></button>
+                <div class="flex-grow-1 text-start">收件匣</div>
+                <div>3</div>
+            </div>
+
+            <div class="d-flex align-items-center justify-content-center pe-3 mail-function">
+                <button class="btn btn-sm btn-light rounded-circle m-2"><i class="bi bi-star-fill"></i></button>
+                <div class="flex-grow-1 text-start">已加星號</div>
+                <div>15</div>
+            </div>
+
+            <div class="d-flex align-items-center justify-content-center pe-3 mail-function">
+                <button class="btn btn-sm btn-light rounded-circle m-2"><i class="bi bi-back"></i></button>
+                <div class="flex-grow-1 text-start">寄件備份</div>
+                <div>5</div>
+            </div>
+
+        </aside>
+
+        <article class="flex-grow-1 text-center">
+
+            <div class="d-flex justify-content-between position-sticky top-0 bg-white w-100">
+                <div class="d-flex align-items-center justify-content-center">
+                    <input class="form-check-input m-2" type="checkbox" value="">
+                    <button class="btn btn-sm btn-light rounded-circle m-2"><i class="bi bi-star"></i></button>
+                    <button class="btn btn-sm btn-light rounded-circle m-2"><i class="bi bi-info-circle"></i></button>
+                    <button class="btn btn-sm btn-light rounded-circle m-2"><i class="bi bi-trash"></i></i></button>
+                </div>
+                <div class="d-flex align-items-center justify-content-center">
+                    <p style="font-size: 11px; margin: 0;">1-50列(共74列)</p>
+                    <button class="btn btn-sm btn-light rounded-circle m-2"><i class="bi bi-chevron-left"></i></button>
+                    <button class="btn btn-sm btn-light rounded-circle m-2"><i class="bi bi-chevron-right"></i></button>
+                </div>
+            </div>
+
+            <div class="d-flex align-items-center mail" style="font-size: 14px;">
+                <input class="form-check-input m-2" type="checkbox" value="">
+                <button class="btn btn-sm  rounded-circle m-2"><i class="bi bi-star-fill star-active"></i></button>
+                <button class="btn btn-sm  rounded-circle m-2"><i class="bi bi-flag"></i></button>
+                <p class="mail-from m-2">天瓏網路書店</p>
+                <p class="mail-subject m-2">天瓏網路書店-感謝您的訂購(674022)</p>
+                <p class="mail-content flex-grow-1 m-2">感謝您於天瓏網路書店訂購商品，訂單編號為 674022，詳細內容請點選下連結查詢：</p>
+                <p class="mail-time m-2">10月16日 週一 上午7:45</p>
+            </div>
+
+            <div class="d-flex align-items-center mail" style="font-size: 14px;">
+                <input class="form-check-input m-2" type="checkbox" value="">
+                <button class="btn btn-sm  rounded-circle m-2"><i class="bi bi-star"></i></button>
+                <button class="btn btn-sm  rounded-circle m-2"><i class="bi bi-flag"></i></button>
+                <p class="mail-from m-2">天瓏網路書店</p>
+                <p class="mail-subject m-2">天瓏網路書店-感謝您的訂購(674022)</p>
+                <p class="mail-content flex-grow-1 m-2">感謝您於天瓏網路書店訂購商品，訂單編號為 674022，詳細內容請點選下連結查詢：</p>
+                <p class="mail-time m-2">10月16日 週一 上午7:45</p>
+            </div>
+
+            <div class="d-flex align-items-center mail" style="font-size: 14px;">
+                <input class="form-check-input m-2" type="checkbox" value="">
+                <button class="btn btn-sm  rounded-circle m-2"><i class="bi bi-star-fill star-active"></i></button>
+                <button class="btn btn-sm  rounded-circle m-2"><i class="bi bi-flag"></i></button>
+                <p class="mail-from m-2">天瓏網路書店</p>
+                <p class="mail-subject m-2">天瓏網路書店-感謝您的訂購(674022)</p>
+                <p class="mail-content flex-grow-1 m-2">感謝您於天瓏網路書店訂購商品，訂單編號為 674022，詳細內容請點選下連結查詢：</p>
+                <p class="mail-time m-2">10月16日 週一 上午7:45</p>
+            </div>
+
+            <div class="d-flex align-items-center mail" style="font-size: 14px;">
+                <input class="form-check-input m-2" type="checkbox" value="">
+                <button class="btn btn-sm  rounded-circle m-2"><i class="bi bi-star"></i></button>
+                <button class="btn btn-sm  rounded-circle m-2"><i class="bi bi-flag"></i></button>
+                <p class="mail-from m-2">天瓏網路書店</p>
+                <p class="mail-subject m-2">天瓏網路書店-感謝您的訂購(674022)</p>
+                <p class="mail-content flex-grow-1 m-2">感謝您於天瓏網路書店訂購商品，訂單編號為 674022，詳細內容請點選下連結查詢：</p>
+                <p class="mail-time m-2">10月16日 週一 上午7:45</p>
+            </div>
+
+            <div class="d-flex align-items-center mail" style="font-size: 14px;">
+                <input class="form-check-input m-2" type="checkbox" value="">
+                <button class="btn btn-sm  rounded-circle m-2"><i class="bi bi-star-fill star-active"></i></button>
+                <button class="btn btn-sm  rounded-circle m-2"><i class="bi bi-flag"></i></button>
+                <p class="mail-from m-2">天瓏網路書店</p>
+                <p class="mail-subject m-2">天瓏網路書店-感謝您的訂購(674022)</p>
+                <p class="mail-content flex-grow-1 m-2">感謝您於天瓏網路書店訂購商品，訂單編號為 674022，詳細內容請點選下連結查詢：</p>
+                <p class="mail-time m-2">10月16日 週一 上午7:45</p>
+            </div>
+            
+            <div class="d-flex align-items-center mail" style="font-size: 14px;">
+                <input class="form-check-input m-2" type="checkbox" value="">
+                <button class="btn btn-sm  rounded-circle m-2"><i class="bi bi-star-fill star-active"></i></button>
+                <button class="btn btn-sm  rounded-circle m-2"><i class="bi bi-flag"></i></button>
+                <p class="mail-from m-2">天瓏網路書店</p>
+                <p class="mail-subject m-2">天瓏網路書店-感謝您的訂購(674022)</p>
+                <p class="mail-content flex-grow-1 m-2">感謝您於天瓏網路書店訂購商品，訂單編號為 674022，詳細內容請點選下連結查詢：</p>
+                <p class="mail-time m-2">10月16日 週一 上午7:45</p>
+            </div>
+
+
+        </article>
+
+        <aside class="text-center d-flex flex-column justify-content-start align-items-center" style="width: 56px;" id="rightAside">
+            <button class="btn btn-sm btn-outline-primary rounded-circle my-3">
+                <i class="bi bi-calendar-date"></i>
+            </button>
+            <button class="btn btn-sm btn-outline-success rounded-circle my-3">
+                <i class="bi bi-calendar-date"></i>
+            </button>
+            <button class="btn btn-sm btn-outline-warning rounded-circle my-3">
+                <i class="bi bi-calendar-date"></i>
+            </button>
+            <button class="btn btn-sm btn-outline-info rounded-circle my-3">
+                <i class="bi bi-person-circle"></i>
+            </button>
+        </aside>
+
+        <button class="btn btn-sm rounded-circle position-absolute bottom-0 end-0 m-2" id="closeRightAsideBtn">
+            <i class="bi bi-chevron-right"></i>
+        </button>
+
+        <button class="btn btn-sm position-absolute bottom-0 end-0 m-2 shadow hide-element" id="openRightAsideBtn">
+            <i class="bi bi-chevron-left leftArrow"></i>
+        </button>
+
+    </main>
+
+    <script>
+
+        $('#closeRightAsideBtn').on('click',function() {
+            $('#rightAside').addClass('hide-element');
+            $(this).addClass('hide-element');
+            $('#openRightAsideBtn').removeClass('hide-element');
+        });
+
+        $('#openRightAsideBtn').on('click',function() {
+            $('#rightAside').removeClass('hide-element');
+            $(this).addClass('hide-element');
+            $('#closeRightAsideBtn').removeClass('hide-element');
+        });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&family=Righteous&display=swap');
+
+:root {
+    --g-bgColor: #f6f8fc;
+    --g-mainColor: #fff;
+    --g-searchColor: #eaf1fb;
+    --g-searchBoderColor: #ced4da;
+    --g-mailHoverColor: #c2dbff;
+    --g-starColor: #e5bf4c;
+    --f-family-1: 'Righteous', 'Noto Sans TC', sans-serif;
+    --g-mailWriteBtnColor: #8bbde8;
+}
+
+body {
+    background-color: var(--g-bgColor);
+    overflow: hidden;
+    font-family: var(--f-family-1);
+}
+
+header {
+    height: 64px;
+}
+
+main {
+    min-height: 90%;
+}
+
+main article {
+    background-color: var(--g-mainColor);
+    max-height: 90vh;
+    max-width: 100%;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.search {
+    background-color: var(--g-searchColor);
+    border-color: var(--g-searchBoderColor);
+}
+
+.search-icon {
+    background-color: var(--g-searchColor);
+    cursor: pointer;
+}
+
+.search:focus {
+    background-color: #fff;
+}
+
+.hide-element {
+    display: none !important;
+}
+
+@keyframes openRightAsideBtn {}
+
+#openRightAsideBtn {
+    margin-right: 0px !important;
+    width: 60px;
+    height: 40px;
+    background-color: skyblue;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    transform: translateX(30%);
+    transition: 1s;
+    background-color: #fff;
+}
+
+#openRightAsideBtn .leftArrow {
+    display: inline-block;
+    transform: translateX(-60%);
+
+}
+
+#openRightAsideBtn:hover {
+    transform: translateX(0%);
+    transition: .5s;
+    background-color: #f1f3f4;
+}
+
+.mail:hover {
+    background-color: var(--g-mailHoverColor);
+}
+
+
+.mail-function {
+    border-radius: 20px;
+}
+
+.mail-function:hover {
+    background-color: var(--g-mailHoverColor);
+}
+
+.star-active {
+    color: var(--g-starColor)
+}
+
+.write {
+    background-color: var(--g-mailWriteBtnColor);
+    color: #fff;
+    border: none;
+}
