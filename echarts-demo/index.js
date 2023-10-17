@@ -13,7 +13,7 @@ option = {
     },
     grid: {
         show:true,
-        backgroundColor: 'red',
+        //backgroundColor: 'red',
     },
     series: [
         {

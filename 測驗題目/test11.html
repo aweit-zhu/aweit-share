@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            background-image: url(./basic21.jpg);
+            width: 500px;
+            height: 300px;
+            text-align: center;
+            border: 1px solid black;
+            position: relative;
+            background-repeat: no-repeat;
+            background-size: cover;
+            /*overflow: hidden;*/
+        }
+
+        .side {
+            color: #fff;
+            background-color: #000;
+            opacity: .8;
+
+            position: absolute;
+            bottom: 0; /**位置*/
+            
+            width: 100%; /**寬度*/
+            height: 80%; /**高度*/
+
+            transform: translateY(100%); /**位移*/
+            transition: 1s;
+        }
+
+        .box:hover .side {
+            transform: translateY(0%);/**位移*/
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="side">
+            <h3>網頁基礎排版</h3>
+            <hr>
+            <p>了解Dreamweaver設計軟體<br>認識基本的HTML
+                與CSS<br>學習網頁版面的編排<br>初識網頁動態效果</p>
+        </div>
+    </div>
+</body>
+
+</html>
