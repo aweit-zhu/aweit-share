@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <style>
+        .h2-aweit {
+            margin: 1em;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2 class="h2-aweit">原來的樣式</h2>
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                    aria-expanded="true" aria-controls="collapseOne">
+                    Accordion Item #1
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse
+                    plugin adds the appropriate classes that we use to style each element. These classes control the
+                    overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of
+                    this with custom CSS or overriding our default variables. It's also worth noting that just about any
+                    HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <h2 class="h2-aweit">客製化調整的樣式</h2> 
+    <div class="custom">
+        <div class="accordion w-50 m-5 mx-auto" id="accordionExample2">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button bg-info text-light fs-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                        aria-expanded="true" aria-controls="collapseTwo">
+                        Accordion Item #1
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse show shadow" aria-labelledby="headingTwo"
+                    data-bs-parent="#accordionExample2">
+                    <div class="accordion-body">
+                        <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse
+                        plugin adds the appropriate classes that we use to style each element. These classes control the
+                        overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of
+                        this with custom CSS or overriding our default variables. It's also worth noting that just about any
+                        HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .custom .accordion-button::after {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23ffffff' class='bi bi-chevron-down' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+        } 
+
+        .custom .accordion-button:not(.collapsed)::after {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23ffffff' class='bi bi-chevron-down' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+        }
+
+        .custom .accordion-button  {
+            justify-content: center;
+            position: relative;
+        }
+
+        .custom .accordion-button::after {
+            margin-left: 0;
+            position: absolute;
+            right: 1em;
+        }
+    </style>
+
+    <!-- 加陰影 -->
+
+        <!-- class="shadow" -->
+
+    <!-- 控制寬度 -->
+
+        <!-- class="w-50" -->
+    
+    <!-- 控制間距(margin、padding) -->
+
+        <!-- class="m-5" -->
+
+    <!-- div 水平置中 -->
+
+        <!-- class="mx-auto" -->
+
+    <!-- div 垂直置中 -->
+
+        <!-- 外層可包一個 div，並利用 flex 方式，讓 div 垂直置中。class="vh-100 d-flex align-items-center" -->
+
+    <!-- 改變 accordion-header 背景色、文字顏色、文字大小-->
+
+        <!-- 1. 先確認 accordion-header 的相關設定是在哪裡？在 h2 還是 button？-->
+
+        <!-- 2. 在 Button 中，加入 class = "bg-success text-light fs-4" -->
+
+    <!-- 改變 accordion-header 旁邊的上下箭頭的顏色、大小、樣式 -->
+
+        <!-- 1. 透過 Chrome DevTools，知道 他是一個 ::after 產生的文字。 即： .accordion-button::after  -->
+
+        <!-- 2. 如果是收合，就是 .accordion-button::after；如果是展開，則是 .accordion-button:not(.collapsed)::after -->
+
+        <!-- 3. 只能透過自行撰寫CSS方式，進行更改並覆蓋原樣式設定。 -->
+
+            <!-- 3-1. Icon 圖：https://icons.getbootstrap.com/icons/chevron-up/ -->
+
+            <!-- 3-2. 複製 SVG 圖，並透過 https://yoksel.github.io/url-encoder/ 進行轉換。 -->
+
+            <!-- 3-3. 將轉換後的 background-image:url("data-image/.....") ，替換掉原來的圖形。 -->
+
+            <!-- 3-4. 他的大小設定為：background-size；顏色設定為 -->
+
+    <!-- 將 accordion-button 內的文字置中，然後箭頭放在右邊 -->
+
+</body>
+
+</html>

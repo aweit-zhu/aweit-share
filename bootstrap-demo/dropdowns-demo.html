@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdowns</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        .h2-aweit {
+            margin: 1em;
+        }
+
+        div {
+            margin: 1px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2 class="h2-aweit">原來的樣式</h2>
+    <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown button
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+    </div>
+
+    <h2 class="h2-aweit">調整後的樣式</h2>
+    <div class="custom1 dropdown m-1">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown button
+        </button>
+        <ul class="dropdown-menu dropdown-menu-dark"  aria-labelledby="dropdownMenuButton1">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+    </div>
+
+    <div class="custom2 dropdown m-1">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown button
+        </button>
+        <ul class="dropdown-menu dropdown-menu-dark"  aria-labelledby="dropdownMenuButton1">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+    </div>
+
+    <style>
+
+        .custom1 .dropdown-toggle::after {
+            display: inline-block;
+            margin-left: 0.255em;
+            vertical-align: 0.255em;
+            content: "";
+            border-top: 0;
+            border-right: 0.3em solid transparent;
+            border-bottom: 0.3em solid;
+            border-left: 0.3em solid transparent;
+        }
+
+        .custom2 .dropdown-toggle::after {
+            display: inline-block;
+            margin-left: 0.255em;
+            vertical-align: baseline;
+            content: "♡";
+            border: 0;
+            font-size: larger;
+            color: white;
+        }
+
+    </style>
+
+    <!-- 1. 右邊的箭頭可以換嗎？ -->
+
+        <!-- 1-1. 他是一個偽元素：利用border技巧，去製造三角形。我們只能改變他的三角形方向、或是大小。 -->
+
+        <!-- 1-2. 偽元素的 content 可以透過 emoji 的方式加入特殊圖形，例如：▽。Emoji的圖例：https://tw.piliapp.com/emoji/list/#tag  -->
+
+        <!-- 
+
+            .dropdown-toggle::after {
+                display: inline-block;
+                margin-left: 0.255em;
+                vertical-align: 0.255em;
+                content: "";
+                border-top: 0.3em solid;
+                border-right: 0.3em solid transparent;
+                border-bottom: 0;
+                border-left: 0.3em solid transparent;
+            }
+            
+            .dropdown-toggle::after {
+                display: inline-block;
+                margin-left: 0.255em;
+                vertical-align: 0.255em;
+                content: "";
+                border-top: 0;
+                border-right: 0.3em solid transparent;
+                border-bottom: 0.3em solid;
+                border-left: 0.3em solid transparent;
+            } 
+        -->
+
+    <!-- 2.暗色系 -->
+
+        <!-- class="dropdown-menu-dark" -->
+
+</body>
+
+</html>
