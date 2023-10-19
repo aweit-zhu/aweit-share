@@ -100,6 +100,13 @@ main article {
     border: none;
 }
 
+.mail-subject {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 300px;
+}
+
 
 .mail-content {
     display: -webkit-box;

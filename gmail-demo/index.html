@@ -47,7 +47,8 @@
     <main class="d-flex mt-2 position-relative">
         <aside class="text-center flex-shrink-0" style="width: 256px;">
 
-            <button class="btn btn-lg me-auto ms-2 mb-2 d-block write shadow text-nowrap"> <i class="bi bi-pencil-fill"></i>
+            <button class="btn btn-lg me-auto ms-2 mb-2 d-block write shadow text-nowrap"> <i
+                    class="bi bi-pencil-fill"></i>
                 撰寫</button>
 
             <div class="d-flex align-items-center justify-content-center pe-3 mail-function">
@@ -100,15 +101,17 @@
                 </div>
             </div>
 
-            <div class="d-flex align-items-center mail position-relative" style="font-size: 14px;">
+            <!-- <div class="d-flex align-items-center mail position-relative" style="font-size: 14px;">
                 <input class="form-check-input m-2 flex-shrink-0" type="checkbox">
-                <button class="btn btn-sm rounded-circle m-lg-2 mail-btn-star"><i class="bi bi-star-fill star-active"></i></button>
+                <button class="btn btn-sm rounded-circle m-lg-2 mail-btn-star"><i
+                        class="bi bi-star-fill star-active"></i></button>
                 <button class="btn btn-sm rounded-circle m-lg-2 mail-btn-flag"><i class="bi bi-flag"></i></button>
                 <p class="mail-from m-lg-2 flex-shrink-0">天瓏網路書店</p>
                 <p class="mail-subject m-lg-2 text-nowrap">天瓏網路書店-感謝您的訂購(674022)</p>
                 <p class="mail-content flex-lg-grow-1 m-lg-2">感謝您於天瓏網路書店訂購商品，訂單編號為 674022，詳細內容請點選下連結查詢：</p>
                 <p class="mail-time m-lg-2 text-nowrap">10月16日 週一 上午7:45</p>
-            </div>
+            </div> -->
+
         </article>
 
         <aside class="d-none text-center d-md-flex flex-column justify-content-start align-items-center"
@@ -164,6 +167,40 @@
         $('.awei-down-arrow').next().on('click', function () {
             $(this).addClass('hide-element');
         });
+
+        $.ajax({
+            url: './assets/mails.json', 
+            dataType: 'json', 
+            success: function (mails) {
+ 
+                $.each(mails, function(i,mail) {
+
+                    let mail_from = mail['mail_from'];
+                    let mail_subject = mail['mail_subject'];
+                    let mail_content = mail['mail_content'];
+                    let mail_time = mail['mail_time'];
+
+                    let template = `
+                        <div class="d-flex align-items-center mail position-relative" style="font-size: 14px;">
+                            <input class="form-check-input m-2 flex-shrink-0" type="checkbox">
+                            <button class="btn btn-sm rounded-circle m-lg-2 mail-btn-star"><i
+                                    class="bi bi-star-fill star-active"></i></button>
+                            <button class="btn btn-sm rounded-circle m-lg-2 mail-btn-flag"><i class="bi bi-flag"></i></button>
+                            <p class="mail-from m-lg-2 flex-shrink-0">${mail_from}</p>
+                            <p class="mail-subject m-lg-2 text-nowrap">${mail_subject}</p>
+                            <p class="mail-content flex-lg-grow-1 m-lg-2 text-start">${mail_content}</p>
+                            <p class="mail-time m-lg-2 text-nowrap">${mail_time}</p>
+                        </div>
+                    `;
+
+                    $('article').append(template);
+                });
+            },
+            error: function (e) {
+                console.error(e);
+            }
+        });
+
 
     </script>
 </body>
