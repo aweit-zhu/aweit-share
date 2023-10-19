@@ -24,7 +24,7 @@
             <span class="input-group-text search-icon">
                 <i class="bi bi-search"></i>
             </span>
-            <input class="form-control search" id="email" name="email" type="text" placeholder="搜尋文件"/>
+            <input class="form-control search" id="email" name="email" type="text" placeholder="搜尋文件" />
             <span class="input-group-text search-icon">
                 <i class="bi bi-filter"></i>
             </span>
@@ -45,110 +45,74 @@
         </div>
     </header>
     <main class="d-flex mt-2 position-relative">
-        <aside class="text-center" style="width: 256px;">
-        
-            <button class="btn btn-lg me-auto ms-2 mb-2 d-block write shadow"> <i class="bi bi-pencil-fill"></i> 撰寫</button>
+        <aside class="text-center flex-shrink-0" style="width: 256px;">
+
+            <button class="btn btn-lg me-auto ms-2 mb-2 d-block write shadow text-nowrap"> <i class="bi bi-pencil-fill"></i>
+                撰寫</button>
 
             <div class="d-flex align-items-center justify-content-center pe-3 mail-function">
                 <button class="btn btn-sm btn-light rounded-circle m-2"><i class="bi bi-envelope-paper"></i></button>
-                <div class="flex-grow-1 text-start">收件匣</div>
-                <div>3</div>
+                <div class="flex-shrink-0 flex-grow-1 text-start">收件匣</div>
+                <div class="flex-shrink-0 ">3</div>
             </div>
 
             <div class="d-flex align-items-center justify-content-center pe-3 mail-function">
                 <button class="btn btn-sm btn-light rounded-circle m-2"><i class="bi bi-star-fill"></i></button>
-                <div class="flex-grow-1 text-start">已加星號</div>
-                <div>15</div>
+                <div class="flex-shrink-0 flex-grow-1 text-start">已加星號</div>
+                <div class="flex-shrink-0 ">15</div>
             </div>
 
             <div class="d-flex align-items-center justify-content-center pe-3 mail-function">
                 <button class="btn btn-sm btn-light rounded-circle m-2"><i class="bi bi-back"></i></button>
-                <div class="flex-grow-1 text-start">寄件備份</div>
-                <div>5</div>
+                <div class="flex-shrink-0 flex-grow-1 text-start">寄件備份</div>
+                <div class="flex-shrink-0 ">5</div>
             </div>
 
         </aside>
 
-        <article class="flex-grow-1 text-center">
+        <article class="flex-shrink-0 flex-grow-1 text-center">
 
             <div class="d-flex justify-content-between position-sticky top-0 bg-white w-100">
                 <div class="d-flex align-items-center justify-content-center">
                     <input class="form-check-input m-2" type="checkbox" value="">
-                    <button class="btn btn-sm btn-light rounded-circle m-2"><i class="bi bi-star"></i></button>
-                    <button class="btn btn-sm btn-light rounded-circle m-2"><i class="bi bi-info-circle"></i></button>
-                    <button class="btn btn-sm btn-light rounded-circle m-2"><i class="bi bi-trash"></i></i></button>
+                    <div class="dropdown">
+                        <button class="btn  dropdown-toggle p-0 px-1" type="button" id="mail-filter"
+                            data-bs-toggle="dropdown" aria-expanded="false"
+                            style="transform: translateY(2px);"></button>
+                        <ul class="dropdown-menu" aria-labelledby="mail-filter">
+                            <li><a class="dropdown-item" href="#">全選</a></li>
+                            <li><a class="dropdown-item" href="#">全不選</a></li>
+                            <li><a class="dropdown-item" href="#">已讀郵件</a></li>
+                            <li><a class="dropdown-item" href="#">未讀郵件</a></li>
+                            <li><a class="dropdown-item" href="#">已加星號</a></li>
+                            <li><a class="dropdown-item" href="#">未加星號</a></li>
+                        </ul>
+                    </div>
+                    <button class="btn btn-sm btn-light rounded-circle m-2"><i
+                            class="bi bi-arrow-clockwise"></i></button>
+                    <button class="btn btn-sm btn-light rounded-circle m-2"><i
+                            class="bi bi-three-dots-vertical"></i></button>
                 </div>
-                <div class="d-flex align-items-center justify-content-center">
-                    <p style="font-size: 11px; margin: 0;">1-50列(共74列)</p>
+                <div class="flex-shrink-0  d-flex align-items-center justify-content-center">
+                    <p style="font-size: 11px; margin: 0;" class="flex-shrink-0">1-50列(共74列)</p>
                     <button class="btn btn-sm btn-light rounded-circle m-2"><i class="bi bi-chevron-left"></i></button>
                     <button class="btn btn-sm btn-light rounded-circle m-2"><i class="bi bi-chevron-right"></i></button>
                 </div>
             </div>
 
-            <div class="d-flex align-items-center mail" style="font-size: 14px;">
-                <input class="form-check-input m-2" type="checkbox" value="">
-                <button class="btn btn-sm  rounded-circle m-2"><i class="bi bi-star-fill star-active"></i></button>
-                <button class="btn btn-sm  rounded-circle m-2"><i class="bi bi-flag"></i></button>
-                <p class="mail-from m-2">天瓏網路書店</p>
-                <p class="mail-subject m-2">天瓏網路書店-感謝您的訂購(674022)</p>
-                <p class="mail-content flex-grow-1 m-2">感謝您於天瓏網路書店訂購商品，訂單編號為 674022，詳細內容請點選下連結查詢：</p>
-                <p class="mail-time m-2">10月16日 週一 上午7:45</p>
+            <div class="d-flex align-items-center mail position-relative" style="font-size: 14px;">
+                <input class="form-check-input m-2 flex-shrink-0" type="checkbox">
+                <button class="btn btn-sm rounded-circle m-lg-2 mail-btn-star"><i class="bi bi-star-fill star-active"></i></button>
+                <button class="btn btn-sm rounded-circle m-lg-2 mail-btn-flag"><i class="bi bi-flag"></i></button>
+                <p class="mail-from m-lg-2 flex-shrink-0">天瓏網路書店</p>
+                <p class="mail-subject m-lg-2">天瓏網路書店-感謝您的訂購(674022)</p>
+                <p class="mail-content flex-lg-grow-1 m-lg-2">感謝您於天瓏網路書店訂購商品，訂單編號為 674022，詳細內容請點選下連結查詢：</p>
+                <p class="mail-time m-lg-2">10月16日 週一 上午7:45</p>
             </div>
-
-            <div class="d-flex align-items-center mail" style="font-size: 14px;">
-                <input class="form-check-input m-2" type="checkbox" value="">
-                <button class="btn btn-sm  rounded-circle m-2"><i class="bi bi-star"></i></button>
-                <button class="btn btn-sm  rounded-circle m-2"><i class="bi bi-flag"></i></button>
-                <p class="mail-from m-2">天瓏網路書店</p>
-                <p class="mail-subject m-2">天瓏網路書店-感謝您的訂購(674022)</p>
-                <p class="mail-content flex-grow-1 m-2">感謝您於天瓏網路書店訂購商品，訂單編號為 674022，詳細內容請點選下連結查詢：</p>
-                <p class="mail-time m-2">10月16日 週一 上午7:45</p>
-            </div>
-
-            <div class="d-flex align-items-center mail" style="font-size: 14px;">
-                <input class="form-check-input m-2" type="checkbox" value="">
-                <button class="btn btn-sm  rounded-circle m-2"><i class="bi bi-star-fill star-active"></i></button>
-                <button class="btn btn-sm  rounded-circle m-2"><i class="bi bi-flag"></i></button>
-                <p class="mail-from m-2">天瓏網路書店</p>
-                <p class="mail-subject m-2">天瓏網路書店-感謝您的訂購(674022)</p>
-                <p class="mail-content flex-grow-1 m-2">感謝您於天瓏網路書店訂購商品，訂單編號為 674022，詳細內容請點選下連結查詢：</p>
-                <p class="mail-time m-2">10月16日 週一 上午7:45</p>
-            </div>
-
-            <div class="d-flex align-items-center mail" style="font-size: 14px;">
-                <input class="form-check-input m-2" type="checkbox" value="">
-                <button class="btn btn-sm  rounded-circle m-2"><i class="bi bi-star"></i></button>
-                <button class="btn btn-sm  rounded-circle m-2"><i class="bi bi-flag"></i></button>
-                <p class="mail-from m-2">天瓏網路書店</p>
-                <p class="mail-subject m-2">天瓏網路書店-感謝您的訂購(674022)</p>
-                <p class="mail-content flex-grow-1 m-2">感謝您於天瓏網路書店訂購商品，訂單編號為 674022，詳細內容請點選下連結查詢：</p>
-                <p class="mail-time m-2">10月16日 週一 上午7:45</p>
-            </div>
-
-            <div class="d-flex align-items-center mail" style="font-size: 14px;">
-                <input class="form-check-input m-2" type="checkbox" value="">
-                <button class="btn btn-sm  rounded-circle m-2"><i class="bi bi-star-fill star-active"></i></button>
-                <button class="btn btn-sm  rounded-circle m-2"><i class="bi bi-flag"></i></button>
-                <p class="mail-from m-2">天瓏網路書店</p>
-                <p class="mail-subject m-2">天瓏網路書店-感謝您的訂購(674022)</p>
-                <p class="mail-content flex-grow-1 m-2">感謝您於天瓏網路書店訂購商品，訂單編號為 674022，詳細內容請點選下連結查詢：</p>
-                <p class="mail-time m-2">10月16日 週一 上午7:45</p>
-            </div>
-
-            <div class="d-flex align-items-center mail" style="font-size: 14px;">
-                <input class="form-check-input m-2" type="checkbox" value="">
-                <button class="btn btn-sm  rounded-circle m-2"><i class="bi bi-star-fill star-active"></i></button>
-                <button class="btn btn-sm  rounded-circle m-2"><i class="bi bi-flag"></i></button>
-                <p class="mail-from m-2">天瓏網路書店</p>
-                <p class="mail-subject m-2">天瓏網路書店-感謝您的訂購(674022)</p>
-                <p class="mail-content flex-grow-1 m-2">感謝您於天瓏網路書店訂購商品，訂單編號為 674022，詳細內容請點選下連結查詢：</p>
-                <p class="mail-time m-2">10月16日 週一 上午7:45</p>
-            </div>
-
-
         </article>
 
-        <aside class="d-none text-center d-lg-flex flex-column justify-content-start align-items-center" style="width: 56px;" id="rightAside">
+        <aside class="d-none text-center d-lg-flex flex-column justify-content-start align-items-center"
+            style="width: 56px;" id="rightAside">
             <button class="btn btn-sm btn-outline-primary rounded-circle my-3">
                 <i class="bi bi-calendar-date"></i>
             </button>
@@ -175,16 +139,30 @@
 
     <script>
 
-        $('#closeRightAsideBtn').on('click',function() {
+        $('#closeRightAsideBtn').on('click', function () {
             $('#rightAside').addClass('hide-element');
             $(this).addClass('hide-element');
             $('#openRightAsideBtn').removeClass('hide-element');
         });
 
-        $('#openRightAsideBtn').on('click',function() {
+        $('#openRightAsideBtn').on('click', function () {
             $('#rightAside').removeClass('hide-element');
             $(this).addClass('hide-element');
             $('#closeRightAsideBtn').removeClass('hide-element');
+        });
+
+
+        $('.awei-down-arrow').on('click', function () {
+            let div = $(this).next();
+            if (div.hasClass('hide-element')) {
+                div.removeClass('hide-element');
+                return;
+            }
+            div.addClass('hide-element');
+        });
+
+        $('.awei-down-arrow').next().on('click', function () {
+            $(this).addClass('hide-element');
         });
 
     </script>

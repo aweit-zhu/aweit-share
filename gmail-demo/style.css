@@ -5,7 +5,7 @@
     --g-mainColor: #fff;
     --g-searchColor: #eaf1fb;
     --g-searchBoderColor: #ced4da;
-    --g-mailHoverColor: #c2dbff;
+    --g-hoverColor: #c2dbff;
     --g-starColor: #e5bf4c;
     --f-family-1: 'Righteous', 'Noto Sans TC', sans-serif;
     --g-mailWriteBtnColor: #8bbde8;
@@ -78,7 +78,7 @@ main article {
 }
 
 .mail:hover {
-    background-color: var(--g-mailHoverColor);
+    background-color: var(--g-hoverColor);
 }
 
 
@@ -87,7 +87,7 @@ main article {
 }
 
 .mail-function:hover {
-    background-color: var(--g-mailHoverColor);
+    background-color: var(--g-hoverColor);
 }
 
 .star-active {
@@ -98,4 +98,66 @@ main article {
     background-color: var(--g-mailWriteBtnColor);
     color: #fff;
     border: none;
+}
+
+
+
+/* == 響應式 =========================================== */
+
+@media (max-width: 992px) {
+    .mail {
+        min-height: 100px;
+        min-width: 352px;
+    }
+
+    .mail-btn-star {
+        position: absolute;
+        bottom:3em;
+        right: 1em;
+        padding: 0;
+    }
+
+    .mail-btn-flag {
+        position: absolute;
+        top: 0;
+        left: 3em;
+        padding: 0;
+    }
+
+    .mail-from {
+        position: absolute;
+        margin: 0;
+        top: 0;
+        left: 4.5em;
+    }
+
+    .mail-subject {
+        position: absolute;
+        margin: 0;
+        top: 25%;
+        left: 3em;
+    }
+
+    .mail-content {
+        position: absolute;
+        margin: 0;
+        top: 50%;
+        left: 3em;
+        text-align: start;
+        width: 75%;
+
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        white-space: normal;
+        overflow-y: hidden;
+    }
+
+    .mail-time {
+        position: absolute;
+        margin: 0;
+        top: 0;
+        right: 1em;
+        font-size: smaller;
+    }
 }
