@@ -2,6 +2,8 @@
 
 1. [Markdown Preview Enhanced](https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced)
 
+2. [Markdown 教學](https://www.runoob.com/markdown/md-tutorial.html)
+
 ![Alt text](image-3.png)
 
 ### 假文
