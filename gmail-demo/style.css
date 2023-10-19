@@ -101,6 +101,15 @@ main article {
 }
 
 
+.mail-content {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
 
 /* == 響應式 =========================================== */
 
@@ -145,12 +154,6 @@ main article {
         left: 3em;
         text-align: start;
         width: 75%;
-
-        display: -webkit-box;
-        -webkit-line-clamp: 1;
-        -webkit-box-orient: vertical;
-        white-space: normal;
-        overflow-y: hidden;
     }
 
     .mail-time {
