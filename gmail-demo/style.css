@@ -8,7 +8,8 @@
     --g-hoverColor: #c2dbff;
     --g-starColor: #e5bf4c;
     --f-family-1: 'Righteous', 'Noto Sans TC', sans-serif;
-    --g-mailWriteBtnColor: #8bbde8;
+    --g-mailWriteBtnColor: #c2e7ff;
+   
 }
 
 body {
@@ -96,8 +97,14 @@ main article {
 
 .write {
     background-color: var(--g-mailWriteBtnColor);
-    color: #fff;
+    /* color: #fff; */
     border: none;
+    padding-left: 1em;
+    padding-right: 1.5em;
+}
+
+.write:hover {
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
 }
 
 .mail-subject {
