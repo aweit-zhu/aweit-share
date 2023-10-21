@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tailwind CSS Demo</title>
-    <link rel="stylesheet" href="/dist/output.css">
+    <link rel="stylesheet" href="../dist/output.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
     <style>
         * {
             box-sizing: border-box;
@@ -15,9 +16,12 @@
 
 <body>
 
-    <header class="flex justify-normal items-center fixed h-16 w-full " style="background-color: #1f2937;">
+
+    <header class="flex md:flex justify-normal items-center fixed z-10 h-16 w-full" style="background-color: #1f2937;">
+        
         <img src="./img/mark.svg" alt="" class="w-14 flex-grow-0">
-        <nav class="hidden md:flex h-9 text-white">
+        
+        <nav class="hidden md:flex md:h-9 text-white">  
             <a href="javascript:none"
                 class="px-3 py-2 mx-2 rounded-md text-sm hover:bg-slate-700 bg-gray-900 ">Dashboard</a>
             <a href="javascript:none" class="px-3 py-2 mx-2 rounded-md text-sm hover:bg-slate-700">Team</a>
@@ -41,10 +45,50 @@
             <!-- 頭像處理方式 -->
             <img class="h-8 w-8 rounded-full mx-3" src="https://picsum.photos/id/1020/32/32" alt="">
         </div>
+        
     </header>
 
-    <div class="pt-16 flex flex-col h-screen">
-        <h1 class="bg-white h-24 border border-grey-100 flex items-center text-4xl font-extrabold">Dashboard</h1>
+    <button class="md:hidden fixed right-0 top-5 menuBtn z-20">
+        <svg class="md:hidden h-6 w-6 text-white mr-5 cursor-pointer "  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+    </button>
+
+    <button class="md:hidden absolute right-0 top-5 closeBtn z-20 hidden">
+        <svg class="md:hidden h-6 w-6 text-white mr-5 cursor-pointer "  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+    </button>
+
+    <div class="md:hidden flex flex-col text-white w-full pt-16 menuList" style="background-color: #1f2937;">  
+        <a href="javascript:none" class="px-3 py-2 rounded-md text-sm hover:bg-slate-700 bg-gray-900 ">Dashboard</a>
+        <a href="javascript:none" class="px-3 py-2 rounded-md text-sm hover:bg-slate-700">Team</a>
+        <a href="javascript:none" class="px-3 py-2 rounded-md text-sm hover:bg-slate-700">Projects</a>
+        <a href="javascript:none" class="px-3 py-2 rounded-md text-sm hover:bg-slate-700">Calendar</a>
+        <a href="javascript:none" class="px-3 py-2 rounded-md text-sm hover:bg-slate-700">Reports</a>
+    </div>
+
+    <script>
+
+        $('.menuList').addClass('hidden');
+
+        $('.menuBtn').on('click', function() {
+            $('.closeBtn').removeClass('hidden');
+            $('.menuBtn').addClass('hidden');
+            $('.menuList').removeClass('hidden');
+        });
+
+        $('.closeBtn').on('click', function() {
+            $('.closeBtn').addClass('hidden');
+            $('.menuBtn').removeClass('hidden');
+            $('.menuList').addClass('hidden');
+        });
+
+    </script>
+
+
+    <div class="md:pt-16 flex flex-col h-screen">
+        <h1 class="bg-white h-20 border border-grey-100 flex items-center text-2xl font-extrabold drop-shadow">Dashboard</h1>
         <main class="flex-1 bg-gray-10 flex justify-center">
             <div class="w-full mx-5 my-12 border border-dashed border-gray-400 stroke-gray-900 relative">
                 <svg class="absolute inset-0 h-full w-full stroke-gray-900/10" fill="none">
@@ -61,6 +105,7 @@
         </main>
     </div>
 
+    <footer class="h-14 w-full" style="background-color: #1f2937;"></footer>
 </body>
 
 </html>
