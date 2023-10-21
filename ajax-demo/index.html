@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax Demo</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        li p {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <p class="text-center m-3 fw-bolder bg-info">AJAX 如何調用？</p>
+
+    <ul>
+        <li>
+            <p>Get 請求</p>
+<pre><code>
+$.ajax({
+    url: 'http://localhost:8080/api/book',
+    method: 'get',
+    success: function (data) {
+        console.log(data);
+    },
+    error: function (e) {
+        console.log(e);
+    }
+});
+</code></pre>
+        </li>
+
+        <li>
+            <p>Get 請求未加 Header</p>
+<pre><code>
+$.ajax({
+    url: 'http://localhost:8080/api/secured/book',
+    method: 'get',
+    success: function (data) {
+        console.log(data);
+    },
+    error: function (e) {
+        console.log(e);
+    }
+});
+</code></pre>
+        </li>
+
+        <li>
+            <p>Get 請求加非法 Header</p>
+<pre><code>
+$.ajax({
+    url: 'http://localhost:8080/api/secured/book',
+    method: 'get',
+    headers: {
+        "Token": 123
+    },
+    success: function (data) {
+        console.log(data);
+    },
+    error: function (e) {
+        console.log(e);
+    }
+});
+</code></pre>
+        </li>
+
+        <li>
+            <p><font class="text-danger">同步請求</font>：先取得 Token，再將 Token 放到 Header 中，並發出 GET 請求</p>
+<pre><code>
+let token = '';
+
+$.ajax({
+    url: 'http://localhost:8080/api/token',
+    method: 'get',
+    headers: {},
+    <font color="red">async: false</font>,
+    success: function (data) {
+        token = data;
+        console.log(data);
+    },
+    error: function (e) { console.log(e); }
+});
+
+$.ajax({
+    url: 'http://localhost:8080/api/secured/book',
+    method: 'get',
+    <font color="red">headers: { "Token": token }</font>,
+    success: function (data) { console.log(data); },
+    error: function (e) { console.log(e); }
+});
+</code></pre>
+        </li>
+
+        <li>
+           <p> <font class="text-danger">同步請求</font>：先取得 Token，再將 Token 放到 Header 中，並發出 POST 請求</p>
+<pre><code>
+let token = '';
+
+$.ajax({
+    url: 'http://localhost:8080/api/token',
+    method: 'get',
+    headers: {},
+    async: false,
+    success: function (data) {
+        token = data;
+        console.log(data);
+    },
+    error: function (e) { console.log(e); }
+});
+
+$.ajax({
+    url: 'http://localhost:8080/api/secured/book',
+    method: 'post',
+    headers: {
+        'Token': token,
+    },
+    dataType: "json",
+    data: <font color="red">JSON.stringify (
+        {
+            name: "HTML、CSS、JS 介紹",
+            price: 300
+        }
+    )</font>,
+    <font color="red">contentType: 'application/json'</font>,
+    success: function (data) { console.log(data); },
+    error: function (e) { console.log(e); }
+});
+</code></pre>
+        </li>
+    </ul>
+
+    <p class="text-center m-3 fw-bolder bg-info">後端服務啟動</p>
+
+    <pre><code class="text-danger">  java -jar BookService.jar</code></pre>
+
+    <img src="./java-service.png" alt="" class="d-block w-50 me-auto ms-3">
+
+
+    <p class="text-center m-3 fw-bolder bg-info">後端 Web API 接口說明</p>
+
+    <table class="table vw-100">
+        <thead>
+            <tr>
+                <th scope="col" class="text-nowrap" style="width: 1rem;">#</th>
+                <th scope="col" class="text-nowrap" style="width: 10rem;">名稱</th>
+                <th scope="col" class="text-nowrap" style="width: 10rem;">路徑(URL)</th>
+                <th scope="col" class="text-nowrap" style="width: 5rem;">Method</th>
+                <th scope="col">說明</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th class="text-nowrap" scope="row">1</th>
+                <td class="text-nowrap">取得書本資訊</td>
+                <td class="text-nowrap"><a href="http://localhost:8080/api/book">http://localhost:8080/api/book</a></td>
+                <td class="text-nowrap">GET</td>
+                <td class="text-break">
+                    <code>
+                    {
+                        "id": 1,
+                        "name": "Java 17 教學手冊",
+                        "price": 500,
+                        "publishDate": "2023-10-20T16:00:00.000+00:00"
+                    }
+                    </code>
+                </td>
+            </tr>
+            <tr>
+                <th class="text-nowrap" scope="row">2</th>
+                <td class="text-nowrap">取得 Token</td>
+                <td class="text-nowrap"><a href="http://localhost:8080/api/token">http://localhost:8080/api/token</a>
+                </td>
+                <td class="text-nowrap">GET</td>
+                <td class="text-break">
+                    <code>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c             </code>    
+                </td>
+            </tr>
+            <tr>
+                <th class="text-nowrap" scope="row">3</th>
+                <td class="text-nowrap">取得書本資訊(含Token)</td>
+                <td class="text-nowrap"><a
+                        href="http://localhost:8080/api/secured/book">http://localhost:8080/api/secured/book</a></td>
+                <td class="text-nowrap">GET</td>
+                <td class="text-break">
+                    1. Header 要加資訊： <code>{'Token': 'token字符'}</code> ，且要<strong>保證 token 已經先拿到了</strong>。<br>
+                    2. 正確回傳
+                        <code>
+                        {
+                            "id": 1,
+                            "name": "Java 17 教學手冊",
+                            "price": 500,
+                            "publishDate": "2023-10-20T16:00:00.000+00:00"
+                        } 
+                        </code><br>
+                    3. 錯誤回傳： 403 Forbidden
+                </td>
+            </tr>
+            <tr>
+                <th class="text-nowrap" scope="row">3</th>
+                <td class="text-nowrap">上架書本(含Token)</td>
+                <td class="text-nowrap"><a
+                        href="http://localhost:8080/api/secured/book">http://localhost:8080/api/secured/book</a></td>
+                <td class="text-nowrap">POST</td>
+                <td>
+                    1. Header 要加資訊： <code>{'Token': 'token字符'}</code> ，且要<strong>保證 token 已經先拿到了</strong>。<br>
+                    2. 正確回傳
+                        <code>
+                        {
+                            "id": 1,
+                            "name": "Java 17 教學手冊",
+                            "price": 500,
+                            "publishDate": "2023-10-20T16:00:00.000+00:00"
+                        } 
+                        </code><br>
+                    3. 錯誤回傳： 403 Forbidden
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <script>
+
+        // Get 請求
+        $.ajax({
+            url: 'http://localhost:8080/api/book',
+            method: 'get',
+            success: function (data) {
+                console.log(data);
+            },
+            error: function (e) {
+                console.log(e);
+            }
+        });
+
+        // Get 請求未加 Header
+        $.ajax({
+            url: 'http://localhost:8080/api/secured/book',
+            method: 'get',
+            success: function (data) {
+                console.log(data);
+            },
+            error: function (e) {
+                console.log(e);
+            }
+        });
+
+        // Get 請求加非法 Header
+        $.ajax({
+            url: 'http://localhost:8080/api/secured/book',
+            method: 'get',
+            headers: {
+                "Token": 123
+            },
+            success: function (data) {
+                console.log(data);
+            },
+            error: function (e) {
+                console.log(e);
+            }
+        });
+
+
+        // 同步請求：先取得 Token，再將 Token 放到 Header 中，並發出請求。
+
+        let token = '';
+
+        $.ajax({
+            url: 'http://localhost:8080/api/token',
+            method: 'get',
+            headers: {},
+            async: false,
+            success: function (data) {
+                token = data;
+                console.log(data);
+            },
+            error: function (e) { console.log(e); }
+        });
+
+        $.ajax({
+            url: 'http://localhost:8080/api/secured/book',
+            method: 'get',
+            headers: { "Token": token },
+            success: function (data) { console.log(data); },
+            error: function (e) { console.log(e); }
+        });
+
+        // Post 請求
+        $.ajax({
+            url: 'http://localhost:8080/api/secured/book',
+            method: 'post',
+            headers: {
+                'Token': token,
+            },
+            dataType: "json",
+            data: JSON.stringify(
+                {
+                    name: "HTML、CSS、JS 介紹",
+                    price: 300
+                }
+            ),
+            contentType: 'application/json',
+            success: function (data) { console.log(data); },
+            error: function (e) { console.log(e); }
+        });
+
+    </script>
+</body>
+
+</html>
