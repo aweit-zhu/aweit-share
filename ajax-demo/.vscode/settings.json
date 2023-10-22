@@ -1,0 +1,7 @@
+{
+  "liveServer.settings.proxy": {
+    "enable": true,
+    "baseUri": "/openapi",
+    "proxyUri": "https://openapi.twse.com.tw:443"
+  }
+}
