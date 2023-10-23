@@ -13,24 +13,113 @@
 
 <body>
 
-    <ul></ul>
+    <p class="text-center m-3 fw-bolder bg-info"> Web API (自家/第三方) </p>
+
+    <div class="d-flex justify-content-center">
+        <div class="d-flex flex-column align-items-center">
+            <img src="./webapi.png" alt="" width="100%" >
+            <a class="mx-3" href="https://openapi.twse.com.tw/#/" target="_blank">
+                證券資料：https://openapi.twse.com.tw/
+            </a>
+        </div>
+        <!-- <div class="d-flex flex-column align-items-center">
+            <img src="./weather.png" alt="" width="100%" >
+            <a class="mx-3" href="https://opendata.cwb.gov.tw/dist/opendata-swagger.html" target="_blank">
+                氣象資料：https://opendata.cwb.gov.tw/dist/opendata-swagger.html
+            </a>
+        </div> -->
+    </div>
+
+    <div class="mx-3">
+    <pre><code>
+    $.ajax({
+        <font color="red">url: 'https://openapi.twse.com.tw:443/v1/opendata/t187ap03_L'</font>,
+        type: 'GET',
+        dataType: 'json',
+        success: function (data) {
+            console.log(data);
+        },
+        error: function (error) {
+            console.error(error);
+        }
+    });
+    </code></pre>
+
+        <code class="fs-6" >
+            Access to XMLHttpRequest at 'https://openapi.twse.com.tw/v1/opendata/t187ap03_L' from origin 'http://127.0.0.1:5500' has been blocked by CORS policy: 
+            No 'Access-Control-Allow-Origin' header is present on the requested resource.
+        </code>
+    </div>
+
+
+    <p class="text-center m-3 fw-bolder bg-info"> CORS policy </p>
+
+    <iframe src="https://www.shubo.io/what-is-cors/" width="100%" height="400px"></iframe>
+
+    <ol class="my-3 text-danger fw-bolder">
+        <li>透過JavaScript存取非同源資源時(例如：ajax、fetch、axios等)，server 必須明確告知瀏覽器允許何種請求，只有 server 允許的請求能夠被瀏覽器實際發送，否則會失敗。</li>
+        <li>不管簡單、非簡單請求，只要跨源，一定要經過後端伺服器的允許。</li>
+        <li>但是，只要不是透過 AJAX等方式存取跨資源，就可以避開 CORS問題。故，可透過代理伺服器方式，繞過 CORS 的政策。</li>
+    </ol>
+
+    <p class="text-center m-3 fw-bolder bg-info"> 透過代理伺服器 </p>
+
+    <ol class="my-3 text-primary fw-bolder">
+
+        <li> 反向代理的說明，可參考：<a href="https://ithelp.ithome.com.tw/articles/10313671">正向代理與反向代理</a>。</li>
+        <li> 我們是使用 Live Server，有內建的代理伺服器功能(Reverse proxy)。</li>
+        <li> 
+            建立 .vscode 資料夾，並且在該資料夾中，建立 settings.json檔案。
+        </li>
+        <li>
+<pre><code>
+    {
+        "liveServer.settings.proxy": {
+            "enable": true,
+            "baseUri": "/openapi",
+            "proxyUri": "https://openapi.twse.com.tw:443"
+        }
+    }
+</code></pre>
+        </li>
+
+        <li> 修改呼叫方式：讓我的代理伺服器幫我轉發。
+<pre><code>
+    $.ajax({
+        <font color="blue">url: 'http://127.0.0.1:5500/openapi/v1/opendata/t187ap03_L'</font>,
+        type: 'GET',
+        dataType: 'json',
+        success: function (data) {
+            console.log(data);
+        },
+        error: function (error) {
+            console.error(error);
+        }
+    });
+</code></pre>
+        </li>
+
+    </ol>
+
+
+
+    <p class="m-3">資料如下：</p>
+    <ul>
+
+    </ul>
 
     <script>
         $.ajax({
-            // url: 'https://openapi.twse.com.tw:443/v1/opendata/t187ap03_L',
+            //url: 'https://openapi.twse.com.tw:443/v1/opendata/t187ap03_L',
             url: 'http://127.0.0.1:5500/openapi/v1/opendata/t187ap03_L',
             type: 'GET',
             dataType: 'json',
             success: function (data) {
                 // console.log(data);
-
                 $.each(data, function(i, ary) {
-                    console.log(ary);
-
-                    let li = `<li>出表日期：${ary['出表日期']}, 公司簡稱: ${ary['公司簡稱']}</li>`;
-
-                    $('ul').append(li);
-
+                    //console.log(ary);
+                    if(i<15)
+                        $('ul').append(`<li>出表日期：${ary['出表日期']}, 公司簡稱: ${ary['公司簡稱']}</li>`);
                 });
             },
             error: function (error) {

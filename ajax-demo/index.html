@@ -17,6 +17,94 @@
 </head>
 
 <body>
+    <p class="text-center m-3 fw-bolder bg-info">後端服務啟動 (自己開發的)</p>
+
+    <pre><code class="text-danger">  java -jar BookService.jar</code></pre>
+
+    <img src="./java-service.png" alt="" class="d-block w-50 me-auto ms-3">
+
+
+    <p class="text-center m-3 fw-bolder bg-info">後端 Web API 接口說明</p>
+
+    <table class="table vw-100">
+        <thead>
+            <tr>
+                <th scope="col" class="text-nowrap" style="width: 1rem;">#</th>
+                <th scope="col" class="text-nowrap" style="width: 10rem;">名稱</th>
+                <th scope="col" class="text-nowrap" style="width: 10rem;">路徑(URL)</th>
+                <th scope="col" class="text-nowrap" style="width: 5rem;">Method</th>
+                <th scope="col">說明</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th class="text-nowrap" scope="row">1</th>
+                <td class="text-nowrap">取得書本資訊</td>
+                <td class="text-nowrap"><a href="http://localhost:8080/api/book">http://localhost:8080/api/book</a></td>
+                <td class="text-nowrap">GET</td>
+                <td class="text-break">
+                    <code>
+                    {
+                        "id": 1,
+                        "name": "Java 17 教學手冊",
+                        "price": 500,
+                        "publishDate": "2023-10-20T16:00:00.000+00:00"
+                    }
+                    </code>
+                </td>
+            </tr>
+            <tr>
+                <th class="text-nowrap" scope="row">2</th>
+                <td class="text-nowrap">取得 Token</td>
+                <td class="text-nowrap"><a href="http://localhost:8080/api/token">http://localhost:8080/api/token</a>
+                </td>
+                <td class="text-nowrap">GET</td>
+                <td class="text-break">
+                    <code>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c             </code>    
+                </td>
+            </tr>
+            <tr>
+                <th class="text-nowrap" scope="row">3</th>
+                <td class="text-nowrap">取得書本資訊(含Token)</td>
+                <td class="text-nowrap"><a
+                        href="http://localhost:8080/api/secured/book">http://localhost:8080/api/secured/book</a></td>
+                <td class="text-nowrap">GET</td>
+                <td class="text-break">
+                    1. Header 要加資訊： <code>{'Token': 'token字符'}</code> ，且要<strong>保證 token 已經先拿到了</strong>。<br>
+                    2. 正確回傳
+                        <code>
+                        {
+                            "id": 1,
+                            "name": "Java 17 教學手冊",
+                            "price": 500,
+                            "publishDate": "2023-10-20T16:00:00.000+00:00"
+                        } 
+                        </code><br>
+                    3. 錯誤回傳： 403 Forbidden
+                </td>
+            </tr>
+            <tr>
+                <th class="text-nowrap" scope="row">3</th>
+                <td class="text-nowrap">上架書本(含Token)</td>
+                <td class="text-nowrap"><a
+                        href="http://localhost:8080/api/secured/book">http://localhost:8080/api/secured/book</a></td>
+                <td class="text-nowrap">POST</td>
+                <td>
+                    1. Header 要加資訊： <code>{'Token': 'token字符'}</code> ，且要<strong>保證 token 已經先拿到了</strong>。<br>
+                    2. 正確回傳
+                        <code>
+                        {
+                            "id": 1,
+                            "name": "Java 17 教學手冊",
+                            "price": 500,
+                            "publishDate": "2023-10-20T16:00:00.000+00:00"
+                        } 
+                        </code><br>
+                    3. 錯誤回傳： 403 Forbidden
+                </td>
+            </tr>
+        </tbody>
+    </table>
 
     <p class="text-center m-3 fw-bolder bg-info">AJAX 如何調用？</p>
 
@@ -137,95 +225,7 @@ $.ajax({
         </li>
     </ul>
 
-    <p class="text-center m-3 fw-bolder bg-info">後端服務啟動</p>
-
-    <pre><code class="text-danger">  java -jar BookService.jar</code></pre>
-
-    <img src="./java-service.png" alt="" class="d-block w-50 me-auto ms-3">
-
-
-    <p class="text-center m-3 fw-bolder bg-info">後端 Web API 接口說明</p>
-
-    <table class="table vw-100">
-        <thead>
-            <tr>
-                <th scope="col" class="text-nowrap" style="width: 1rem;">#</th>
-                <th scope="col" class="text-nowrap" style="width: 10rem;">名稱</th>
-                <th scope="col" class="text-nowrap" style="width: 10rem;">路徑(URL)</th>
-                <th scope="col" class="text-nowrap" style="width: 5rem;">Method</th>
-                <th scope="col">說明</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th class="text-nowrap" scope="row">1</th>
-                <td class="text-nowrap">取得書本資訊</td>
-                <td class="text-nowrap"><a href="http://localhost:8080/api/book">http://localhost:8080/api/book</a></td>
-                <td class="text-nowrap">GET</td>
-                <td class="text-break">
-                    <code>
-                    {
-                        "id": 1,
-                        "name": "Java 17 教學手冊",
-                        "price": 500,
-                        "publishDate": "2023-10-20T16:00:00.000+00:00"
-                    }
-                    </code>
-                </td>
-            </tr>
-            <tr>
-                <th class="text-nowrap" scope="row">2</th>
-                <td class="text-nowrap">取得 Token</td>
-                <td class="text-nowrap"><a href="http://localhost:8080/api/token">http://localhost:8080/api/token</a>
-                </td>
-                <td class="text-nowrap">GET</td>
-                <td class="text-break">
-                    <code>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c             </code>    
-                </td>
-            </tr>
-            <tr>
-                <th class="text-nowrap" scope="row">3</th>
-                <td class="text-nowrap">取得書本資訊(含Token)</td>
-                <td class="text-nowrap"><a
-                        href="http://localhost:8080/api/secured/book">http://localhost:8080/api/secured/book</a></td>
-                <td class="text-nowrap">GET</td>
-                <td class="text-break">
-                    1. Header 要加資訊： <code>{'Token': 'token字符'}</code> ，且要<strong>保證 token 已經先拿到了</strong>。<br>
-                    2. 正確回傳
-                        <code>
-                        {
-                            "id": 1,
-                            "name": "Java 17 教學手冊",
-                            "price": 500,
-                            "publishDate": "2023-10-20T16:00:00.000+00:00"
-                        } 
-                        </code><br>
-                    3. 錯誤回傳： 403 Forbidden
-                </td>
-            </tr>
-            <tr>
-                <th class="text-nowrap" scope="row">3</th>
-                <td class="text-nowrap">上架書本(含Token)</td>
-                <td class="text-nowrap"><a
-                        href="http://localhost:8080/api/secured/book">http://localhost:8080/api/secured/book</a></td>
-                <td class="text-nowrap">POST</td>
-                <td>
-                    1. Header 要加資訊： <code>{'Token': 'token字符'}</code> ，且要<strong>保證 token 已經先拿到了</strong>。<br>
-                    2. 正確回傳
-                        <code>
-                        {
-                            "id": 1,
-                            "name": "Java 17 教學手冊",
-                            "price": 500,
-                            "publishDate": "2023-10-20T16:00:00.000+00:00"
-                        } 
-                        </code><br>
-                    3. 錯誤回傳： 403 Forbidden
-                </td>
-            </tr>
-        </tbody>
-    </table>
-
+    
 
     <script>
 
