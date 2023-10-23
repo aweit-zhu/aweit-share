@@ -67,10 +67,8 @@
     <ol class="my-3 text-primary fw-bolder">
 
         <li> 反向代理的說明，可參考：<a href="https://ithelp.ithome.com.tw/articles/10313671">正向代理與反向代理</a>。</li>
-        <li> 我們是使用 Live Server，有內建的代理伺服器功能(Reverse proxy)。</li>
-        <li> 
-            建立 .vscode 資料夾，並且在該資料夾中，建立 settings.json檔案。
-        </li>
+        <li> 我們是使用 Live Server，有內建的代理伺服器功能(Reverse proxy)，但只能配一個代理。</li>
+        <li> 建立 .vscode 資料夾，並且在該資料夾中，建立 settings.json檔案。</li>
         <li>
 <pre><code>
     {
@@ -110,7 +108,7 @@
 
     <script>
         $.ajax({
-            //url: 'https://openapi.twse.com.tw:443/v1/opendata/t187ap03_L',
+            // url: 'https://openapi.twse.com.tw:443/v1/opendata/t187ap03_L',
             url: 'http://127.0.0.1:5500/openapi/v1/opendata/t187ap03_L',
             type: 'GET',
             dataType: 'json',
