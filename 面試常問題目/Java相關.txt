@@ -1,0 +1,51 @@
+1. 什麼是 JDK、JRE、JVM？
+
+	JDK 開發人員工具
+
+	JRE Java 執行環境
+
+	JVM Java 虛擬機器
+
+2. 什麼是跨平台？ 跨作業系統。
+
+3. 什麼是 Complier？ 編譯、class 檔。
+
+4. Java有哪些「基本資料型別」？
+
+5. i++ 和 ++i 差異？ 
+
+	--> int var = age++;  
+
+		int var = age;
+		
+		age = age + 1;
+
+	--> int var = ++age;
+
+		age = age + 1;
+		
+		int var = age;
+
+6. && 和 & 的差異？ 節省效能。&& 只要一邊為 false 就不會執行另一邊。
+
+7. 什麼是物件導向(OO)？
+
+	模組化(功能獨立)、抽象化(共用)、成員、方法
+
+8. 有聽過 UML(Unified Modeling Language) 嗎？
+
+    SD 與 PG 溝通規格文件的一種方式，包含類別、成員、建構子、方法等。
+
+9. JVM 記憶體配置 - Stack 與 Heap 差異？
+   
+   例如：int i = 3，Java 如何分配他的記憶體？
+   
+   例如：String str = "abc"; Java 如何分配他的記憶體？
+   
+===  不太重要
+
+1. Java 歷史發展
+
+2. 位移運算、二進位等問題。
+
+3.
