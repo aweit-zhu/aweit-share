@@ -185,6 +185,29 @@ $.ajax({
     error: function (e) { console.log(e); }
 });
 </code></pre>
+
+<font class="text-danger">補充：</font><a href="https://ithelp.ithome.com.tw/articles/10262988" target="_blank"> Callback Hell</a>
+
+<pre><code>
+$.ajax({
+    url: 'http://localhost:8080/api/token',
+    method: 'get',
+    headers: {},
+    <font color="red">async: false</font>,
+    success: function (data) {
+        token = data;
+        $.ajax({
+            url: 'http://localhost:8080/api/secured/book',
+            method: 'get',
+            <font color="red">headers: { "Token": token }</font>,
+            success: function (data) { console.log(data); },
+            error: function (e) { console.log(e); }
+        });
+    },
+    error: function (e) { console.log(e); }
+});
+</code></pre>
+
         </li>
 
         <li>
