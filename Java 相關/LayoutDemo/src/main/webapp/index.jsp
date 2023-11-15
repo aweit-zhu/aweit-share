@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="/WEB-INF/layout.tld" prefix="ex" %>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -39,10 +40,10 @@
 	    </script>
 	</head>
 	<body>
-		<%@ include file="layout.jsp" %>
-		<div id="content" class="mx-auto vh-100 d-flex flex-column justify-content-center w-100">
-			<h4 class="fw-bold text-center">首頁</h4>
-			<div id="chart_div" style="width:80%; height:80%" class="mx-auto"></div>
-		</div>
+		<ex:Layout>
+			<div class="w-100 vh-100" style="min-height:100%;padding-top:5rem">
+				<div id="chart_div" style="width:80%; height:80%" class="mx-auto"></div>
+			</div>
+		</ex:Layout>
 	</body>
 </html>

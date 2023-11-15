@@ -19,10 +19,6 @@
 	    		z-index: 99;
 	    	}
 	    	
-	    	#content {
-	    		position:relative;
-	    		top:80px;
-	    	}
 	    </style>
 	</head>
 	<body>

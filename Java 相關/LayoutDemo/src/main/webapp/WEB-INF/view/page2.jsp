@@ -1,7 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
-<%@ include file="/layout.jsp" %>
+<%@ include file="/WEB-INF/view/header.jsp" %>
 
-<div id="content" class="mx-auto vh-100 d-flex justify-content-center w-100">
+<div class="w-100 h-100" style="padding-top:5rem">
 	<h4 class="fw-bold text-center">Page 2</h4>
 </div>
+
+<%@ include file="/WEB-INF/view/footer.jsp" %>
