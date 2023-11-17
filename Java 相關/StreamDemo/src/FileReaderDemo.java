@@ -7,7 +7,7 @@ public class FileReaderDemo {
 		try (FileReader reader = new FileReader("123.txt");){
 			int i = 0;
 			while( (i = reader.read()) != -1) {
-				System.out.print((char)i);
+				System.out.print(i + ":" +(char)i);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
