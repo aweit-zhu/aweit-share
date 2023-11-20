@@ -13,14 +13,13 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
 
 @WebServlet(value = "/page2")
-@MultipartConfig(
-		fileSizeThreshold = 1024 * 1024 * 10, // 10 MB
+@MultipartConfig(fileSizeThreshold = 1024 * 1024 * 10, // 10 MB
 		maxFileSize = 1024 * 1024 * 50, // 50 MB
 		maxRequestSize = 1024 * 1024 * 100) // 100 MB
 public class Page2Servlet extends HttpServlet {
 
 	private static final String UPLOAD_DIR = "uploads";
-	
+
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		RequestDispatcher rd = req.getRequestDispatcher("/WEB-INF/view/page2.jsp");
@@ -43,36 +42,36 @@ public class Page2Servlet extends HttpServlet {
 		System.out.println("memo:" + memoString);
 
 		// 檔案
-        String applicationPath = req.getServletContext().getRealPath("");
-        String uploadFilePath = applicationPath + File.separator + UPLOAD_DIR;
-         
-        File fileSaveDir = new File(uploadFilePath);
-        if (!fileSaveDir.exists()) {
-            fileSaveDir.mkdirs();
-        }
-        System.out.println("Upload File Directory="+fileSaveDir.getAbsolutePath());
-        
-        String fileName = null;
-        //Get all the parts from request and write it to the file on server
-        for (Part part : req.getParts()) {
-            fileName = getFileName(part);
-            if(!"".equals(fileName))
-            	part.write(uploadFilePath + File.separator + fileName);
-        }
-		
+		String applicationPath = req.getServletContext().getRealPath("");
+		String uploadFilePath = applicationPath + File.separator + UPLOAD_DIR;
+
+		File fileSaveDir = new File(uploadFilePath);
+		if (!fileSaveDir.exists()) {
+			fileSaveDir.mkdirs();
+		}
+		System.out.println("Upload File Directory=" + fileSaveDir.getAbsolutePath());
+
+		String fileName = null;
+		// Get all the parts from request and write it to the file on server
+		for (Part part : req.getParts()) {
+			fileName = getFileName(part);
+			if (!"".equals(fileName))
+				part.write(uploadFilePath + File.separator + fileName);
+		}
+
 		req.getRequestDispatcher("/WEB-INF/view/page2_result.jsp").forward(req, resp);
 	}
-	
+
 	private String getFileName(Part part) {
-        String contentDisp = part.getHeader("content-disposition");
-        System.out.println("content-disposition header= "+contentDisp);
-        String[] tokens = contentDisp.split(";");
-        for (String token : tokens) {
-            if (token.trim().startsWith("filename")) {
-                return token.substring(token.indexOf("=") + 2, token.length()-1);
-            }
-        }
-        return "";
-    }
+		String contentDisp = part.getHeader("content-disposition");
+		System.out.println("content-disposition header= " + contentDisp);
+		String[] tokens = contentDisp.split(";");
+		for (String token : tokens) {
+			if (token.trim().startsWith("filename")) {
+				return token.substring(token.indexOf("=") + 2, token.length() - 1);
+			}
+		}
+		return "";
+	}
 
 }
