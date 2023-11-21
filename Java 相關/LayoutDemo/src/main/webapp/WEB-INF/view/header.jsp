@@ -32,13 +32,16 @@
 		    <div class="collapse navbar-collapse" id="navbarSupportedContent">
 		      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 		      	<li class="nav-item">
-		          <a role="button" class="nav-link text-light" href="./">首頁</a>
+		          <a role="button" class="nav-link text-light" href="./">🎄報表</a>
 		        </li>
 		        <li class="nav-item">
-		          <a role="button" class="nav-link text-light" href="./page1.jsp">Page1</a>
+		          <a role="button" class="nav-link text-light" href="./page1.jsp">🎄表單製作</a>
 		        </li>
 		        <li class="nav-item">
-		          <a role="button" class="nav-link text-light" href="./page2">Page2</a>
+		          <a role="button" class="nav-link text-light" href="./page2">🎄表單驗證+上傳檔案</a>
+		        </li>
+		        <li class="nav-item">
+		          <a role="button" class="nav-link text-light" href="./page3.jsp">🎄下載檔案</a>
 		        </li>
 		     </ul>
 		    </div>

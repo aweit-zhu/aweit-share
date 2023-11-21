@@ -3,7 +3,7 @@
 <%@ include file="/WEB-INF/view/header.jsp" %>
 
 <div class="w-100 h-100" style="padding-top:5rem">
-    成功
+  成功
 </div>
 
 <%--@ include file="/WEB-INF/view/footer.jsp" --%>
