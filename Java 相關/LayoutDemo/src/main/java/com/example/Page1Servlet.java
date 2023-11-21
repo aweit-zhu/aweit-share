@@ -2,6 +2,7 @@ package com.example;
 
 import java.io.IOException;
 
+import javax.annotation.PostConstruct;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -19,7 +20,20 @@ public class Page1Servlet extends HttpServlet{
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		System.out.println("Hello!!");
+		
+		req.setCharacterEncoding("utf-8");
+		
+		String email = req.getParameter("email");
+		String message = req.getParameter("message");
+		
+		req.setAttribute("email", email);
+		req.setAttribute("message", message);
+		
+		RequestDispatcher rd = req.getRequestDispatcher("./index.jsp");
+		rd.forward(req, resp);
+		
 	}
 
 }
+	
+	

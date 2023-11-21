@@ -4,8 +4,7 @@
 <%@ include file="/WEB-INF/view/header.jsp"%>
 
 <!-- FullCalendar -->
-<script
-	src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.9/index.global.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.9/index.global.min.js'></script>
 <script>
 	document.addEventListener('DOMContentLoaded', function() {
 		var calendarEl = document.getElementById('calendar');
@@ -28,8 +27,7 @@
 <div class="w-100 h-100" style="padding-top: 5rem">
 	<div
 		class="d-flex flex-column flex-lg-row justify-content-center mx-5 align-items-center">
-		<form class="row g-3 needs-validation col-12 col-lg-6" novalidate
-			action="./page2" method="post" enctype="multipart/form-data">
+		<form id="form1" class="row g-3 needs-validation col-12 col-lg-6" novalidate action="./page2" method="post" enctype="multipart/form-data" onsubmit="return check()">
 			<h4 class="text-center">請假表單</h4>
 
 			<!-- 文字輸入框 -->
@@ -126,4 +124,21 @@
 		fileInfo += "</font>";
 		$('#img_area').html(fileInfo);
 	});
+	
+	function check() {
+		
+		let start_date = $('#start_date').val();
+		let end_date = $('#end_date').val();
+
+		if(Date.parse(start_date) > Date.parse(end_date)) {
+			$('#start_date').removeClass('is-valid');
+			$('#end_date').removeClass('is-valid ');
+			$('#start_date').addClass('is-invalid ');
+			$('#end_date').addClass('is-invalid ');
+			$('#start_date').val('');
+			$('#end_date').val('');
+			return false;
+		}
+		return false;
+	}
 </script>
