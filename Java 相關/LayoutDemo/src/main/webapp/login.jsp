@@ -11,6 +11,7 @@
 		<title>Layout</title>
 	    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
 	    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+	    <link rel="shortcut icon" href="./images/icon.png" type="image/x-icon"/>
 	    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
 	    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
 	    <style>
@@ -30,7 +31,6 @@
 	            width: 500px;
 	            height: 350px;
 	    	}
-	    
 	    </style>
 	</head>
 	<body>
