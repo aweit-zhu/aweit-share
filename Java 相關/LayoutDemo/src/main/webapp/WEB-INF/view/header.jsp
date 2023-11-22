@@ -43,10 +43,17 @@
 		        <li class="nav-item">
 		          <a role="button" class="nav-link text-light" href="./page3.jsp">🎄下載檔案</a>
 		        </li>
+
+		     </ul>
+		     <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+		     	<li class="nav-item">
+		         	<i class="bi bi-person-circle d-none d-lg-block h5 my-0 text-light me-3" role="button"> ${sessionScope.username}</i>
+		        </li>
+		        <li class="nav-item">
+		         	<i class="bi bi-box-arrow-right text-light ml-3" role="button" onclick="window.location.href='./logout'">Logout</i>
+		        </li>
 		     </ul>
 		    </div>
-		    <i class="bi bi-person-circle d-none d-xl-block h5 my-0 text-light me-3" role="button"> ${sessionScope.username}</i>
-		    <i class="bi bi-box-arrow-right text-light ml-3" role="button" onclick="window.location.href='./logout'">Logout</i>
 		  </div>
 		</nav>
 	</body>
