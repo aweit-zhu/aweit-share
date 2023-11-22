@@ -52,27 +52,7 @@
 					<button class="btn btn-primary w-100" type="submit">Login</button>
 				</div>
 			</form>
+			<script src="./js/form-validation.js"></script>
 		</div>
 	</body>
 </html>
-
-<script type="text/javascript">
-	(function() {
-		'use strict'
-
-		// Fetch all the forms we want to apply custom Bootstrap validation styles to
-		var forms = document.querySelectorAll('.needs-validation')
-
-		// Loop over them and prevent submission
-		Array.prototype.slice.call(forms).forEach(function(form) {
-			form.addEventListener('submit', function(event) {
-				if (!form.checkValidity()) {
-					event.preventDefault()
-					event.stopPropagation()
-				}
-
-				form.classList.add('was-validated');
-			}, false)
-		})
-	})()
-</script>

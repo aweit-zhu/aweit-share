@@ -95,26 +95,8 @@
 </div>
 
 <%--@ include file="/WEB-INF/view/footer.jsp" --%>
-
+<script src="./js/form-validation.js"></script>
 <script type="text/javascript">
-	(function() {
-		'use strict'
-
-		// Fetch all the forms we want to apply custom Bootstrap validation styles to
-		var forms = document.querySelectorAll('.needs-validation')
-
-		// Loop over them and prevent submission
-		Array.prototype.slice.call(forms).forEach(function(form) {
-			form.addEventListener('submit', function(event) {
-				if (!form.checkValidity()) {
-					event.preventDefault()
-					event.stopPropagation()
-				}
-
-				form.classList.add('was-validated');
-			}, false)
-		})
-	})()
 
 	$('#upfile').on('change', function(e) {
 		let fileInfo = '<font color="blue">';

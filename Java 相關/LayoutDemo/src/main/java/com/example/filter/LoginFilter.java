@@ -19,7 +19,10 @@ public class LoginFilter extends HttpFilter{
 		
 		String urlString = request.getRequestURL().toString();
 		
-		if(urlString.endsWith("login.jsp") || urlString.endsWith("login") || urlString.indexOf("/images")>=0 || urlString.endsWith(".css")) {
+		if(urlString.endsWith("login.jsp") || urlString.endsWith("login") 
+				|| urlString.indexOf("/images")>=0 
+				|| urlString.endsWith(".css")
+				|| urlString.endsWith(".js") ) {
 			chain.doFilter(request, response);
 			return;
 		}
