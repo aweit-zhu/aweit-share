@@ -1,4 +1,4 @@
-package com.example;
+package com.example.controller;
 
 import java.io.File;
 import java.io.IOException;
@@ -41,7 +41,6 @@ public class Page2Servlet extends HttpServlet {
 		System.out.println("end_date:" + endDateString);
 		System.out.println("memo:" + memoString);
 
-		// 檔案
 		String applicationPath = req.getServletContext().getRealPath("");
 		String uploadFilePath = applicationPath + File.separator + UPLOAD_DIR;
 

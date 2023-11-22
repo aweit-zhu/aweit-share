@@ -27,14 +27,15 @@
 <div class="w-100 h-100" style="padding-top: 5rem">
 	<div
 		class="d-flex flex-column flex-lg-row justify-content-center mx-5 align-items-center">
-		<form id="form1" class="row g-3 needs-validation col-12 col-lg-6" novalidate action="./page2" method="post" enctype="multipart/form-data" onsubmit="return check()">
+		<form id="form1" class="row g-3 needs-validation col-12 col-lg-6" novalidate 
+		      action="./page2" method="post" enctype="multipart/form-data" onsubmit="return check()">
 			<h4 class="text-center">請假表單</h4>
 
 			<!-- 文字輸入框 -->
 			<div>
 				<label for="username" class="form-label">Username</label> <input
 					type="text" class="form-control" id="username" name="username"
-					value="" required>
+					value="${sessionScope.username}" required>
 				<div class="invalid-feedback">請輸入Username</div>
 			</div>
 
