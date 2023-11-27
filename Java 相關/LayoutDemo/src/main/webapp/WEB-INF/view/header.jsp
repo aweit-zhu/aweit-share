@@ -9,17 +9,8 @@
 	    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 	    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
 	    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
-	    <style>
-	    	.nav-item a:hover {
-	    		color: yellow !important;
-	    	}
-	    	
-	    	nav {
-	    		position:fixed !important;
-	    		z-index: 99;
-	    	}
-	    	
-	    </style>
+	    <link rel="shortcut icon" href="./images/icon.png" type="image/x-icon"/>
+	    <link rel="stylesheet" href="./styles/style.css">
 	</head>
 	<body>
 		<nav class="navbar navbar-expand-lg navbar-light bg-primary vw-100">
@@ -32,19 +23,28 @@
 		    <div class="collapse navbar-collapse" id="navbarSupportedContent">
 		      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 		      	<li class="nav-item">
-		          <a role="button" class="nav-link text-light" href="./">首頁</a>
+		          <a role="button" class="nav-link text-light" href="./">🎄報表</a>
 		        </li>
 		        <li class="nav-item">
-		          <a role="button" class="nav-link text-light" href="./page1.jsp">Page1</a>
+		          <a role="button" class="nav-link text-light" href="./page1.jsp">🎄表單製作</a>
 		        </li>
 		        <li class="nav-item">
-		          <!--  <a role="button" class="nav-link text-light" href="./WEB-INF/view/page2.jsp">Page2</a> -->
-		          
-		          <a role="button" class="nav-link text-light" href="./page2">Page2</a>
+		          <a role="button" class="nav-link text-light" href="./page2">🎄表單驗證+上傳檔案</a>
+		        </li>
+		        <li class="nav-item">
+		          <a role="button" class="nav-link text-light" href="./page3.jsp">🎄下載檔案</a>
+		        </li>
+
+		     </ul>
+		     <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+		     	<li class="nav-item">
+		         	<i class="bi bi-person-circle d-none d-lg-block h5 my-0 text-light me-3" role="button"> ${sessionScope.username}</i>
+		        </li>
+		        <li class="nav-item">
+		         	<i class="bi bi-box-arrow-right text-light ml-3" role="button" onclick="window.location.href='./logout'">Logout</i>
 		        </li>
 		     </ul>
 		    </div>
-		    <i class="bi bi-person-circle d-none d-xl-block h5 my-0 text-light me-3" role="button"></i>
 		  </div>
 		</nav>
 	</body>

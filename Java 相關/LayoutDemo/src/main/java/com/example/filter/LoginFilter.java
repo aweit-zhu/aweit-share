@@ -10,25 +10,32 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-@WebFilter( value = {"/*"})
+@WebFilter(value = {"/*"})
 public class LoginFilter extends HttpFilter{
 
 	@Override
-	protected void doFilter(HttpServletRequest req, HttpServletResponse res, FilterChain chain) throws IOException, ServletException {
+	protected void doFilter(HttpServletRequest request, HttpServletResponse response, FilterChain chain)
+			throws IOException, ServletException {
 		
-		String url = req.getRequestURL().toString();
-
-		if(url.indexOf("/login.jsp") >=0) {
-			chain.doFilter(req, res);
+		String urlString = request.getRequestURL().toString();
+		
+		if(urlString.endsWith("login.jsp") || urlString.endsWith("login") 
+				|| urlString.indexOf("/images")>=0 
+				|| urlString.endsWith(".css")
+				|| urlString.endsWith(".js") ) {
+			chain.doFilter(request, response);
 			return;
 		}
 		
-		HttpSession session = req.getSession();
-		boolean isLogin = (boolean)session.getAttribute("islogin");
+		HttpSession session = request.getSession();
+		boolean isLogin = session.getAttribute("isLogin") == null ? false: (boolean)session.getAttribute("isLogin");
 		if(!isLogin) {
-			res.sendRedirect("./login.jsp");
+			response.sendRedirect("./login.jsp");
 			return;
 		}
-		chain.doFilter(req, res);
+		
+		chain.doFilter(request, response);
+		
 	}
+
 }
