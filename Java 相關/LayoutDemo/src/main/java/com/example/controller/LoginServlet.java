@@ -13,29 +13,28 @@ import javax.servlet.http.HttpSession;
 import org.mindrot.jbcrypt.BCrypt;
 
 @WebServlet(value = "/login")
-public class LoginServlet extends HttpServlet{
+public class LoginServlet extends HttpServlet {
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		
+
 		String username = req.getParameter("username");
 		String password = req.getParameter("password");
-	
-		// ÅçÃÒ¥Î¤áµn¤J¸ê°T¡G°²³] username=user,password=123 (¸ê®Æ®w¦s¡G$2a$10$ms1UGigcUkZP0axeEY4JM.3bG9CawnqegKEH2Dlw.fJAv.wLF6Zf.)
-		boolean isPasswordMatch = BCrypt.checkpw(password, "$2a$10$ms1UGigcUkZP0axeEY4JM.3bG9CawnqegKEH2Dlw.fJAv.wLF6Zf.");
-		if(!"user".equals(username) || !isPasswordMatch) {
-			req.setAttribute("error", "±b¸¹©Î±K½X¿ù»~!");
+
+		boolean isPasswordMatch = BCrypt.checkpw(password,
+				"$2a$10$ms1UGigcUkZP0axeEY4JM.3bG9CawnqegKEH2Dlw.fJAv.wLF6Zf.");
+		if (!"user".equals(username) || !isPasswordMatch) {
+			req.setAttribute("error", "å¸³è™Ÿæˆ–å¯†ç¢¼è¼¸å…¥éŒ¯èª¤!");
 			RequestDispatcher dp = req.getRequestDispatcher("/login.jsp");
 			dp.forward(req, resp);
 			return;
-		} 
-		
+		}
+
 		HttpSession session = req.getSession();
-		session.setMaxInactiveInterval(60 * 15); // ³æ¦ì¬°¬í
+		session.setMaxInactiveInterval(60 * 15); // 15åˆ†é˜ï¼šå¦‚æœåœ¨æŒ‡å®šçš„ä¸€æ®µæ™‚é–“å…§ï¼Œæ²’æœ‰ä»»ä½•çš„è«‹æ±‚é€²ä¾†ï¼Œsessionæœƒå¤±æ•ˆã€‚
 		session.setAttribute("isLogin", true);
 		session.setAttribute("username", username);
 		resp.sendRedirect("./");
 	}
 
-	
 }

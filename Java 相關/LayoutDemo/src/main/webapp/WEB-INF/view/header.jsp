@@ -34,7 +34,9 @@
 		        <li class="nav-item">
 		          <a role="button" class="nav-link text-light" href="./page3.jsp">🎄下載檔案</a>
 		        </li>
-
+		        <li class="nav-item">
+		          <a role="button" class="nav-link text-light" href="./page4.jsp">🎄上傳檔案</a>
+		        </li>
 		     </ul>
 		     <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
 		     	<li class="nav-item">

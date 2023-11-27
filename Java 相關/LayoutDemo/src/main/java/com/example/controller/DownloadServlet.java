@@ -6,12 +6,15 @@ import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.net.URISyntaxException;
 import java.net.URL;
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
 import javax.annotation.Resource;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -48,7 +51,7 @@ public class DownloadServlet extends HttpServlet {
 }
 
 
-// 傳統方法：
+// 傳統方式
 //try (InputStream input = getClass().getClassLoader().getResourceAsStream(filename);
 //OutputStream output = resp.getOutputStream()) {
 //byte[] buffer = new byte[4096];
