@@ -4,4 +4,5 @@ build/**
 
 *.class
 .settings
-/Java 相關/LayoutDemo/build
+/build
+/doc
