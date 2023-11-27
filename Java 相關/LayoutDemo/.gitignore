@@ -4,3 +4,4 @@ build/**
 .settings/**
 
 *.class
+/target/
