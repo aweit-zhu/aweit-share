@@ -21,17 +21,17 @@ public class LoginServlet extends HttpServlet{
 		String username = req.getParameter("username");
 		String password = req.getParameter("password");
 	
-		// ÅçÃÒ¥Î¤áµn¤J¸ê°T¡G°²³] username=user,password=123 (¸ê®Æ®w¦s¡G$2a$10$ms1UGigcUkZP0axeEY4JM.3bG9CawnqegKEH2Dlw.fJAv.wLF6Zf.)
+		// ï¿½ï¿½ï¿½Ò¥Î¤ï¿½nï¿½Jï¿½ï¿½Tï¿½Gï¿½ï¿½ï¿½] username=user,password=123 ($2a$10$ms1UGigcUkZP0axeEY4JM.3bG9CawnqegKEH2Dlw.fJAv.wLF6Zf.)
 		boolean isPasswordMatch = BCrypt.checkpw(password, "$2a$10$ms1UGigcUkZP0axeEY4JM.3bG9CawnqegKEH2Dlw.fJAv.wLF6Zf.");
 		if(!"user".equals(username) || !isPasswordMatch) {
-			req.setAttribute("error", "±b¸¹©Î±K½X¿ù»~!");
+			req.setAttribute("error", "å¸³è™Ÿæˆ–å¯†ç¢¼è¼¸å…¥éŒ¯èª¤!");
 			RequestDispatcher dp = req.getRequestDispatcher("/login.jsp");
 			dp.forward(req, resp);
 			return;
 		} 
 		
 		HttpSession session = req.getSession();
-		session.setMaxInactiveInterval(60 * 15); // ³æ¦ì¬°¬í
+		session.setMaxInactiveInterval(60 * 15); // ï¿½ï¿½ì¬°ï¿½ï¿½
 		session.setAttribute("isLogin", true);
 		session.setAttribute("username", username);
 		resp.sendRedirect("./");
