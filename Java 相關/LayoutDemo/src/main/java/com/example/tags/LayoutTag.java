@@ -8,8 +8,6 @@ import javax.servlet.jsp.tagext.TagSupport;
 
 public class LayoutTag extends TagSupport{
 
-	
-	
 	@Override
 	public int doStartTag() throws JspException {
 		try {
