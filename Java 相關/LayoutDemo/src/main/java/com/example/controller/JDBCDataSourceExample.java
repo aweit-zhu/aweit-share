@@ -8,22 +8,24 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Date;
 
-import javax.naming.NamingException;
+import javax.annotation.Resource;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import com.example.config.EmployeeDBDataSource;
+import javax.sql.DataSource;
 
 @WebServlet("/JDBCDataSourceExample")
 public class JDBCDataSourceExample extends HttpServlet {
 
+    @Resource(name = "jdbc/EmployeeDB")
+    private DataSource dataSource;
+	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		try (Connection con = EmployeeDBDataSource.getDataSource().getConnection();
+		try (Connection con = dataSource.getConnection();
 				Statement stmt = con.createStatement();
 				ResultSet rs = stmt.executeQuery("SELECT * FROM EMPLOYEE");) {
 
@@ -60,8 +62,6 @@ public class JDBCDataSourceExample extends HttpServlet {
 
 		} catch (SQLException e) {
 			e.printStackTrace();
-		} catch (NamingException e1) {
-			e1.printStackTrace();
 		}
 	}
 }

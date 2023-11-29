@@ -55,6 +55,9 @@ public class EmployeeDBDataSource {
 
 	private static DataSource ds;
 
+	/**
+	 * 其實透過 web.xml 的標籤，就可以取得此 Data Source。
+	 * */
 	public static DataSource getDataSource() throws NamingException{
 		if(ds == null) {
 			try {
