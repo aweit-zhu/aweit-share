@@ -20,7 +20,7 @@ public class LoginServlet extends HttpServlet {
 
 		String username = req.getParameter("username");
 		String password = req.getParameter("password");
-
+		
 		boolean isPasswordMatch = BCrypt.checkpw(password,
 				"$2a$10$ms1UGigcUkZP0axeEY4JM.3bG9CawnqegKEH2Dlw.fJAv.wLF6Zf.");
 		if (!"user".equals(username) || !isPasswordMatch) {
