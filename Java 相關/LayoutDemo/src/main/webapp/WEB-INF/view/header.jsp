@@ -5,12 +5,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Layout</title>
-	    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
-	    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-	    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-	    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
-	    <link rel="shortcut icon" href="./images/icon.png" type="image/x-icon"/>
-	    <link rel="stylesheet" href="./styles/style.css">
+		<%@ include file="/WEB-INF/view/library.jspf" %>
 	</head>
 	<body>
 		<nav class="navbar navbar-expand-lg navbar-light bg-primary vw-100">
@@ -36,6 +31,9 @@
 		        </li>
 		        <li class="nav-item">
 		          <a role="button" class="nav-link text-light" href="./page4.jsp">🎄上傳檔案</a>
+		        </li>
+		        <li class="nav-item">
+		          <a role="button" class="nav-link text-light" href="./shopping.jsp">🎄購物車</a>
 		        </li>
 		     </ul>
 		     <ul class="navbar-nav ml-auto mb-2 mb-lg-0">

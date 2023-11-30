@@ -38,14 +38,16 @@ public class GenerateQRCode {
 		MatrixToImageWriter.writeToPath(matrix, path.substring(path.lastIndexOf('.') + 1), Paths.get(path));
 
 	}
+	
 	public static String readQRcode(String path, String charset) throws FileNotFoundException, IOException, NotFoundException  {  
 		BinaryBitmap binaryBitmap = new BinaryBitmap(new HybridBinarizer(new BufferedImageLuminanceSource(ImageIO.read(new FileInputStream(path)))));  
 		Result rslt = new MultiFormatReader().decode(binaryBitmap);  
 		return rslt.getText();  
-	}  
+	}
+	
 	public static void main(String args[]) throws WriterException, IOException, NotFoundException {
-		String str = "https://www.google.com.tw/";
-		String path = "Quote.png";
+		String str = "./product";
+		String path = "HandBurger.png";
 		String charset = "UTF-8";
 		Map<EncodeHintType, ErrorCorrectionLevel> hashMap = new HashMap<>();
 		hashMap.put(EncodeHintType.ERROR_CORRECTION, ErrorCorrectionLevel.L);
