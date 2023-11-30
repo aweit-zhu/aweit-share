@@ -25,7 +25,3 @@
 </div>
 
 <%@ include file="/WEB-INF/view/library.jspf" %>
-
-<script type="text/javascript">
-
-</script>
