@@ -3,7 +3,7 @@ var bsIcon_css = 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/boots
 var bs_js = 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js';
 
 var doorClose = `
-    <div class="d-flex flex-column justify-content-center align-items-center position-relative my-2 ds-tooltip" role="button">
+    <div class="d-flex flex-column justify-content-center align-items-center position-relative my-2 ds-tooltip door" role="button">
         <p class="my-0 position-absolute text-danger status">Close</p>
         <i class="bi bi-door-closed mx-2"></i>
         <p class="my-0 position-absolute title">doorName</p>
@@ -12,7 +12,7 @@ var doorClose = `
 `;
 
 var doorOpen = `
-    <div class="d-flex flex-column justify-content-center align-items-center position-relative my-2 ds-tooltip" role="button">
+    <div class="d-flex flex-column justify-content-center align-items-center position-relative my-2 ds-tooltip door" role="button">
         <p class="my-0 position-absolute text-success status">Open</p>
         <i class="bi bi-door-open mx-2"></i>
         <p class="my-0 position-absolute title">doorName</p>
@@ -21,7 +21,7 @@ var doorOpen = `
 `;
 
 var doorStop = `
-    <div class="d-flex flex-column justify-content-center align-items-center position-relative my-2">
+    <div class="d-flex flex-column justify-content-center align-items-center position-relative my-2 door">
         <p class="my-0 position-absolute text-danger status">Close</p>
         <i class="bi bi-door-closed mx-2"></i>
         <p class="my-0 position-absolute title">doorName</p>
@@ -30,6 +30,7 @@ var doorStop = `
 `;
 
 var style = `
+
     i {
         font-size:28px;
         top:2em;
@@ -43,7 +44,7 @@ var style = `
 
     .title {
         font-size: 5px;
-        bottom: -2px;
+        bottom: -1px;
         font-weight: bold;
     }
 
@@ -53,9 +54,15 @@ var style = `
         color: red;
     }
 
+    .door {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     .ds-tooltip {
         position: relative;
         display: inline-block;
+
     }
       
     .ds-tooltip .ds-tooltiptext {
