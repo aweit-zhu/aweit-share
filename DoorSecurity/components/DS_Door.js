@@ -1,31 +1,31 @@
-
 var bs_css = 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css';
 var bsIcon_css = 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css';
 var bs_js = 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js';
 
-var door_name = '';
-
 var doorClose = `
-    <div class="d-flex flex-column justify-content-center align-items-center position-relative my-2">
+    <div class="d-flex flex-column justify-content-center align-items-center position-relative my-2 ds-tooltip">
         <p class="my-0 position-absolute text-danger status">Close</p>
-        <i class="bi bi-door-closed mx-2"></i>
+        <i class="bi bi-door-closed mx-2"  role="button"></i>
         <p class="my-0 position-absolute title">doorName</p>
+        <span class="ds-tooltiptext">Open Door</span>
     </div>
 `;
 
 var doorOpen = `
-    <div class="d-flex flex-column justify-content-center align-items-center position-relative my-2">
+    <div class="d-flex flex-column justify-content-center align-items-center position-relative my-2 ds-tooltip">
         <p class="my-0 position-absolute text-success status">Open</p>
-        <i class="bi bi-door-open mx-2"></i>
+        <i class="bi bi-door-open mx-2"  role="button"></i>
         <p class="my-0 position-absolute title">doorName</p>
+        <span class="ds-tooltiptext">Close Door</span>
     </div>
 `;
 
 var doorStop = `
     <div class="d-flex flex-column justify-content-center align-items-center position-relative my-2">
-        <p class="my-0 position-absolute text-danger status">Stop</p>
+        <p class="my-0 position-absolute text-danger status">Close</p>
         <i class="bi bi-door-closed mx-2"></i>
         <p class="my-0 position-absolute title">doorName</p>
+        <i class="bi bi-lock-fill position-absolute stop"></i>
     </div>
 `;
 
@@ -38,12 +38,43 @@ var style = `
     .status {
         font-size:6px;
         top:-1px;
+        font-weight: bold;
     }
 
     .title {
         font-size: 5px;
         bottom: -2px;
         font-weight: bold;
+    }
+
+    .stop {
+        top: 12px;
+        font-size: 12px;
+        color: red;
+    }
+
+    .ds-tooltip {
+        position: relative;
+        display: inline-block;
+    }
+      
+    .ds-tooltip .ds-tooltiptext {
+        cursor: pointer;
+        visibility: hidden;
+        font-size: 3px;
+        bottom: -2px;
+        font-weight: bold;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        border-radius: 2px;
+        padding: 1px;
+        position: absolute;
+        z-index: 1;
+    }
+      
+    .ds-tooltip:hover .ds-tooltiptext {
+        visibility: visible;
     }
 `;
 
