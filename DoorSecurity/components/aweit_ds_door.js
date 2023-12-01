@@ -32,25 +32,25 @@ var doorStop = `
 var style = `
 
     i {
-        font-size:28px;
+        font-size:110px;
         top:2em;
     }
 
     .status {
-        font-size:6px;
+        font-size:20px;
         top:-1px;
         font-weight: bold;
     }
 
     .title {
-        font-size: 5px;
-        bottom: -1px;
+        font-size: 20px;
+        bottom: -5px;
         font-weight: bold;
     }
 
     .stop {
-        top: 12px;
-        font-size: 12px;
+        top: 40px;
+        font-size: 50px;
         color: red;
     }
 
@@ -62,14 +62,13 @@ var style = `
     .ds-tooltip {
         position: relative;
         display: inline-block;
-
     }
       
     .ds-tooltip .ds-tooltiptext {
         cursor: pointer;
         visibility: hidden;
-        font-size: 3px;
-        bottom: 15px;
+        font-size: 20x;
+
         font-weight: bold;
         background-color: black;
         color: #fff;
