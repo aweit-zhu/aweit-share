@@ -144,12 +144,12 @@ class DoorSecurity extends HTMLElement {
         const root = shadow.querySelector('#root');
 
         if (name === 'status' && value == 1) {
-            root.innerHTML = doorOpen.replace("doorName", this.getAttribute('door_name'))
+            root.innerHTML = doorOpen.replace("doorName", this.getAttribute('door_id'))
         } else if(name === 'status' && value == 0) {
-        //    root.innerHTML = doorClose.replace("doorName", this.getAttribute('door_name'))
-            root.innerHTML = doorStop.replace("doorName", this.getAttribute('door_name'))
+        //    root.innerHTML = doorClose.replace("doorName", this.getAttribute('door_id'))
+            root.innerHTML = doorStop.replace("doorName", this.getAttribute('door_id'))
         } else if(name === 'status' && value == -1) {
-            root.innerHTML = doorStop.replace("doorName", this.getAttribute('door_name'))
+            root.innerHTML = doorStop.replace("doorName", this.getAttribute('door_id'))
         }
     }
 
