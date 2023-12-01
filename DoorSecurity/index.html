@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./components/DS_Door.js"></script>
+</head>
+<body>
+
+    <div class="d-flex justify-content-center">
+        <ds-door id="door1" status=1 door_name="A001"></ds-door>
+        <ds-door id="door2" status=0 door_name="A002"></ds-door>
+        <ds-door id="door3" status=-1 door_name="A003"></ds-door>
+    </div>
+
+    <script>
+        const door1 = document.getElementById('door1');
+        door1.registerClickHandler(() => triggerDoor(door1));
+
+        const door2 = document.getElementById('door2');
+        door2.registerClickHandler(() => triggerDoor(door2));
+
+        const door3 = document.getElementById('door3');
+        door3.registerClickHandler(() => triggerDoor(door3));
+
+
+        function triggerDoor(element) {
+            let status = element.getAttribute('status');
+            if(status == -1) {
+                return;
+            }
+            element.setAttribute('status', status == 1 ? 0: 1);
+        }
+
+    </script>
+
+</body>
+</html>
