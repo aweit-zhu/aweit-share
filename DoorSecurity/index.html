@@ -13,28 +13,37 @@
 <body>
 
     <div class="d-flex justify-content-center">
-        <ds-door id="door1" status=1 door_name="A001"></ds-door>
-        <ds-door id="door2" status=0 door_name="A002"></ds-door>
-        <ds-door id="door3" status=-1 door_name="A003"></ds-door>
+        <ds-door status=1  door_name="A001"></ds-door>
+        <ds-door status=0  door_name="A002"></ds-door>
+        <ds-door status=-1 door_name="A003"></ds-door>
+        <ds-door status=1  door_name="A004"></ds-door>
+        <ds-door status=-1 door_name="A005"></ds-door>
+        <ds-door status=1  door_name="A006"></ds-door>
+        <ds-door status=-1 door_name="A007"></ds-door>
     </div>
-
+    <div class="d-flex justify-content-center">
+        <ds-door status=0  door_name="A008"></ds-door>
+        <ds-door status=-1  door_name="A009"></ds-door>
+        <ds-door status=0 door_name="A010"></ds-door>
+        <ds-door status=0  door_name="A011"></ds-door>
+        <ds-door status=-1 door_name="A012"></ds-door>
+        <ds-door status=1  door_name="A013"></ds-door>
+        <ds-door status=0 door_name="A014"></ds-door>
+    </div>
     <script>
-        const door1 = document.getElementById('door1');
-        door1.registerClickHandler(() => triggerDoor(door1));
 
-        const door2 = document.getElementById('door2');
-        door2.registerClickHandler(() => triggerDoor(door2));
+        document.querySelectorAll('ds-door').forEach(register);
 
-        const door3 = document.getElementById('door3');
-        door3.registerClickHandler(() => triggerDoor(door3));
+        function register(door,index) {
+            door.registerClickHandler(() => tap(door));
+        }
 
-
-        function triggerDoor(element) {
-            let status = element.getAttribute('status');
+        function tap(door) {
+            let status = door.getAttribute('status');
             if(status == -1) {
                 return;
             }
-            element.setAttribute('status', status == 1 ? 0: 1);
+            door.setAttribute('status', status == 1 ? 0: 1);
         }
 
     </script>

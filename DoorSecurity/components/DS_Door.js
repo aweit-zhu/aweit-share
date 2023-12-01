@@ -3,18 +3,18 @@ var bsIcon_css = 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/boots
 var bs_js = 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js';
 
 var doorClose = `
-    <div class="d-flex flex-column justify-content-center align-items-center position-relative my-2 ds-tooltip">
+    <div class="d-flex flex-column justify-content-center align-items-center position-relative my-2 ds-tooltip" role="button">
         <p class="my-0 position-absolute text-danger status">Close</p>
-        <i class="bi bi-door-closed mx-2"  role="button"></i>
+        <i class="bi bi-door-closed mx-2"></i>
         <p class="my-0 position-absolute title">doorName</p>
         <span class="ds-tooltiptext">Open Door</span>
     </div>
 `;
 
 var doorOpen = `
-    <div class="d-flex flex-column justify-content-center align-items-center position-relative my-2 ds-tooltip">
+    <div class="d-flex flex-column justify-content-center align-items-center position-relative my-2 ds-tooltip" role="button">
         <p class="my-0 position-absolute text-success status">Open</p>
-        <i class="bi bi-door-open mx-2"  role="button"></i>
+        <i class="bi bi-door-open mx-2"></i>
         <p class="my-0 position-absolute title">doorName</p>
         <span class="ds-tooltiptext">Close Door</span>
     </div>
@@ -62,7 +62,7 @@ var style = `
         cursor: pointer;
         visibility: hidden;
         font-size: 3px;
-        bottom: -2px;
+        bottom: 15px;
         font-weight: bold;
         background-color: black;
         color: #fff;
@@ -129,7 +129,7 @@ class DS_Door extends HTMLElement {
     }
 
     attributeChangedCallback(name, oldValue, newValue) {
-        console.log(`属性 ${name} 已由 ${oldValue} 变更为 ${newValue}。`);
+        //console.log(`属性 ${name} 已由 ${oldValue} 变更为 ${newValue}。`);
         this.updateStyle(this,name,newValue);
     }
 
