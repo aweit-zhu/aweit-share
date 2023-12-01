@@ -85,7 +85,7 @@ var style = `
     }
 `;
 
-class DS_Door extends HTMLElement {
+class DoorSecurity extends HTMLElement {
 
     constructor() {
         super();
@@ -158,4 +158,4 @@ class DS_Door extends HTMLElement {
     }
 }
 
-customElements.define("ds-door", DS_Door);
+customElements.define("aweit-ds-door", DoorSecurity);
