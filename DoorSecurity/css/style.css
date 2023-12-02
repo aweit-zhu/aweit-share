@@ -12,6 +12,7 @@ body {
 }
 
 .nav-item a:hover {
+	font-weight: bolder !important;
 	color: yellow !important;
 }
 
