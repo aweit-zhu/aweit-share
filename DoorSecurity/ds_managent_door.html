@@ -1,0 +1,54 @@
+<script src="./components/aweit_ds_door/aweit_ds_door.js"></script>
+<style>
+    .door {
+        background-color: #f5f5f5;
+    }
+    .door:hover  {
+        border: 2px solid black !important;
+    }
+</style>
+<div class="d-flex flex-row justify-content-center align-items-start">
+
+    <div class="vh-100 w-100 d-flex flex-column justify-content-center align-items-center">
+        <p class="text-center h3 fw-bolder">A棟</p>
+        <div class="d-flex justify-content-start align-items-center flex-wrap" width="500px;">
+            <div class="m-2 border door"><aweit-ds-door type="door" door_id="A001" door_name="總經理室"></aweit-ds-door></div>
+            <div class="m-2 border door"><aweit-ds-door type="door" door_id="A002" door_name="健身房"></aweit-ds-door></div>
+            <div class="m-2 border door"><aweit-ds-door type="door" door_id="A003" door_name="餐廳區"></aweit-ds-door></div>
+            <div class="m-2 border door"><aweit-ds-door type="door" door_id="A004" door_name="按摩區"></aweit-ds-door></div>
+            <div class="m-2 border door"><aweit-ds-door type="door" door_id="A005" door_name="諮商室"></aweit-ds-door></div>
+        </div>
+        <p class="text-center h3 fw-bolder">B棟</p>
+        <div class="d-flex justify-content-start align-items-center flex-wrap" width="500px;">
+            <div class="m-2 border door"><aweit-ds-door type="door" door_id="B001" door_name="實驗室B"></aweit-ds-door></div>
+            <div class="m-2 border door"><aweit-ds-door type="door" door_id="B002" door_name="收發室"></aweit-ds-door></div>
+            <div class="m-2 border door"><aweit-ds-door type="door" door_id="B003" door_name="實驗室A"></aweit-ds-door></div>
+            <div class="m-2 border door"><aweit-ds-door type="door" door_id="B004" door_name="實驗室C"></aweit-ds-door></div>
+            <div class="m-2 border door"><aweit-ds-door type="door" door_id="B005" door_name="實驗室D"></aweit-ds-door></div>
+        </div>
+    </div>
+    <div class="vh-100 w-100 d-flex flex-column justify-content-center align-items-center" id="door_info">
+        <h2></h2>
+        <h3></h3>
+    </div>
+
+</div>
+
+<script>
+
+    document.querySelectorAll('aweit-ds-door').forEach(register);
+
+    function register(door,index) {
+        door.registerClickHandler(() => tap(door));
+    }
+
+    var updateList = new Map();
+
+    function tap(door) {
+        let door_id = door.getAttribute('door_id');
+        let door_name = door.getAttribute('door_name');
+        $('#door_info h2').html(door_id);
+        $('#door_info h3').html(door_name);
+    }
+
+</script>

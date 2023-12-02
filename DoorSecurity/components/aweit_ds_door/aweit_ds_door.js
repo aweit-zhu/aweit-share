@@ -29,7 +29,7 @@ class DoorSecurity extends HTMLElement {
     }
 
     static get observedAttributes() {
-        return ["status"];
+        return ["status","type"];
     }
 
     attributeChangedCallback(name, oldValue, newValue) {
@@ -41,25 +41,38 @@ class DoorSecurity extends HTMLElement {
         const shadow = elem.shadowRoot;
         const root = shadow.querySelector('#root');
         const door = root.querySelector('#door');
+        const type = this.getAttribute('type');
+
         door.querySelector('#door_name').innerHTML = this.getAttribute('door_name');
         door.querySelector('#door_id').innerHTML = this.getAttribute('door_id');
-        if (name === 'status' && value == 1) {
+        if(type == 'employee') {
+            if (name === 'status' && value == 1) {
+                door.querySelector('#door_pic').classList.remove('bi-door-closed');
+                door.querySelector('#door_pic').classList.add('bi-door-open');
+                door.querySelector('#door_stop').classList.add('d-none');
+                door.querySelector('#door_status').innerHTML = 'Open';
+                door.querySelector('#door_status').classList.remove('text-danger');
+                door.querySelector('#door_status').classList.add('text-success');
+            } else if(name === 'status' && value <= 0) {
+                door.querySelector('#door_pic').classList.add('bi-door-closed');
+                door.querySelector('#door_pic').classList.remove('bi-door-open');
+                door.querySelector('#door_stop').classList.remove('d-none');
+                door.querySelector('#door_status').innerHTML = 'Close';
+                door.querySelector('#door_status').classList.add('text-danger');
+                door.querySelector('#door_status').classList.remove('text-success');
+                if(value< 0) {
+                    door.querySelector('#door_stop').classList.add('d-none');
+                }
+            }
+        }
+        if(type == 'door') {
+
             door.querySelector('#door_pic').classList.remove('bi-door-closed');
             door.querySelector('#door_pic').classList.add('bi-door-open');
             door.querySelector('#door_stop').classList.add('d-none');
-            door.querySelector('#door_status').innerHTML = 'Open';
+            door.querySelector('#door_status').innerHTML = '';
             door.querySelector('#door_status').classList.remove('text-danger');
-            door.querySelector('#door_status').classList.add('text-success');
-        } else if(name === 'status' && value <= 0) {
-            door.querySelector('#door_pic').classList.add('bi-door-closed');
-            door.querySelector('#door_pic').classList.remove('bi-door-open');
-            door.querySelector('#door_stop').classList.remove('d-none');
-            door.querySelector('#door_status').innerHTML = 'Close';
-            door.querySelector('#door_status').classList.add('text-danger');
             door.querySelector('#door_status').classList.remove('text-success');
-            if(value< 0) {
-                door.querySelector('#door_stop').classList.add('d-none');
-            }
         }
     }
 
