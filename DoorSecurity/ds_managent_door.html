@@ -7,34 +7,48 @@
         border: 2px solid black !important;
     }
 </style>
-<div class="d-flex flex-row justify-content-center align-items-start">
-
-    <div class="vh-100 w-100 d-flex flex-column justify-content-center align-items-center">
-        <p class="text-center h3 fw-bolder">A棟</p>
-        <div class="d-flex justify-content-start align-items-center flex-wrap" width="500px;">
-            <div class="m-2 border door"><aweit-ds-door type="door" door_id="A001" door_name="總經理室"></aweit-ds-door></div>
-            <div class="m-2 border door"><aweit-ds-door type="door" door_id="A002" door_name="健身房"></aweit-ds-door></div>
-            <div class="m-2 border door"><aweit-ds-door type="door" door_id="A003" door_name="餐廳區"></aweit-ds-door></div>
-            <div class="m-2 border door"><aweit-ds-door type="door" door_id="A004" door_name="按摩區"></aweit-ds-door></div>
-            <div class="m-2 border door"><aweit-ds-door type="door" door_id="A005" door_name="諮商室"></aweit-ds-door></div>
+<div class=" vh-100 overflow-scroll" style="padding-top: 20px;">
+    <div id="doorList" class="d-flex justify-content-center align-items-center" width="500px;"></div>
+    <div id="door_info" class="row h-auto mt-3 d-none">
+        <div class="col-6">
+            <div class="card mx-auto border border-dark shadow" style="width: 18rem; height:25rem">
+                <img src="" class="door_pic card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title door_id"></h5>
+                  <p class="card-text door_desc"></p>
+                </div>
+            </div>
         </div>
-        <p class="text-center h3 fw-bolder">B棟</p>
-        <div class="d-flex justify-content-start align-items-center flex-wrap" width="500px;">
-            <div class="m-2 border door"><aweit-ds-door type="door" door_id="B001" door_name="實驗室B"></aweit-ds-door></div>
-            <div class="m-2 border door"><aweit-ds-door type="door" door_id="B002" door_name="收發室"></aweit-ds-door></div>
-            <div class="m-2 border door"><aweit-ds-door type="door" door_id="B003" door_name="實驗室A"></aweit-ds-door></div>
-            <div class="m-2 border door"><aweit-ds-door type="door" door_id="B004" door_name="實驗室C"></aweit-ds-door></div>
-            <div class="m-2 border door"><aweit-ds-door type="door" door_id="B005" door_name="實驗室D"></aweit-ds-door></div>
+        <div class="col-6">
+            
         </div>
     </div>
-    <div class="vh-100 w-100 d-flex flex-column justify-content-center align-items-center" id="door_info">
-        <h2></h2>
-        <h3></h3>
-    </div>
-
 </div>
 
 <script>
+
+    var doorList = [];
+
+    $.ajax({
+        async:false,
+        url:'./api/ds_door.json',
+        dataType: 'json',
+        success: function(doors) {
+            doorList = doors;   
+        }
+    });
+
+    doorList.forEach(render); 
+
+    function render(door,index) {
+        let ds_door =
+         ` 
+            <div class="m-2 border door">
+                <aweit-ds-door type="door" door_id="${door.door_id}" door_name="${door.door_name}" door_pic="${door.door_pic}" door_desc="${door.door_desc}"></aweit-ds-door>
+            </div>
+        `;
+        $('#doorList').append(ds_door);
+    }
 
     document.querySelectorAll('aweit-ds-door').forEach(register);
 
@@ -42,13 +56,15 @@
         door.registerClickHandler(() => tap(door));
     }
 
-    var updateList = new Map();
-
     function tap(door) {
         let door_id = door.getAttribute('door_id');
         let door_name = door.getAttribute('door_name');
-        $('#door_info h2').html(door_id);
-        $('#door_info h3').html(door_name);
+        let door_pic = door.getAttribute('door_pic');
+        let door_desc = door.getAttribute('door_desc');
+        $('#door_info').removeClass('d-none');
+        $('#door_info .door_id').html(`${door_id}(${door_name})`);
+        $('#door_info .door_pic').attr('src',door_pic);
+        $('#door_info .door_desc').html(`${door_desc}`);
     }
 
 </script>

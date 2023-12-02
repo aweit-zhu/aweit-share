@@ -1,0 +1,62 @@
+[
+    {
+        "door_id": "A001",
+        "door_name": "總經理室",
+        "door_pic": "https://picsum.photos/id/681/600/400",
+        "door_desc": "Ullamco eu veniam enim minim aute."
+    },
+    {
+        "door_id": "A002",
+        "door_name": "健身房",
+        "door_pic": "https://picsum.photos/id/682/600/400",
+        "door_desc": "Laboris do cupidatat aute ad qui veniam exercitation laboris enim."
+    },
+    {
+        "door_id": "A003",
+        "door_name": "餐廳區",
+        "door_pic": "https://picsum.photos/id/683/600/400",
+        "door_desc": "Veniam et amet deserunt commodo in."
+    },
+    {
+        "door_id": "A004",
+        "door_name": "按摩區",
+        "door_pic": "https://picsum.photos/id/684/600/400",
+        "door_desc": "Commodo duis aliqua nisi eiusmod veniam culpa incididunt."
+    },
+    {
+        "door_id": "A005",
+        "door_name": "諮商室",
+        "door_pic": "https://picsum.photos/id/685/600/400",
+        "door_desc": "Ex commodo laborum non minim sit nostrud dolor irure."
+    },
+    {
+        "door_id": "B001",
+        "door_name": "實驗室B",
+        "door_pic": "https://picsum.photos/id/686/600/400",
+        "door_desc": "Id duis excepteur do eu velit consequat officia id sunt commodo veniam."
+    },
+    {
+        "door_id": "B002",
+        "door_name": "收發室",
+        "door_pic": "https://picsum.photos/id/687/600/400",
+        "door_desc": "Incididunt aliquip velit et eu non eiusmod commodo eiusmod cupidatat reprehenderit eu pariatur."
+    },
+    {
+        "door_id": "B003",
+        "door_name": "實驗室A",
+        "door_pic": "https://picsum.photos/id/688/600/400",
+        "door_desc": "Consequat dolor mollit fugiat exercitation voluptate dolor consequat sit adipisicing ullamco consequat deserunt eu."
+    },
+    {
+        "door_id": "B004",
+        "door_name": "實驗室C",
+        "door_pic": "https://picsum.photos/id/689/600/400",
+        "door_desc": "Duis elit tempor exercitation magna qui."
+    },
+    {
+        "door_id": "B005",
+        "door_name": "實驗室D",
+        "door_pic": "https://picsum.photos/id/690/600/400",
+        "door_desc": "Esse voluptate non laboris deserunt ipsum cupidatat quis reprehenderit exercitation."
+    }
+]
