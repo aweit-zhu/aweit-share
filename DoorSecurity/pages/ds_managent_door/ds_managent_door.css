@@ -1,0 +1,6 @@
+.door {
+    background-color: #f5f5f5;
+}
+.door:hover  {
+    border: 2px solid black !important;
+}

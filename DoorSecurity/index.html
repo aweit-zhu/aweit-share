@@ -1,75 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="./css/style.css">
-    <script type="module" src="./components/aweit_ds_door/aweit_ds_door.js"></script>
-</head>
-
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark vw-100">
-        <div class="container-fluid">
-            <i class="bi  bi-buildings-fill h5 my-0 text-light me-2"></i>
-            <a class="navbar-brand text-light" href="#">門禁管理系統</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a role="button" class="nav-link text-light" href="#">首頁</a>
-                    </li>
-                    <li class="nav-item">
-                        <a role="button" class="nav-link text-light" href="#ds_managent_employee.html">門點權限管理(by員工)</a>
-                    </li>
-                    <li class="nav-item">
-                        <a role="button" class="nav-link text-light" href="#ds_managent_door.html">門點權限管理(by門點)</a>
-                    </li>
-                </ul>
-                <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <i class="bi bi-person-circle d-none d-lg-block h5 my-0 text-light me-3" role="button">
-                            admin</i>
-                    </li>
-                    <li class="nav-item">
-                        <i class="bi bi-box-arrow-right text-light ml-3" role="button" onclick="window.location.href='./login.html'">Logout</i>
-                    </li>
-                </ul>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>門禁管理系統</title>
+        <link rel="shortcut icon" href="./images/architecture.jpg" type="image/x-icon"/>
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <link rel="stylesheet" href="./css/style.css">
+        <script type="module" src="./components/aweit_ds_door/aweit_ds_door.js"></script>
+        <meta http-equiv="pragma" content="no-cache">
+        <meta http-equiv="expires" content="0">
+        <meta http-equiv="cache-control" content="no-cache">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark vw-100">
+            <div class="container-fluid">
+                <i class="bi  bi-buildings-fill h5 my-0 text-light me-2"></i>
+                <a class="navbar-brand text-light" href="/#">門禁管理系統</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a role="button" class="nav-link text-light" href="/#">首頁</a>
+                        </li>
+                        <li class="nav-item">
+                            <a role="button" class="nav-link text-light" href="/#/ds_managent_employee/ds_managent_employee.html">門點權限管理(by員工)</a>
+                        </li>
+                        <li class="nav-item">
+                            <a role="button" class="nav-link text-light" href="/#/ds_managent_door/ds_managent_door.html">門點權限管理(by門點)</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <i class="bi bi-person-circle d-none d-lg-block h5 my-0 text-light me-3" role="button">
+                                admin</i>
+                        </li>
+                        <li class="nav-item">
+                            <i class="bi bi-box-arrow-right text-light ml-3" role="button" onclick="window.location.href='./pages/login/login.html'">Logout</i>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
-    <div id="content" class="w-100 h-100" style="min-height:100%;padding-top:3.5rem">
-
-    </div>
-</body>
-
+        </nav>
+        <div id="content" class="w-100 h-100" style="min-height:100%;padding-top:3.5rem"></div>
+    </body>
+    <!-- loadPage、hashchange -->
+    <script src="./index.js"></script>
 </html>
 
-<script>
-
-    function loadPage(href) {
-
-        if(href == '') {
-            $('#content').load('ds_entry.html');
-        } else {
-            $('#content').load(href);
-        }
-    }
-
-    window.addEventListener('hashchange', function () {
-        let href = location.hash.substring(1);
-        loadPage(href);
-    });
-
-    window.dispatchEvent(new Event('hashchange'));
-
-</script>
