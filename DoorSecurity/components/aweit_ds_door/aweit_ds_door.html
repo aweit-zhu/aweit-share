@@ -1,0 +1,67 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+<style>
+
+    i {
+        font-size:110px;
+        top:2em;
+    }
+
+    .status {
+        font-size:20px;
+        top:-1px;
+        font-weight: bold;
+    }
+
+    .title {
+        font-size: 20px;
+        bottom: -5px;
+        font-weight: bold;
+    }
+
+    .stop {
+        top: 40px;
+        font-size: 50px;
+        color: red;
+    }
+
+    .door {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .ds-tooltip {
+        position: relative;
+        display: inline-block;
+    }
+      
+    .ds-tooltip .ds-tooltiptext {
+        cursor: pointer;
+        visibility: hidden;
+        font-size: 20x;
+
+        font-weight: bold;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        border-radius: 2px;
+        padding: 1px;
+        position: absolute;
+        z-index: 1;
+    }
+      
+    .ds-tooltip:hover .ds-tooltiptext {
+        visibility: visible;
+    }
+
+</style>
+
+<div id="door" class="d-flex flex-column justify-content-center align-items-center position-relative my-2 ds-tooltip door" role="button">
+    <p id="door_status" class="my-0 position-absolute status"></p>
+    <i id="door_pic" class="bi bi-door-closed mx-2"></i>
+    <p id="door_id" class="my-0 position-absolute title"></p>
+    <span id="door_name" class="ds-tooltiptext"></span>
+    <i id="door_stop" class="bi bi-lock-fill position-absolute stop d-none"></i>
+</div>
