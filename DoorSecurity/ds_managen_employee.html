@@ -1,0 +1,52 @@
+<script src="./components//aweit_ds_door.js"></script>
+
+<style>
+    .door {
+        background-color: #f5f5f5;
+    }
+</style>
+<div class="d-flex justify-content-between align-items-center mt-3 mb-2 mx-3">
+    <h3 class="text-center fw-bolder"><i class="bi bi-person"></i> weizhi.zhu (57169)</h3> 
+    <button class="btn btn-primary mx-3" onclick="console.log(updateList)">Save</button>
+</div>
+<div class="d-flex justify-content-center align-items-center">
+    <div>
+        <p class="text-center h3 fw-bolder">A棟</p>
+        <div class="d-flex justify-content-start align-items-center flex-wrap" width="500px;">
+            <div class="m-2 border door"><aweit-ds-door status=0  door_id="A001"></aweit-ds-door></div>
+            <div class="m-2 border door"><aweit-ds-door status=0  door_id="A002"></aweit-ds-door></div>
+            <div class="m-2 border door"><aweit-ds-door status=1  door_id="A003"></aweit-ds-door></div>
+            <div class="m-2 border door"><aweit-ds-door status=1  door_id="A004"></aweit-ds-door></div>
+            <div class="m-2 border door"><aweit-ds-door status=1  door_id="A005"></aweit-ds-door></div>
+        </div>
+    </div>
+    <div>
+        <p class="text-center h3 fw-bolder">B棟</p>
+        <div class="d-flex justify-content-start align-items-center flex-wrap" width="500px;">
+            <div class="m-2 border door"><aweit-ds-door status=0  door_id="B001"></aweit-ds-door></div>
+            <div class="m-2 border door"><aweit-ds-door status=1  door_id="B002"></aweit-ds-door></div>
+            <div class="m-2 border door"><aweit-ds-door status=1  door_id="B003"></aweit-ds-door></div>
+            <div class="m-2 border door"><aweit-ds-door status=1  door_id="B004"></aweit-ds-door></div>
+            <div class="m-2 border door"><aweit-ds-door status=0  door_id="B005"></aweit-ds-door></div>
+    </div>
+</div>
+
+<script>
+
+    document.querySelectorAll('aweit-ds-door').forEach(register);
+
+    function register(door,index) {
+        door.registerClickHandler(() => tap(door));
+    }
+
+    var updateList = new Map();
+
+    function tap(door) {
+        let door_id = door.getAttribute('door_id');
+        let status = door.getAttribute('status');
+        status = status == 1 ? 0: 1;
+        updateList.set(door_id,status);
+        door.setAttribute('status', status);
+    }
+
+</script>

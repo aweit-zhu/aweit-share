@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&family=Righteous&display=swap');
+
+:root {
+	--g-bgColor: #f6f8fc;
+	--f-family-1: 'Righteous', 'Noto Sans TC', sans-serif;
+}
+
+body {
+    background-color: var(--g-bgColor);
+    overflow: hidden;
+    font-family: var(--f-family-1);
+}
+
+.nav-item a:hover {
+	color: yellow !important;
+}
+
+nav {
+	position:fixed !important;
+	z-index: 99;
+}

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,81 +9,63 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="./components/aweit_ds_door.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
-
-    <style>
-        .door {
-            background-color: #f5f5f5;
-        }
-    </style>
-    <div class="d-flex justify-content-between align-items-center mt-3 mb-2 mx-3">
-        <h3 class="text-center fw-bolder"><i class="bi bi-person"></i> weizhi.zhu (57169)</h3> 
-        <button class="btn btn-primary mx-3" onclick="console.log(updateList)">Save</button>
-    </div>
-    <div class="d-flex justify-content-center align-items-center">
-        <div>
-            <p class="text-center h3 fw-bolder">A棟</p>
-            <div class="d-flex justify-content-start align-items-center flex-wrap" width="500px;">
-                <div class="m-2 border door"><aweit-ds-door status=0  door_id="A001"></aweit-ds-door></div>
-                <div class="m-2 border door"><aweit-ds-door status=0  door_id="A002"></aweit-ds-door></div>
-                <div class="m-2 border door"><aweit-ds-door status=1  door_id="A003"></aweit-ds-door></div>
-                <div class="m-2 border door"><aweit-ds-door status=1  door_id="A004"></aweit-ds-door></div>
-                <div class="m-2 border door"><aweit-ds-door status=1  door_id="A005"></aweit-ds-door></div>
-                <div class="m-2 border door"><aweit-ds-door status=1  door_id="A006"></aweit-ds-door></div>
-                <div class="m-2 border door"><aweit-ds-door status=1  door_id="A007"></aweit-ds-door></div>
-                <div class="m-2 border door"><aweit-ds-door status=0  door_id="A008"></aweit-ds-door></div>
-                <div class="m-2 border door"><aweit-ds-door status=0  door_id="A009"></aweit-ds-door></div>
-                <div class="m-2 border door"><aweit-ds-door status=0  door_id="A010"></aweit-ds-door></div>
-                <div class="m-2 border door"><aweit-ds-door status=1  door_id="A011"></aweit-ds-door></div>
-                <div class="m-2 border door"><aweit-ds-door status=1  door_id="A012"></aweit-ds-door></div>
-                <div class="m-2 border door"><aweit-ds-door status=1  door_id="A013"></aweit-ds-door></div>
-                <div class="m-2 border door"><aweit-ds-door status=1  door_id="A014"></aweit-ds-door></div>
-                <div class="m-2 border door"><aweit-ds-door status=1  door_id="A015"></aweit-ds-door></div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark vw-100">
+        <div class="container-fluid">
+            <i class="bi bi-calendar3 h5 my-0 text-light me-2"></i>
+            <a class="navbar-brand text-light" href="#">門禁管理系統</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a role="button" class="nav-link text-light" href="#">首頁</a>
+                    </li>
+                    <li class="nav-item">
+                        <a role="button" class="nav-link text-light" href="#ds_managen_employee.html">門點權限管理(by員工)</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <i class="bi bi-person-circle d-none d-lg-block h5 my-0 text-light me-3" role="button">
+                            admin</i>
+                    </li>
+                    <li class="nav-item">
+                        <i class="bi bi-box-arrow-right text-light ml-3" role="button" onclick="window.location.href='./logout'">Logout</i>
+                    </li>
+                </ul>
             </div>
         </div>
-        <div>
-            <p class="text-center h3 fw-bolder">B棟</p>
-            <div class="d-flex justify-content-start align-items-center flex-wrap" width="500px;">
-                <div class="m-2 border door"><aweit-ds-door status=0  door_id="B001"></aweit-ds-door></div>
-                <div class="m-2 border door"><aweit-ds-door status=1  door_id="B002"></aweit-ds-door></div>
-                <div class="m-2 border door"><aweit-ds-door status=1  door_id="B003"></aweit-ds-door></div>
-                <div class="m-2 border door"><aweit-ds-door status=1  door_id="B004"></aweit-ds-door></div>
-                <div class="m-2 border door"><aweit-ds-door status=0  door_id="B005"></aweit-ds-door></div>
-                <div class="m-2 border door"><aweit-ds-door status=1  door_id="B006"></aweit-ds-door></div>
-                <div class="m-2 border door"><aweit-ds-door status=0  door_id="B007"></aweit-ds-door></div>
-                <div class="m-2 border door"><aweit-ds-door status=1  door_id="B008"></aweit-ds-door></div>
-                <div class="m-2 border door"><aweit-ds-door status=1  door_id="B009"></aweit-ds-door></div>
-                <div class="m-2 border door"><aweit-ds-door status=0  door_id="B010"></aweit-ds-door></div>
-                <div class="m-2 border door"><aweit-ds-door status=1  door_id="B011"></aweit-ds-door></div>
-                <div class="m-2 border door"><aweit-ds-door status=1  door_id="B012"></aweit-ds-door></div>
-                <div class="m-2 border door"><aweit-ds-door status=1  door_id="B013"></aweit-ds-door></div>
-                <div class="m-2 border door"><aweit-ds-door status=0  door_id="B014"></aweit-ds-door></div>
-                <div class="m-2 border door"><aweit-ds-door status=0  door_id="B015"></aweit-ds-door></div>
-            </div>
-        </div>
+    </nav>
+    <div id="content" class="w-100 h-100" style="min-height:100%;padding-top:3.5rem">
+
     </div>
-
-    <script>
-
-        document.querySelectorAll('aweit-ds-door').forEach(register);
-
-        function register(door,index) {
-            door.registerClickHandler(() => tap(door));
-        }
-
-        var updateList = new Map();
-
-        function tap(door) {
-            let door_id = door.getAttribute('door_id');
-            let status = door.getAttribute('status');
-            status = status == 1 ? 0: 1;
-            updateList.set(door_id,status);
-            door.setAttribute('status', status);
-        }
-
-    </script>
-
 </body>
+
 </html>
+
+<script>
+
+    function loadPage(href) {
+
+        if(href == '') {
+            $('#content').load('ds_entry.html');
+        } else {
+            $('#content').load(href);
+        }
+    }
+
+    window.addEventListener('hashchange', function () {
+        let href = location.hash.substring(1);
+        loadPage(href);
+    });
+
+    window.dispatchEvent(new Event('hashchange'));
+
+</script>
