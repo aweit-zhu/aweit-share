@@ -1,4 +1,4 @@
-class DoorSecurity extends HTMLElement {
+export class DoorSecurity extends HTMLElement {
 
     constructor() {
         
