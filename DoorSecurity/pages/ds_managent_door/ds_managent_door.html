@@ -1,3 +1,7 @@
+<meta http-equiv='cache-control' content='no-cache'>
+<meta http-equiv='expires' content='0'>
+<meta http-equiv='pragma' content='no-cache'>
+
 <div class="mx-auto vh-100 overflow-auto w-sm-100" style="width: 100%;">
     <div id="door_list" 
          class="d-flex flex-row align-items-center overflow-auto w-100 border shadow justify-content-start " 
@@ -43,8 +47,8 @@
         </div>
     </div>
     <div class="m-3 d-flex justify-content-center">
-        <button class="btn btn-primary m-3">提交</button>
-        <button class="btn btn-danger m-3">清除</button>
+        <button class="btn btn-primary m-3" onclick="submit()">提交</button>
+        <button class="btn btn-danger m-3" onclick="reset()">清除</button>
     </div>
     <div class="m-3 d-flex justify-content-center">
     </div>
@@ -52,20 +56,4 @@
 
 <link rel="stylesheet" href="/pages/ds_managent_door/ds_managent_door.css">
 
-<script src="/pages/ds_managent_door/ds_managent_door.js"></script>
-
-<script type="module">
-
-    import { HttpClient } from '/js/utils/httpClient.js';
-
-    const httpClient = new HttpClient();
-
-    var doorList = httpClient.getAllDoors();
-
-    doorList.forEach(renderDoor);
-
-    document.querySelectorAll('aweit-ds-door').forEach(registerDoorTap);
-
-    tap(document.querySelectorAll('aweit-ds-door')[0]);
-
-</script>
+<script>loadModule( `/pages/ds_managent_door/ds_managent_door.js`);</script>

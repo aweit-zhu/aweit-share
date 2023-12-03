@@ -1,4 +1,21 @@
 
+import { HttpClient } from '/js/utils/httpClient.js';
+
+const httpClient = new HttpClient();
+
+init();
+
+function init() {
+
+    var doorList = httpClient.getAllDoors();
+        
+    doorList.forEach(renderDoor);
+    
+    document.querySelectorAll('aweit-ds-door').forEach(registerDoorTap);
+    
+    tap(document.querySelectorAll('aweit-ds-door')[0]);    
+}
+
 function renderDoor(door,index) {
     $('#door_list').append(
     ` 
@@ -21,6 +38,13 @@ function tap(door) {
     $('#door_info .door_id').html(`${door_id}(${door_name})`);
     $('#door_info .door_pic').attr('src',door_pic);
     $('#door_info .door_desc').html(`${door_desc}`);
+
+    renderDoorEmployees(door_id);
+}
+
+function renderDoorEmployees(doorId) {
+    let employees = httpClient.getEmployeesByDoorId(doorId);
+    console.log(employees);
 }
 
 function allowDrop(event) {
@@ -42,4 +66,12 @@ function drop(event) {
     //console.log(`${employee_name} (${employee_id}) 從 ${sourceId} 到 ${targetId}`);
     document.getElementById(sourceId).removeChild(employee);
     document.getElementById(targetId).appendChild(employee);
+}
+
+function submit() {
+    alert(123);
+}
+
+function reset(){
+    alert(456);
 }

@@ -1,0 +1,268 @@
+[
+    {
+        "door_id": "A001",
+        "had_access": [
+            {
+                "employee_id": "E001",
+                "employee_name": "James"
+            },
+            {
+                "employee_id": "E003",
+                "employee_name": "Benson"
+            }
+        ],
+        "no_access": [
+            {
+                "employee_id": "E004",
+                "employee_name": "Yushu"
+            }
+        ]
+    },
+    {
+        "door_id": "A002",
+        "had_access": [
+            {
+                "employee_id": "E001",
+                "employee_name": "James"
+            },
+            {
+                "employee_id": "E002",
+                "employee_name": "Mavis"
+            },
+            {
+                "employee_id": "E003",
+                "employee_name": "Benson"
+            }
+        ],
+        "no_access": [
+            {
+                "employee_id": "E004",
+                "employee_name": "Yushu"
+            }
+        ]
+    },
+    {
+        "door_id": "A003",
+        "had_access": [
+            {
+                "employee_id": "E001",
+                "employee_name": "James"
+            },
+            {
+                "employee_id": "E002",
+                "employee_name": "Mavis"
+            }
+        ],
+        "no_access": [
+            {
+                "employee_id": "E004",
+                "employee_name": "Yushu"
+            },
+            {
+                "employee_id": "E006",
+                "employee_name": "Weizhi"
+            }
+        ]
+    },
+    {
+        "door_id": "A004",
+        "had_access": [
+            {
+                "employee_id": "E001",
+                "employee_name": "James"
+            },
+            {
+                "employee_id": "E002",
+                "employee_name": "Mavis"
+            },
+            {
+                "employee_id": "E003",
+                "employee_name": "Benson"
+            }
+        ],
+        "no_access": [
+            {
+                "employee_id": "E004",
+                "employee_name": "Yushu"
+            },
+            {
+                "employee_id": "E005",
+                "employee_name": "Rosa"
+            },
+            {
+                "employee_id": "E006",
+                "employee_name": "Weizhi"
+            }
+        ]
+    },
+    {
+        "door_id": "A005",
+        "had_access": [
+            {
+                "employee_id": "E001",
+                "employee_name": "James"
+            },
+            {
+                "employee_id": "E002",
+                "employee_name": "Mavis"
+            },
+            {
+                "employee_id": "E003",
+                "employee_name": "Benson"
+            }
+        ],
+        "no_access": [
+            {
+                "employee_id": "E004",
+                "employee_name": "Yushu"
+            },
+            {
+                "employee_id": "E005",
+                "employee_name": "Rosa"
+            },
+            {
+                "employee_id": "E006",
+                "employee_name": "Weizhi"
+            }
+        ]
+    },
+    {
+        "door_id": "B001",
+        "had_access": [
+            {
+                "employee_id": "E003",
+                "employee_name": "Benson"
+            }
+        ],
+        "no_access": [
+            {
+                "employee_id": "E005",
+                "employee_name": "Rosa"
+            }
+        ]
+    },
+    {
+        "door_id": "B002",
+        "had_access": [
+            {
+                "employee_id": "E001",
+                "employee_name": "James"
+            },
+            {
+                "employee_id": "E002",
+                "employee_name": "Mavis"
+            },
+            {
+                "employee_id": "E003",
+                "employee_name": "Benson"
+            }
+        ],
+        "no_access": [
+            {
+                "employee_id": "E004",
+                "employee_name": "Yushu"
+            },
+            {
+                "employee_id": "E005",
+                "employee_name": "Rosa"
+            },
+            {
+                "employee_id": "E006",
+                "employee_name": "Weizhi"
+            }
+        ]
+    },
+    {
+        "door_id": "B003",
+        "had_access": [
+            {
+                "employee_id": "E001",
+                "employee_name": "James"
+            },
+            {
+                "employee_id": "E002",
+                "employee_name": "Mavis"
+            },
+            {
+                "employee_id": "E003",
+                "employee_name": "Benson"
+            }
+        ],
+        "no_access": [
+            {
+                "employee_id": "E004",
+                "employee_name": "Yushu"
+            },
+            {
+                "employee_id": "E005",
+                "employee_name": "Rosa"
+            },
+            {
+                "employee_id": "E006",
+                "employee_name": "Weizhi"
+            }
+        ]
+    },
+    {
+        "door_id": "B004",
+        "had_access": [
+            {
+                "employee_id": "E001",
+                "employee_name": "James"
+            },
+            {
+                "employee_id": "E002",
+                "employee_name": "Mavis"
+            },
+            {
+                "employee_id": "E003",
+                "employee_name": "Benson"
+            }
+        ],
+        "no_access": [
+            {
+                "employee_id": "E004",
+                "employee_name": "Yushu"
+            },
+            {
+                "employee_id": "E005",
+                "employee_name": "Rosa"
+            },
+            {
+                "employee_id": "E006",
+                "employee_name": "Weizhi"
+            }
+        ]
+    },
+    {
+        "door_id": "B005",
+        "had_access": [
+            {
+                "employee_id": "E001",
+                "employee_name": "James"
+            },
+            {
+                "employee_id": "E002",
+                "employee_name": "Mavis"
+            },
+            {
+                "employee_id": "E003",
+                "employee_name": "Benson"
+            }
+        ],
+        "no_access": [
+            {
+                "employee_id": "E004",
+                "employee_name": "Yushu"
+            },
+            {
+                "employee_id": "E005",
+                "employee_name": "Rosa"
+            },
+            {
+                "employee_id": "E006",
+                "employee_name": "Weizhi"
+            }
+        ]
+    }
+]

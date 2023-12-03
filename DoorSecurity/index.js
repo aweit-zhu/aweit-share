@@ -13,3 +13,12 @@ window.addEventListener('hashchange', function () {
 });
 
 window.dispatchEvent(new Event('hashchange'));
+
+function loadModule(url) {
+    var timestamp = Date.now();
+    var scriptUrl = `${url}?timestamp=${timestamp}`;
+    var scriptElement = document.createElement("script");
+    scriptElement.type = "module";
+    scriptElement.src = scriptUrl;
+    document.head.appendChild(scriptElement);
+}
