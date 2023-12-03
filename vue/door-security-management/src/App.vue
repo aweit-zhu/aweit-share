@@ -1,47 +1,54 @@
+
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+
+import { ref } from 'vue';
+
+const webName = ref('門禁管理系統');
+
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark vw-100">
+        <div class="container-fluid">
+            <i class="bi  bi-buildings-fill h5 my-0 text-light me-2"></i>
+            <a class="navbar-brand text-light" href="/#">{{ webName }}</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <router-link to="/home" class="custom-link mx-2">Home</router-link>
+                    </li>
+                    <li class="nav-item">
+                        <router-link to="/mgtByEmploye" class="custom-link mx-2">權限管理(by員工)</router-link>
+                    </li>
+                    <li class="nav-item">
+                        <router-link to="/mgtByDoor" class="custom-link mx-2">權限管理(by門點)</router-link>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><i class="bi bi-person-circle d-none d-lg-block h5 my-0 text-light me-3" role="button">admin</i></li>
+                    <i class="bi bi-box-arrow-right text-light ml-3" role="button" onclick="window.location.href='/login.html'">Logout</i>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div style="padding-top:3.5rem">
+        <router-view></router-view>
     </div>
-  </header>
 
-  <main>
-    <TheWelcome />
-  </main>
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
+.custom-link {
+    color: #fff;
+    text-decoration: none;
+    /* font-weight: bold; */
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
+.custom-link:hover {
+    color: #2980b9;
 }
 </style>
