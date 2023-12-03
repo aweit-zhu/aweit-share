@@ -22,24 +22,24 @@
                     <div class="col-6 shadow">
                         <h5 class="text-center">具有權限的員工</h5>
                         <div id="left" style="height: 90%;" class="" ondrop="drop(event)" ondragover="allowDrop(event)">
-                            <p id="E001" class="border border-2 border-primary rounded-pill shadow p-1 m-1" 
+                            <!-- <p id="E001" class="border border-2 border-primary rounded-pill shadow p-1 m-1" 
                                          role="button" draggable="true" ondragstart="drag(event)">
                                 <i class="bi bi-person"></i>James</p>
                             <p id="E002" class="border border-2 border-primary rounded-pill shadow p-1 m-1" role="button" draggable="true" ondragstart="drag(event)">
                                 <i class="bi bi-person"></i>Mavis</p>
                             <p id="E003" class="border border-2 border-primary rounded-pill shadow p-1 m-1" role="button" draggable="true" ondragstart="drag(event)">
-                                <i class="bi bi-person"></i>Benson</p>
+                                <i class="bi bi-person"></i>Benson</p> -->
                         </div>
                     </div>
                     <div class="col-6 shadow">
                         <h5 class="text-center">被移除權限的員工</h5>
                         <div id="right" style="height: 90%;" class="" ondrop="drop(event)" ondragover="allowDrop(event)">
-                            <p id="E004" class="border border-2 border-danger rounded-pill shadow p-1 m-1" role="button" draggable="true" ondragstart="drag(event)">
+                            <!-- <p id="E004" class="border border-2 border-danger rounded-pill shadow p-1 m-1" role="button" draggable="true" ondragstart="drag(event)">
                                 <i class="bi bi-person"></i>Yushu</p>
                             <p id="E005" class="border border-2 border-danger rounded-pill shadow p-1 m-1" role="button" draggable="true" ondragstart="drag(event)">
                                 <i class="bi bi-person"></i>Rosa</p>
                             <p id="E006" class="border border-2 border-danger rounded-pill shadow p-1 m-1" role="button" draggable="true" ondragstart="drag(event)">
-                                <i class="bi bi-person"></i>Weizhi</p>
+                                <i class="bi bi-person"></i>Weizhi</p> -->
                         </div>
                     </div>
                 </div>
@@ -57,3 +57,28 @@
 <link rel="stylesheet" href="/pages/ds_managent_door/ds_managent_door.css">
 
 <script>loadModule( `/pages/ds_managent_door/ds_managent_door.js`);</script>
+
+<script>
+
+    function allowDrop(event) {
+        event.preventDefault();
+    }
+
+    function drag(event) {
+        event.dataTransfer.setData('employee_name', event.target.innerText);
+        event.dataTransfer.setData('employee_id', event.target.id);
+    }
+
+    function drop(event) {
+        event.preventDefault();
+        var employee_name = event.dataTransfer.getData('employee_name');
+        var employee_id = event.dataTransfer.getData('employee_id');
+        var targetId = event.target.id;
+        var sourceId = (targetId == 'right') ? 'left': 'right';
+        var employee = document.getElementById(employee_id);
+        //console.log(`${employee_name} (${employee_id}) 從 ${sourceId} 到 ${targetId}`);
+        document.getElementById(sourceId).removeChild(employee);
+        document.getElementById(targetId).appendChild(employee);
+    }
+
+</script>

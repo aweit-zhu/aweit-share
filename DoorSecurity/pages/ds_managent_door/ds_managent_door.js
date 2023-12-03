@@ -3,6 +3,9 @@ import { HttpClient } from '/js/utils/httpClient.js';
 
 const httpClient = new HttpClient();
 
+var hadAccessList = [];
+var noAccessList = [];
+
 init();
 
 function init() {
@@ -13,7 +16,7 @@ function init() {
     
     document.querySelectorAll('aweit-ds-door').forEach(registerDoorTap);
     
-    tap(document.querySelectorAll('aweit-ds-door')[0]);    
+    tap(document.querySelectorAll('aweit-ds-door')[0]);  
 }
 
 function renderDoor(door,index) {
@@ -30,6 +33,23 @@ function registerDoorTap(door,index) {
 }
 
 function tap(door) {
+    
+    let door_id = door.getAttribute('door_id');
+    let employees = httpClient.getEmployeesByDoorId(door_id);
+    
+    hadAccessList = employees.get('had_access_list');
+    noAccessList = employees.get('no_access_list');
+    
+    // console.log(employees);
+    // console.log(hadAccessList);
+    // console.log(noAccessList);
+
+    renderDoorEmployees(door, hadAccessList,noAccessList);
+}
+
+function renderDoorEmployees(door,hadAccessList,noAccessList) {
+    
+    // 左圖區塊
     let door_id = door.getAttribute('door_id');
     let door_name = door.getAttribute('door_name');
     let door_pic = door.getAttribute('door_pic');
@@ -39,34 +59,34 @@ function tap(door) {
     $('#door_info .door_pic').attr('src',door_pic);
     $('#door_info .door_desc').html(`${door_desc}`);
 
-    renderDoorEmployees(door_id);
+    // 右圖
+    $('#left p').remove();
+    $('#right p').remove();
+
+    hadAccessList.forEach(
+        employee => {
+            $('#left').append(
+                `
+                <p id="${employee.id}" class="border border-2 border-primary rounded-pill shadow p-1 m-1" 
+                                         role="button" draggable="true" ondragstart="drag(event)">
+                                <i class="bi bi-person"></i>${employee.name}</p>
+                `
+            );
+        }
+    );
+    noAccessList.forEach(
+        employee => {
+            $('#right').append(
+                `
+                <p id="${employee.id}" class="border border-2 border-danger rounded-pill shadow p-1 m-1" 
+                                         role="button" draggable="true" ondragstart="drag(event)">
+                                <i class="bi bi-person"></i>${employee.name}</p>
+                `
+            );
+        }
+    );
 }
 
-function renderDoorEmployees(doorId) {
-    let employees = httpClient.getEmployeesByDoorId(doorId);
-    console.log(employees);
-}
-
-function allowDrop(event) {
-    event.preventDefault();
-}
-
-function drag(event) {
-    event.dataTransfer.setData('employee_name', event.target.innerText);
-    event.dataTransfer.setData('employee_id', event.target.id);
-}
-
-function drop(event) {
-    event.preventDefault();
-    var employee_name = event.dataTransfer.getData('employee_name');
-    var employee_id = event.dataTransfer.getData('employee_id');
-    var targetId = event.target.id;
-    var sourceId = (targetId == 'right') ? 'left': 'right';
-    var employee = document.getElementById(employee_id);
-    //console.log(`${employee_name} (${employee_id}) 從 ${sourceId} 到 ${targetId}`);
-    document.getElementById(sourceId).removeChild(employee);
-    document.getElementById(targetId).appendChild(employee);
-}
 
 function submit() {
     alert(123);
