@@ -22,6 +22,9 @@ const webName = ref('門禁管理系統');
                         <router-link to="/home" class="custom-link mx-2">Home</router-link>
                     </li>
                     <li class="nav-item">
+                        <router-link to="/about" class="custom-link mx-2">About</router-link>
+                    </li>
+                    <li class="nav-item">
                         <router-link to="/mgtByEmploye" class="custom-link mx-2">權限管理(by員工)</router-link>
                     </li>
                     <li class="nav-item">
