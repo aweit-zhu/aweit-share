@@ -1,4 +1,4 @@
-package jsoup.demo;
+
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -7,7 +7,7 @@ import org.jsoup.select.Elements;
 
 
 /**
- * °Ñ¦Òºô­¶¡Ghttps://www.1ju.org/jsoup/jsoup-examples
+ * åƒè€ƒç¶²ç«™ï¼šhttps://www.1ju.org/jsoup/jsoup-examples
  * */
 public class JsoupTest {
     public static void main(String[] args) {
