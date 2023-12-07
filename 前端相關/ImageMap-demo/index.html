@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Maps</title>
+    
+    <!--W3C Image Maps：https://www.w3schools.com/htmL/html_images_imagemap.asp-->
+    <!--JQuery Mapster：http://www.outsharked.com/ImageMapster/default.aspx?docs.html-->
+    <!--如何線上找座標？https://www.image-map.net/-->
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/imagemapster@1.5.4/dist/jquery.imagemapster.min.js"></script>
+    <script>
+
+        var information = {
+            Computer: ['Computer','Officia duis commodo eiusmod ex eiusmod fugiat aliquip quis quis dolore.'],
+            Phone: ['Phone','Mollit elit sint cillum anim occaecat enim do veniam aute veniam '],
+            Coffee: ['Coffee','Ipsum irure ipsum nostrud enim ad mollit tempor minim nisi'],
+        }
+
+        $(function() {
+            $('#info').hide();
+            
+            $('img[usemap]').mapster({
+                fillColor: '000000',
+                fillOpacity: 0,
+                stroke: true,
+                strokeColor: 'ff0000',
+                strokeWidth: 2,
+                mapKey: 'alt',
+                isSelectable: false,
+                onMouseover: function (data) {
+                    $('#header').text(information[data.key][0]);
+                    $('#text').text(information[data.key][1]);
+                    $('#info').show();
+                },
+                onMouseout: function (data) {
+                    $('#info').hide();
+                }
+            });
+        })
+        
+    </script>
+    <style>
+        .info {
+            font-size: 20px;
+            display: inline-block; 
+            border: 2px solid #999;
+            border-radius: 7px;
+            padding: 7px;
+            margin:5px;
+            max-width: 400px;
+            height: 100px;
+            word-wrap:break-word;
+        }
+    </style>
+</head>
+<body>
+    <div class="d-flex flex-column justify-content-start align-items-center vh-100">
+        <div>
+            <img src="./workplace.jpg" alt="" usemap="#workmap">
+            <map name="workmap">
+                <area shape="rect" coords="34,44,270,350" alt="Computer" href="#">
+                <area shape="rect" coords="290,172,333,250" alt="Phone" href="#">
+                <area shape="circle" coords="337,300,44" alt="Coffee" href="#">
+            </map>
+        </div>
+        <div id="info" class="info">
+            <p id="header" class="h5 fw-bold text-wrap"></p>
+            <p id="text"></p>
+        </div>
+    </div>
+</body>
+</html>
