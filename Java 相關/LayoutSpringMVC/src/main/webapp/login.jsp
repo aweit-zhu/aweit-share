@@ -35,7 +35,7 @@
 	</head>
 	<body>
 		<div class="d-flex align-items-center justify-content-center vh-100 ">
-			<form class="needs-validation" novalidate action="./login" method="post" >
+			<form class="needs-validation" novalidate action="/LayoutSpringMVC/app/login" method="post" >
 				<h4 class="text-center">Login</h4>
 				<p class="text-center text-danger fw-bold"> ${!empty error ? error: ""} </p>
 				<div>

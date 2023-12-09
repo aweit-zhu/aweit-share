@@ -23,30 +23,34 @@ public class UserDAOImpl implements UserDAO {
 
 	@Override
 	public User findUserById(Integer userId) {
-		String sql = "SELECT * FROM USER WHERE ID = ?";
-
-		RowMapper<User> rowMapper = (ResultSet rs, int rowNum) -> {
-			return new User(rs.getInt(1), rs.getString(2), rs.getString(3));
-		};
-
-		return jdbcTemplate.queryForObject(sql, rowMapper, userId);
+		try {
+			String sql = "SELECT * FROM USER WHERE ID = ?";
+			RowMapper<User> rowMapper = (ResultSet rs, int rowNum) -> {
+				return new User(rs.getInt(1), rs.getString(2), rs.getString(3));
+			};
+			return jdbcTemplate.queryForObject(sql, rowMapper, userId);
+		} catch (Exception e) {
+			return null;
+		}
 	}
 
 	@Override
 	public List<User> findAllUsers() {
 		String sql = "SELECT * FROM USER";
-		return jdbcTemplate.query(sql,new BeanPropertyRowMapper(User.class));
+		return jdbcTemplate.query(sql, new BeanPropertyRowMapper(User.class));
 	}
 
 	@Override
 	public User findUserByName(String userName) {
-		String sql = "SELECT * FROM USER WHERE NAME = ?";
-
-		RowMapper<User> rowMapper = (ResultSet rs, int rowNum) -> {
-			return new User(rs.getInt(1), rs.getString(2), rs.getString(3));
-		};
-
-		return jdbcTemplate.queryForObject(sql, rowMapper, userName);
+		try {
+			String sql = "SELECT * FROM USER WHERE NAME = ?";
+			RowMapper<User> rowMapper = (ResultSet rs, int rowNum) -> {
+				return new User(rs.getInt(1), rs.getString(2), rs.getString(3));
+			};
+			return jdbcTemplate.queryForObject(sql, rowMapper, userName);
+		} catch (Exception e) {
+			return null;
+		}
 	}
 
 }
