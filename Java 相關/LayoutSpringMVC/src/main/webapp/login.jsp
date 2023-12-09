@@ -45,7 +45,7 @@
 				</div>
 				<div>
 					<label for="password" class="form-label">Password</label> <input
-						type="text" class="form-control" id="password" name="password" value="" required>
+						type="password" class="form-control" id="password" name="password" value="" required>
 					<div class="invalid-feedback">請輸入Password</div>
 				</div>
 				<div class="d-flex justify-content-center mt-5">

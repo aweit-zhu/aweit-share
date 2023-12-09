@@ -38,4 +38,15 @@ public class UserDAOImpl implements UserDAO {
 		return jdbcTemplate.query(sql,new BeanPropertyRowMapper(User.class));
 	}
 
+	@Override
+	public User findUserByName(String userName) {
+		String sql = "SELECT * FROM USER WHERE NAME = ?";
+
+		RowMapper<User> rowMapper = (ResultSet rs, int rowNum) -> {
+			return new User(rs.getInt(1), rs.getString(2), rs.getString(3));
+		};
+
+		return jdbcTemplate.queryForObject(sql, rowMapper, userName);
+	}
+
 }
