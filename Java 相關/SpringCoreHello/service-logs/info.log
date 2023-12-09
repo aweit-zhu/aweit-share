@@ -1,0 +1,37 @@
+2023-12-09 17:18:35,140 INFO com.aweit.slf4j.Slf4JDemo [main] Info log message
+2023-12-09 17:26:18,250 INFO com.aweit.slf4j.Slf4JDemo [main] Info log message
+2023-12-09 17:32:56,394 INFO com.aweit.slf4j.Slf4JDemo [main] Info log message
+2023-12-09 17:33:20,829 INFO com.mchange.v2.log.slf4j.Slf4jMLog$Slf4jMLogger$InfoLogger [MLog-Init-Reporter] MLog clients using slf4j logging.
+2023-12-09 17:33:20,913 INFO com.mchange.v2.log.slf4j.Slf4jMLog$Slf4jMLogger$InfoLogger [main] Initializing c3p0-0.9.5.5 [built 11-December-2019 22:18:33 -0800; debug? true; trace: 10]
+2023-12-09 17:33:21,026 INFO com.aweit.aspectJ.LoggingAspect [main] 前置通知 Log: %s, %s%n
+2023-12-09 17:33:21,026 INFO com.aweit.aspectJ.LoggingAspect [main] %s方法執行後,回傳值:%s%n
+2023-12-09 17:33:21,027 INFO com.aweit.HelloProgram [main] 123
+2023-12-09 17:34:30,110 INFO com.mchange.v2.log.slf4j.Slf4jMLog$Slf4jMLogger$InfoLogger [MLog-Init-Reporter] MLog clients using slf4j logging.
+2023-12-09 17:34:30,198 INFO com.mchange.v2.log.slf4j.Slf4jMLog$Slf4jMLogger$InfoLogger [main] Initializing c3p0-0.9.5.5 [built 11-December-2019 22:18:33 -0800; debug? true; trace: 10]
+2023-12-09 17:34:30,316 INFO com.aweit.aspectJ.LoggingAspect [main] 前置通知 Log: getName, []
+2023-12-09 17:34:30,316 INFO com.aweit.aspectJ.LoggingAspect [main] getName方法執行後,回傳值:Mook Kim
+2023-12-09 17:34:30,316 INFO com.aweit.HelloProgram [main] 123
+2023-12-09 17:38:02,649 INFO com.aweit.slf4j.Slf4JDemo [main] Info log message
+2023-12-09 17:39:53,269 INFO com.aweit.slf4j.Slf4JDemo [main] Info log message
+2023-12-09 17:41:54,030 INFO com.aweit.slf4j.Slf4JDemo [main] Info log message
+2023-12-09 17:42:50,833 INFO com.aweit.slf4j.Slf4JDemo [main] Info log message
+2023-12-09 17:43:34,770 INFO com.aweit.slf4j.Slf4JDemo [main] Info log message
+2023-12-09 17:55:22,417 INFO com.aweit.slf4j.Slf4JDemo [main] Info log message
+2023-12-09 17:56:01,906 INFO com.aweit.slf4j.Slf4JDemo [main] Info log message
+2023-12-09 17:56:28,691 INFO com.mchange.v2.log.slf4j.Slf4jMLog$Slf4jMLogger$InfoLogger [MLog-Init-Reporter] MLog clients using slf4j logging.
+2023-12-09 17:56:28,778 INFO com.mchange.v2.log.slf4j.Slf4jMLog$Slf4jMLogger$InfoLogger [main] Initializing c3p0-0.9.5.5 [built 11-December-2019 22:18:33 -0800; debug? true; trace: 10]
+2023-12-09 17:56:28,904 INFO com.aweit.aspectJ.LoggingAspect [main] 前置通知 Log: getName, []
+2023-12-09 17:56:28,905 INFO com.aweit.aspectJ.LoggingAspect [main] getName方法執行後,回傳值:Mook Kim
+2023-12-09 17:56:28,905 INFO com.aweit.HelloProgram [main] 123
+2023-12-09 17:57:07,675 INFO com.aweit.slf4j.Slf4JDemo [main] Info log message
+2023-12-09 18:00:02,917 INFO com.aweit.slf4j.Slf4JDemo [main] Info log message
+2023-12-09 18:00:12,809 INFO com.mchange.v2.log.slf4j.Slf4jMLog$Slf4jMLogger$InfoLogger [MLog-Init-Reporter] MLog clients using slf4j logging.
+2023-12-09 18:00:12,931 INFO com.mchange.v2.log.slf4j.Slf4jMLog$Slf4jMLogger$InfoLogger [main] Initializing c3p0-0.9.5.5 [built 11-December-2019 22:18:33 -0800; debug? true; trace: 10]
+2023-12-09 18:00:13,084 INFO com.aweit.aspectJ.LoggingAspect [main] 前置通知 Log: getName, []
+2023-12-09 18:00:13,085 INFO com.aweit.aspectJ.LoggingAspect [main] getName方法執行後,回傳值:Mook Kim
+2023-12-09 18:00:13,085 INFO com.aweit.HelloProgram [main] 123
+2023-12-09 18:49:37,603 INFO com.mchange.v2.log.slf4j.Slf4jMLog$Slf4jMLogger$InfoLogger [MLog-Init-Reporter] MLog clients using slf4j logging.
+2023-12-09 18:49:37,789 INFO com.mchange.v2.log.slf4j.Slf4jMLog$Slf4jMLogger$InfoLogger [main] Initializing c3p0-0.9.5.5 [built 11-December-2019 22:18:33 -0800; debug? true; trace: 10]
+2023-12-09 18:49:37,925 INFO com.aweit.aspectJ.LoggingAspect [main] 前置通知 Log: getName, []
+2023-12-09 18:49:37,925 INFO com.aweit.aspectJ.LoggingAspect [main] getName方法執行後,回傳值:Mook Kim
+2023-12-09 18:49:37,925 INFO com.aweit.HelloProgram [main] 123

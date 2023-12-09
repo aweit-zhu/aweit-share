@@ -1,0 +1,40 @@
+2023-12-09 17:57:07,674 DEBUG com.aweit.slf4j.Slf4JDemo [main] Debug log message
+2023-12-09 17:57:07,675 INFO com.aweit.slf4j.Slf4JDemo [main] Info log message
+2023-12-09 17:57:07,675 ERROR com.aweit.slf4j.Slf4JDemo [main] Error log message
+2023-12-09 18:00:02,916 DEBUG com.aweit.slf4j.Slf4JDemo [main] main:15 - Debug log message
+2023-12-09 18:00:02,917 INFO com.aweit.slf4j.Slf4JDemo [main] main:16 - Info log message
+2023-12-09 18:00:02,918 ERROR com.aweit.slf4j.Slf4JDemo [main] main:17 - Error log message
+2023-12-09 18:00:12,809 INFO com.mchange.v2.log.MLog [MLog-Init-Reporter] log:212 - MLog clients using slf4j logging.
+2023-12-09 18:00:12,814 DEBUG com.mchange.v2.log.MLog [MLog-Init-Reporter] log:207 - Reading VM config for path list /com/mchange/v2/log/default-mchange-log.properties, /mchange-commons.properties, /c3p0.properties, hocon:/reference,/application,/c3p0,/, /mchange-log.properties, /
+2023-12-09 18:00:12,815 DEBUG com.mchange.v2.log.MLog [MLog-Init-Reporter] log:207 - The configuration file for resource identifier '/mchange-commons.properties' could not be found. Skipping.
+2023-12-09 18:00:12,815 DEBUG com.mchange.v2.log.MLog [MLog-Init-Reporter] log:207 - The configuration file for resource identifier '/c3p0.properties' could not be found. Skipping.
+2023-12-09 18:00:12,815 DEBUG com.mchange.v2.cfg.MConfig [main] log:207 - The configuration file for resource identifier '/mchange-commons.properties' could not be found. Skipping.
+2023-12-09 18:00:12,816 DEBUG com.mchange.v2.log.MLog [MLog-Init-Reporter] log:207 - The configuration file for resource identifier 'hocon:/reference,/application,/c3p0,/' could not be found. Skipping.
+2023-12-09 18:00:12,816 DEBUG com.mchange.v2.log.MLog [MLog-Init-Reporter] log:207 - The configuration file for resource identifier '/mchange-log.properties' could not be found. Skipping.
+2023-12-09 18:00:12,816 DEBUG com.mchange.v2.cfg.MConfig [main] log:207 - The configuration file for resource identifier '/mchange-log.properties' could not be found. Skipping.
+2023-12-09 18:00:12,816 DEBUG com.mchange.v2.cfg.MConfig [main] log:207 - The configuration file for resource identifier 'hocon:/reference,/application,/c3p0,/' could not be found. Skipping.
+2023-12-09 18:00:12,817 DEBUG com.mchange.v2.cfg.MConfig [main] log:207 - The configuration file for resource identifier '/c3p0.properties' could not be found. Skipping.
+2023-12-09 18:00:12,931 INFO com.mchange.v2.c3p0.C3P0Registry [main] log:212 - Initializing c3p0-0.9.5.5 [built 11-December-2019 22:18:33 -0800; debug? true; trace: 10]
+2023-12-09 18:00:12,947 DEBUG com.mchange.v2.c3p0.management.DynamicPooledDataSourceManagerMBean [main] log:204 - MBean: com.mchange.v2.c3p0:type=PooledDataSource,identityToken=1hgeps1b0lnbmsv16s4ua6|6a4d7f76,name=1hgeps1b0lnbmsv16s4ua6|6a4d7f76 registered.
+2023-12-09 18:00:12,963 DEBUG com.mchange.v2.c3p0.management.DynamicPooledDataSourceManagerMBean [main] log:204 - MBean: com.mchange.v2.c3p0:type=PooledDataSource,identityToken=1hgeps1b0lnbmsv16s4ua6|6a4d7f76,name=1hgeps1b0lnbmsv16s4ua6|6a4d7f76 unregistered, in order to be reregistered after update.
+2023-12-09 18:00:12,963 DEBUG com.mchange.v2.c3p0.management.DynamicPooledDataSourceManagerMBean [main] log:204 - MBean: com.mchange.v2.c3p0:type=PooledDataSource,identityToken=1hgeps1b0lnbmsv16s4ua6|6a4d7f76,name=1hgeps1b0lnbmsv16s4ua6|6a4d7f76 registered.
+2023-12-09 18:00:13,084 INFO com.aweit.aspectJ.LoggingAspect [main] logBefore:24 - 前置通知 Log: getName, []
+2023-12-09 18:00:13,085 INFO com.aweit.aspectJ.LoggingAspect [main] logBefore:31 - getName方法執行後,回傳值:Mook Kim
+2023-12-09 18:00:13,085 INFO com.aweit.HelloProgram [main] main:26 - 123
+2023-12-09 18:49:37,603 INFO com.mchange.v2.log.MLog [MLog-Init-Reporter] log:212 - MLog clients using slf4j logging.
+2023-12-09 18:49:37,609 DEBUG com.mchange.v2.cfg.MConfig [main] log:207 - The configuration file for resource identifier '/mchange-commons.properties' could not be found. Skipping.
+2023-12-09 18:49:37,701 DEBUG com.mchange.v2.log.MLog [MLog-Init-Reporter] log:207 - Reading VM config for path list /com/mchange/v2/log/default-mchange-log.properties, /mchange-commons.properties, /c3p0.properties, hocon:/reference,/application,/c3p0,/, /mchange-log.properties, /
+2023-12-09 18:49:37,706 DEBUG com.mchange.v2.cfg.MConfig [main] log:207 - The configuration file for resource identifier '/mchange-log.properties' could not be found. Skipping.
+2023-12-09 18:49:37,707 DEBUG com.mchange.v2.log.MLog [MLog-Init-Reporter] log:207 - The configuration file for resource identifier '/mchange-commons.properties' could not be found. Skipping.
+2023-12-09 18:49:37,707 DEBUG com.mchange.v2.cfg.MConfig [main] log:207 - The configuration file for resource identifier 'hocon:/reference,/application,/c3p0,/' could not be found. Skipping.
+2023-12-09 18:49:37,707 DEBUG com.mchange.v2.log.MLog [MLog-Init-Reporter] log:207 - The configuration file for resource identifier '/c3p0.properties' could not be found. Skipping.
+2023-12-09 18:49:37,707 DEBUG com.mchange.v2.cfg.MConfig [main] log:207 - The configuration file for resource identifier '/c3p0.properties' could not be found. Skipping.
+2023-12-09 18:49:37,707 DEBUG com.mchange.v2.log.MLog [MLog-Init-Reporter] log:207 - The configuration file for resource identifier 'hocon:/reference,/application,/c3p0,/' could not be found. Skipping.
+2023-12-09 18:49:37,708 DEBUG com.mchange.v2.log.MLog [MLog-Init-Reporter] log:207 - The configuration file for resource identifier '/mchange-log.properties' could not be found. Skipping.
+2023-12-09 18:49:37,789 INFO com.mchange.v2.c3p0.C3P0Registry [main] log:212 - Initializing c3p0-0.9.5.5 [built 11-December-2019 22:18:33 -0800; debug? true; trace: 10]
+2023-12-09 18:49:37,803 DEBUG com.mchange.v2.c3p0.management.DynamicPooledDataSourceManagerMBean [main] log:204 - MBean: com.mchange.v2.c3p0:type=PooledDataSource,identityToken=1hgeps1b0lp36ip1xhd6me|79767781,name=1hgeps1b0lp36ip1xhd6me|79767781 registered.
+2023-12-09 18:49:37,817 DEBUG com.mchange.v2.c3p0.management.DynamicPooledDataSourceManagerMBean [main] log:204 - MBean: com.mchange.v2.c3p0:type=PooledDataSource,identityToken=1hgeps1b0lp36ip1xhd6me|79767781,name=1hgeps1b0lp36ip1xhd6me|79767781 unregistered, in order to be reregistered after update.
+2023-12-09 18:49:37,817 DEBUG com.mchange.v2.c3p0.management.DynamicPooledDataSourceManagerMBean [main] log:204 - MBean: com.mchange.v2.c3p0:type=PooledDataSource,identityToken=1hgeps1b0lp36ip1xhd6me|79767781,name=1hgeps1b0lp36ip1xhd6me|79767781 registered.
+2023-12-09 18:49:37,925 INFO com.aweit.aspectJ.LoggingAspect [main] logBefore:24 - 前置通知 Log: getName, []
+2023-12-09 18:49:37,925 INFO com.aweit.aspectJ.LoggingAspect [main] logBefore:31 - getName方法執行後,回傳值:Mook Kim
+2023-12-09 18:49:37,925 INFO com.aweit.HelloProgram [main] main:26 - 123
