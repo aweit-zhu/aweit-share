@@ -38,3 +38,46 @@
 2023-12-09 18:49:37,925 INFO com.aweit.aspectJ.LoggingAspect [main] logBefore:24 - 前置通知 Log: getName, []
 2023-12-09 18:49:37,925 INFO com.aweit.aspectJ.LoggingAspect [main] logBefore:31 - getName方法執行後,回傳值:Mook Kim
 2023-12-09 18:49:37,925 INFO com.aweit.HelloProgram [main] main:26 - 123
+2023-12-09 22:16:05,851 DEBUG com.aweit.slf4j.Slf4JDemo [main] main:18 - Debug log message
+2023-12-09 22:16:06,119 INFO com.aweit.slf4j.Slf4JDemo [main] main:19 - Info log message
+2023-12-09 22:16:06,191 ERROR com.aweit.slf4j.Slf4JDemo [main] main:20 - Error log message
+2023-12-09 22:16:40,877 DEBUG com.aweit.slf4j.Slf4JDemo [main] main:18 - Debug log message
+2023-12-09 22:16:40,878 INFO com.aweit.slf4j.Slf4JDemo [main] main:19 - Info log message
+2023-12-09 22:16:40,879 ERROR com.aweit.slf4j.Slf4JDemo [main] main:20 - Error log message
+2023-12-09 22:17:00,039 DEBUG com.aweit.slf4j.Slf4JDemo [main] main:18 - Debug log message
+2023-12-09 22:17:00,040 INFO com.aweit.slf4j.Slf4JDemo [main] main:19 - Info log message
+2023-12-09 22:17:00,040 ERROR com.aweit.slf4j.Slf4JDemo [main] main:20 - Error log message
+2023-12-09 22:17:05,638 DEBUG com.aweit.slf4j.Slf4JDemo [main] main:18 - Debug log message
+2023-12-09 22:17:05,639 INFO com.aweit.slf4j.Slf4JDemo [main] main:19 - Info log message
+2023-12-09 22:17:05,639 ERROR com.aweit.slf4j.Slf4JDemo [main] main:20 - Error log message
+2023-12-09 22:17:16,911 DEBUG com.aweit.slf4j.Slf4JDemo [main] main:18 - Debug log message
+2023-12-09 22:17:16,912 INFO com.aweit.slf4j.Slf4JDemo [main] main:19 - Info log message
+2023-12-09 22:17:16,912 ERROR com.aweit.slf4j.Slf4JDemo [main] main:20 - Error log message
+2023-12-09 22:17:56,592 DEBUG com.aweit.slf4j.Slf4JDemo [main] main:18 - Debug log message
+2023-12-09 22:17:56,593 INFO com.aweit.slf4j.Slf4JDemo [main] main:19 - Info log message
+2023-12-09 22:17:56,593 ERROR com.aweit.slf4j.Slf4JDemo [main] main:20 - Error log message
+2023-12-09 22:19:33,998 DEBUG com.aweit.slf4j.Slf4JDemo [main] main:18 - Debug log message
+2023-12-09 22:19:34,000 INFO com.aweit.slf4j.Slf4JDemo [main] main:19 - Info log message
+2023-12-09 22:19:34,000 ERROR com.aweit.slf4j.Slf4JDemo [main] main:20 - Error log message
+2023-12-09 22:19:43,801 DEBUG com.aweit.slf4j.Slf4JDemo [main] main:18 - Debug log message
+2023-12-09 22:19:43,802 INFO com.aweit.slf4j.Slf4JDemo [main] main:19 - Info log message
+2023-12-09 22:19:43,802 ERROR com.aweit.slf4j.Slf4JDemo [main] main:20 - Error log message
+2023-12-09 22:21:52,721 DEBUG com.aweit.slf4j.Slf4JDemo [main] main:19 - Debug log message
+2023-12-09 22:21:52,784 INFO com.aweit.slf4j.Slf4JDemo [main] main:20 - Info log message
+2023-12-09 22:21:52,845 ERROR com.aweit.slf4j.Slf4JDemo [main] main:21 - Error log message
+2023-12-09 22:22:02,307 DEBUG com.aweit.slf4j.Slf4JDemo [main] main:19 - Debug log message
+2023-12-09 22:22:02,308 INFO com.aweit.slf4j.Slf4JDemo [main] main:20 - Info log message
+2023-12-09 22:22:02,308 ERROR com.aweit.slf4j.Slf4JDemo [main] main:21 - Error log message
+2023-12-09 22:22:19,748 DEBUG com.aweit.slf4j.Slf4JDemo [main] main:19 - Debug log message
+2023-12-09 22:22:19,749 INFO com.aweit.slf4j.Slf4JDemo [main] main:20 - Info log message
+2023-12-09 22:22:19,750 ERROR com.aweit.slf4j.Slf4JDemo [main] main:21 - Error log message
+2023-12-09 22:23:27,146 DEBUG com.aweit.slf4j.Slf4JDemo [main] main:19 - Debug log message
+2023-12-09 22:23:27,148 INFO com.aweit.slf4j.Slf4JDemo [main] main:20 - Info log message
+2023-12-09 22:23:27,148 ERROR com.aweit.slf4j.Slf4JDemo [main] main:21 - Error log message
+2023-12-09 22:25:09,640 TRACE com.aweit.slf4j.Slf4JDemo [main] main:18 - Trace log message
+2023-12-09 22:25:09,641 DEBUG com.aweit.slf4j.Slf4JDemo [main] main:19 - Debug log message
+2023-12-09 22:25:09,642 INFO com.aweit.slf4j.Slf4JDemo [main] main:20 - Info log message
+2023-12-09 22:25:09,642 ERROR com.aweit.slf4j.Slf4JDemo [main] main:21 - Error log message
+2023-12-09 22:25:36,771 DEBUG com.aweit.slf4j.Slf4JDemo [main] main:19 - Debug log message
+2023-12-09 22:25:36,772 INFO com.aweit.slf4j.Slf4JDemo [main] main:20 - Info log message
+2023-12-09 22:25:36,772 ERROR com.aweit.slf4j.Slf4JDemo [main] main:21 - Error log message

@@ -7,6 +7,9 @@
     <Appenders>
         <!--*********************控制台日志***********************-->
         <Console name="consoleAppender" target="SYSTEM_OUT">
+            <Filters>
+                <ThresholdFilter level="info" onMatch="ACCEPT"/>
+            </Filters>
             <!--设置日志格式及颜色-->
             <PatternLayout
                     pattern="%style{%d{ISO8601}}{bright,green} %highlight{%-5level} [%style{%t}{bright,blue}] %style{%C{}}{bright,yellow}: %msg%n%style{%throwable}{red}"

@@ -35,3 +35,17 @@
 2023-12-09 18:49:37,925 INFO com.aweit.aspectJ.LoggingAspect [main] 前置通知 Log: getName, []
 2023-12-09 18:49:37,925 INFO com.aweit.aspectJ.LoggingAspect [main] getName方法執行後,回傳值:Mook Kim
 2023-12-09 18:49:37,925 INFO com.aweit.HelloProgram [main] 123
+2023-12-09 22:16:06,119 INFO com.aweit.slf4j.Slf4JDemo [main] Info log message
+2023-12-09 22:16:40,878 INFO com.aweit.slf4j.Slf4JDemo [main] Info log message
+2023-12-09 22:17:00,040 INFO com.aweit.slf4j.Slf4JDemo [main] Info log message
+2023-12-09 22:17:05,639 INFO com.aweit.slf4j.Slf4JDemo [main] Info log message
+2023-12-09 22:17:16,912 INFO com.aweit.slf4j.Slf4JDemo [main] Info log message
+2023-12-09 22:17:56,593 INFO com.aweit.slf4j.Slf4JDemo [main] Info log message
+2023-12-09 22:19:34,000 INFO com.aweit.slf4j.Slf4JDemo [main] Info log message
+2023-12-09 22:19:43,802 INFO com.aweit.slf4j.Slf4JDemo [main] Info log message
+2023-12-09 22:21:52,784 INFO com.aweit.slf4j.Slf4JDemo [main] Info log message
+2023-12-09 22:22:02,308 INFO com.aweit.slf4j.Slf4JDemo [main] Info log message
+2023-12-09 22:22:19,749 INFO com.aweit.slf4j.Slf4JDemo [main] Info log message
+2023-12-09 22:23:27,148 INFO com.aweit.slf4j.Slf4JDemo [main] Info log message
+2023-12-09 22:25:09,642 INFO com.aweit.slf4j.Slf4JDemo [main] Info log message
+2023-12-09 22:25:36,772 INFO com.aweit.slf4j.Slf4JDemo [main] Info log message

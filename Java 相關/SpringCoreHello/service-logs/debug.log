@@ -70,3 +70,17 @@
 2023-12-09 18:49:37,803 DEBUG com.mchange.v2.log.slf4j.Slf4jMLog$Slf4jMLogger$DebugLogger [main] MBean: com.mchange.v2.c3p0:type=PooledDataSource,identityToken=1hgeps1b0lp36ip1xhd6me|79767781,name=1hgeps1b0lp36ip1xhd6me|79767781 registered.
 2023-12-09 18:49:37,817 DEBUG com.mchange.v2.log.slf4j.Slf4jMLog$Slf4jMLogger$DebugLogger [main] MBean: com.mchange.v2.c3p0:type=PooledDataSource,identityToken=1hgeps1b0lp36ip1xhd6me|79767781,name=1hgeps1b0lp36ip1xhd6me|79767781 unregistered, in order to be reregistered after update.
 2023-12-09 18:49:37,817 DEBUG com.mchange.v2.log.slf4j.Slf4jMLog$Slf4jMLogger$DebugLogger [main] MBean: com.mchange.v2.c3p0:type=PooledDataSource,identityToken=1hgeps1b0lp36ip1xhd6me|79767781,name=1hgeps1b0lp36ip1xhd6me|79767781 registered.
+2023-12-09 22:16:05,851 DEBUG com.aweit.slf4j.Slf4JDemo [main] Debug log message
+2023-12-09 22:16:40,877 DEBUG com.aweit.slf4j.Slf4JDemo [main] Debug log message
+2023-12-09 22:17:00,039 DEBUG com.aweit.slf4j.Slf4JDemo [main] Debug log message
+2023-12-09 22:17:05,638 DEBUG com.aweit.slf4j.Slf4JDemo [main] Debug log message
+2023-12-09 22:17:16,911 DEBUG com.aweit.slf4j.Slf4JDemo [main] Debug log message
+2023-12-09 22:17:56,592 DEBUG com.aweit.slf4j.Slf4JDemo [main] Debug log message
+2023-12-09 22:19:33,998 DEBUG com.aweit.slf4j.Slf4JDemo [main] Debug log message
+2023-12-09 22:19:43,801 DEBUG com.aweit.slf4j.Slf4JDemo [main] Debug log message
+2023-12-09 22:21:52,721 DEBUG com.aweit.slf4j.Slf4JDemo [main] Debug log message
+2023-12-09 22:22:02,307 DEBUG com.aweit.slf4j.Slf4JDemo [main] Debug log message
+2023-12-09 22:22:19,748 DEBUG com.aweit.slf4j.Slf4JDemo [main] Debug log message
+2023-12-09 22:23:27,146 DEBUG com.aweit.slf4j.Slf4JDemo [main] Debug log message
+2023-12-09 22:25:09,641 DEBUG com.aweit.slf4j.Slf4JDemo [main] Debug log message
+2023-12-09 22:25:36,771 DEBUG com.aweit.slf4j.Slf4JDemo [main] Debug log message
