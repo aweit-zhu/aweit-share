@@ -21,7 +21,10 @@ public class BCryptExample {
         
         UserDAOImpl impl = (UserDAOImpl)context.getBean("userDAOImpl");
         
-        impl.save(user);
+        //impl.save(user);
+        
+        User user1 = impl.findUserById(1);
+        System.out.println(user1);
         
 //        String candidatePassword = "123";
 //        boolean isPasswordMatch = BCrypt.checkpw(candidatePassword, hashedPassword);

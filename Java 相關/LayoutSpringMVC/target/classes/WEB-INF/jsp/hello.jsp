@@ -8,5 +8,6 @@
 </head>
 	<body>
 		 <h2>Hello, ${message}</h2>
+		 <h2> ${sessionScope.username} </h2>
 	</body>
 </html>
