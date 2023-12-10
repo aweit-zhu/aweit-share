@@ -14,7 +14,7 @@ public class Slf4JDemo {
 	private static Logger logger = LoggerFactory.getLogger(Slf4JDemo.class);
 
 	public static void main(String[] args) {
-		
+
 		logger.trace("Trace log message");
 		logger.debug("Debug log message");
 		logger.info("Info log message");
