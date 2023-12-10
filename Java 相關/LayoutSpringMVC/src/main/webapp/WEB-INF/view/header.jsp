@@ -18,22 +18,22 @@
 		    <div class="collapse navbar-collapse" id="navbarSupportedContent">
 		      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 		      	<li class="nav-item">
-		          <a role="button" class="nav-link text-light" href="./">🎄報表</a>
+		          <a role="button" class="nav-link text-light" href="/LayoutSpringMVC/">🎄報表</a>
 		        </li>
 		        <li class="nav-item">
-		          <a role="button" class="nav-link text-light" href="./page1.jsp">🎄表單製作</a>
+		          <a role="button" class="nav-link text-light" href="/LayoutSpringMVC/page1.jsp">🎄表單製作</a>
 		        </li>
 		        <li class="nav-item">
-		          <a role="button" class="nav-link text-light" href="./page2">🎄表單驗證+上傳檔案</a>
+		          <a role="button" class="nav-link text-light" href="/LayoutSpringMVC/page2">🎄表單驗證+上傳檔案</a>
 		        </li>
 		        <li class="nav-item">
-		          <a role="button" class="nav-link text-light" href="./page3.jsp">🎄下載檔案</a>
+		          <a role="button" class="nav-link text-light" href="/LayoutSpringMVC/page3.jsp">🎄下載檔案</a>
 		        </li>
 		        <li class="nav-item">
-		          <a role="button" class="nav-link text-light" href="./page4.jsp">🎄上傳檔案</a>
+		          <a role="button" class="nav-link text-light" href="/LayoutSpringMVC/page4.jsp">🎄上傳檔案</a>
 		        </li>
 		        <li class="nav-item">
-		          <a role="button" class="nav-link text-light" href="./shopping.jsp">🎄購物車</a>
+		          <a role="button" class="nav-link text-light" href="/LayoutSpringMVC/shopping.jsp">🎄購物車</a>
 		        </li>
 		        <li class="nav-item">
 		          <a role="button" class="nav-link text-light" href="/LayoutSpringMVC/app/hello">🎄Hello Page</a>
