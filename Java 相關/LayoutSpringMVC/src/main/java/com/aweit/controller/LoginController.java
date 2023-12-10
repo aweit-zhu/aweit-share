@@ -12,12 +12,14 @@ import org.mindrot.jbcrypt.BCrypt;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.aweit.dao.user.User;
 import com.aweit.dao.user.UserDAOImpl;
 
-@Controller(value = "/login")
+@Controller
+@RequestMapping(value = "/login")
 public class LoginController {
 
 	@Autowired

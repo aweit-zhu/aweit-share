@@ -35,6 +35,9 @@
 		        <li class="nav-item">
 		          <a role="button" class="nav-link text-light" href="./shopping.jsp">🎄購物車</a>
 		        </li>
+		        <li class="nav-item">
+		          <a role="button" class="nav-link text-light" href="/LayoutSpringMVC/app/hello">🎄Hello Page</a>
+		        </li>
 		     </ul>
 		     <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
 		     	<li class="nav-item">

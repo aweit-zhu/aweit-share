@@ -8,7 +8,7 @@
         <!--*********************控制台日志***********************-->
         <Console name="consoleAppender" target="SYSTEM_OUT">
             <Filters>
-                <ThresholdFilter level="info" onMatch="neutral"/>
+                <ThresholdFilter level="debug" onMatch="neutral"/>
             </Filters>
             <!--设置日志格式及颜色-->
             <PatternLayout
