@@ -7,12 +7,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequestMapping("/hello")
-public class HelloController{
+public class HelloController {
 
-   @GetMapping(value="/print")
-   public String printHello(Model model) {
-      model.addAttribute("message", "Hello Spring MVC Framework!");
-      return "hello";
-   }
+	@GetMapping(value = "/print")
+	public String printHello(Model model) {
+		model.addAttribute("message", "Hello Spring MVC Framework!");
+		return "hello";
+	}
 
 }

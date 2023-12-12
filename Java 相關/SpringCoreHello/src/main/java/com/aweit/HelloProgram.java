@@ -17,13 +17,17 @@ public class HelloProgram {
 	
 	public static void main(String[] args) {
 
-		ApplicationContext ctx = new ClassPathXmlApplicationContext("beans.xml");
-
-		CustomerService customerService = (CustomerService) ctx.getBean("customerServiceImpl");
+//		ApplicationContext ctx = new ClassPathXmlApplicationContext("beans.xml");
+//
+//		CustomerService customerService = (CustomerService) ctx.getBean("customerServiceImpl");
+//		
+//		customerService.getName();
+//		
+//		logger.info("123");
 		
-		customerService.getName();
+		System.out.println( 0.1 + 0.1 == 0.2);
+		System.out.println( 0.1 + 0.1 + 0.1 == 0.3);
 		
-		logger.info("123");
 
 	}
 
