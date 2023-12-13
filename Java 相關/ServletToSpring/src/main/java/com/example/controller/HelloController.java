@@ -2,10 +2,13 @@ package com.example.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.context.weaving.DefaultContextLoadTimeWeaver;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 
 /**
  * http://localhost:8080/ServletToSpring/mvc/hello/spring
@@ -25,8 +28,16 @@ public class HelloController {
 	}
 	
 	@GetMapping("/spring2")
-	public String spring2() {
+	public String spring2(Model model) {
 		logger.info("hello spring2");
 		return "spring";
+	}
+	
+	@GetMapping("/spring3")
+	public ModelAndView spring3() {
+		logger.info("hello spring3");
+		ModelAndView view = new ModelAndView();
+		view.setViewName("spring");
+		return view;
 	}
 }
