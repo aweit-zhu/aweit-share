@@ -1,5 +1,8 @@
 package com.example.controller;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.weaving.DefaultContextLoadTimeWeaver;
@@ -39,5 +42,11 @@ public class HelloController {
 		ModelAndView view = new ModelAndView();
 		view.setViewName("spring");
 		return view;
+	}
+	
+	@GetMapping("/spring4")
+	public String spring4(HttpServletRequest request,HttpServletResponse response,java.util.Locale locale) {
+		logger.info("hello spring2");
+		return "spring";
 	}
 }

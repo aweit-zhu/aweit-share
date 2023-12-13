@@ -5,6 +5,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.aweit.bean.Book;
 import com.aweit.bean.Emp;
@@ -28,7 +29,7 @@ public class HelloController {
 
 	@GetMapping(value = "/two")
 	@ResponseBody
-	public String one(Emp emp,Emp emp2,Book book) {
+	public String one(Emp emp,Emp emp2,Book book,Model model) {
 		System.out.println(emp);
 		return "hello";
 	}
