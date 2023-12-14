@@ -1,0 +1,5 @@
+[20:59:59:131] [TRACE] - com.aweit.slf4j.Slf4JDemo.main(Slf4JDemo.java:18) - Trace log message
+[20:59:59:133] [DEBUG] - com.aweit.slf4j.Slf4JDemo.main(Slf4JDemo.java:19) - Debug log message
+[20:59:59:133] [INFO ] - com.aweit.slf4j.Slf4JDemo.main(Slf4JDemo.java:20) - Info log message
+[20:59:59:134] [WARN ] - com.aweit.slf4j.Slf4JDemo.main(Slf4JDemo.java:21) - Info log message
+[20:59:59:134] [ERROR] - com.aweit.slf4j.Slf4JDemo.main(Slf4JDemo.java:22) - Error log message
