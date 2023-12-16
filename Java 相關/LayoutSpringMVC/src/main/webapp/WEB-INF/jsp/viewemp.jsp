@@ -4,15 +4,21 @@
 	prefix="spform"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
 
+<%@ include file="/WEB-INF/view/header.jsp"%>
+<div class="w-100 vh-100" style="min-height:100%;padding-top:5rem">
+	<%-- ${list} --%>
+	<ol class="list-group list-group-numbered">
+		<c:forEach items="${ list }" var="emp">
+		  <li class="list-group-item d-flex justify-content-between align-items-start">
+		    <div class="ms-2 me-auto">
+		      <div class="fw-bold"> ${ emp.name }</div>
+		       薪水：${ emp.salary }
+		       職業：${ emp.designation }
+		    </div>
+		  </li>
+		</c:forEach>
+	</ol>
+</div>
+<%@ include file="/WEB-INF/view/footer.jsp"%>
 	
-
-</body>
-</html>

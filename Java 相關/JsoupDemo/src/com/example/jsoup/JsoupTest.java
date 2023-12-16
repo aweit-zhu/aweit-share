@@ -1,3 +1,4 @@
+package com.example.jsoup;
 
 
 import org.jsoup.Jsoup;
@@ -5,10 +6,6 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-
-/**
- * 參考網站：https://www.1ju.org/jsoup/jsoup-examples
- * */
 public class JsoupTest {
     public static void main(String[] args) {
         try {
