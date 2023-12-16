@@ -27,6 +27,12 @@
             <configuration>
               <transformers>
                 <transformer>
+                  <resource>META-INF/spring.handlers</resource>
+                </transformer>
+                <transformer>
+                  <resource>META-INF/spring.schemas</resource>
+                </transformer>
+                <transformer>
                   <manifestEntries>
                     <Main-Class>com.example.ScheduleMain</Main-Class>
                   </manifestEntries>
