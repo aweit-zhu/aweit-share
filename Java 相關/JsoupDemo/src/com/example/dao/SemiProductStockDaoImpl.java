@@ -4,6 +4,8 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.List;
 
+import javax.transaction.Transactional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BatchPreparedStatementSetter;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -18,6 +20,7 @@ public class SemiProductStockDaoImpl implements SemiProductStockDao {
 	JdbcTemplate jdbcTemplate;
 	
 	@Override
+	@Transactional
 	public int[] save(List<SemiProductStock> semiProductStocks) {
 
 		int trxId = getNextSeq();
