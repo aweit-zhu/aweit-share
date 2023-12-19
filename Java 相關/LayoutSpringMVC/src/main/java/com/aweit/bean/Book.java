@@ -1,5 +1,7 @@
 package com.aweit.bean;
 
+import com.google.gson.Gson;
+
 public class Book {
 
 	private Integer id;
@@ -43,6 +45,9 @@ public class Book {
 		this.name = name;
 	}
 	
-	
+	@Override
+	public String toString() {
+		return new Gson().toJson(this);
+	}
 	
 }

@@ -1,13 +1,23 @@
 package com.aweit.bean;
 
+import javax.validation.constraints.Min;
+
+import org.hibernate.validator.constraints.NotBlank;
+import org.hibernate.validator.constraints.NotEmpty;
+
+import com.google.gson.Gson;
+
 public class Emp {
 
 	private int id;
 
+	@NotBlank(message = "請輸入用戶")
 	private String name;
 
+	@Min(value = 25000, message = "最小值為25000元")
 	private float salary;
 
+	@NotBlank(message = "請輸入職業")
 	private String designation;
 
 	public Emp() {
@@ -51,4 +61,11 @@ public class Emp {
 	public void setDesignation(String designation) {
 		this.designation = designation;
 	}
+
+	@Override
+	public String toString() {
+		return new Gson().toJson(this);
+	}
+	
+	
 }
