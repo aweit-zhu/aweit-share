@@ -9,6 +9,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
+import org.springframework.stereotype.Component;
 import org.springframework.web.socket.CloseStatus;
 import org.springframework.web.socket.TextMessage;
 import org.springframework.web.socket.WebSocketSession;
@@ -20,6 +21,7 @@ import com.example.entity.SemiProductStock;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 
+@Component("serverWebSocketHandler")
 public class ServerWebSocketHandler extends TextWebSocketHandler {
 
 	enum Prop {
@@ -99,11 +101,11 @@ public class ServerWebSocketHandler extends TextWebSocketHandler {
 	@Autowired
 	private SemiProductStockDaoImpl semiProductStockDao;
 
-	@Scheduled(fixedRate = 10 * 1000) // 每 10 秒執行一次
-	private void sendPeriodicMessages() throws IOException {
+	//@Scheduled(fixedRate = 10 * 1000) // 每 10 秒執行一次
+	public void sendPeriodicMessages() throws IOException {
+		List<SemiProductStock> semiProductStocks = semiProductStockDao.findLatestSemiProductStock();
 		for (WebSocketSession session : sessions) {
 			if (session.isOpen()) {
-				List<SemiProductStock> semiProductStocks = semiProductStockDao.findLatestSemiProductStock();
 				JsonObject stockObject = new JsonObject();
 				stockObject.addProperty(Prop.TYPE.getName(), "stocks");
 				stockObject.add(Prop.CONTENT.getName(), gson.toJsonTree(semiProductStocks));
@@ -113,10 +115,3 @@ public class ServerWebSocketHandler extends TextWebSocketHandler {
 		}
 	}
 }
-
-//JsonObject messageObject = new JsonObject();
-//messageObject.addProperty(Prop.TYPE.getName(), "time");
-//messageObject.addProperty(Prop.CONTENT.getName(),
-//		LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")));
-//logger.info("Server sends: {}", messageObject);
-//session.sendMessage(new TextMessage(gson.toJson(messageObject)));

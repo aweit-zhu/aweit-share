@@ -1,5 +1,6 @@
 package com.example.config;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.EnableScheduling;
@@ -15,13 +16,11 @@ import com.example.handler.ServerWebSocketHandler;
 @EnableScheduling
 public class WebSocketConfig implements WebSocketConfigurer {
 
+	@Autowired
+	ServerWebSocketHandler serverWebSocketHandler;
+	
     @Override
     public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
-        registry.addHandler(myWebSocketHandler(), "/websocket").setAllowedOrigins("*");
-    }
-
-    @Bean
-    public WebSocketHandler myWebSocketHandler() {
-        return new ServerWebSocketHandler();
+        registry.addHandler(serverWebSocketHandler, "/websocket").setAllowedOrigins("*");
     }
 }

@@ -10,6 +10,15 @@
     
 	<script>
 		
+		$(function() {
+			$.ajax({
+		        url: 'http://localhost:8080/WebSocketDemo/mvc/stock',
+		        success: function ( data ){
+					console.log(data);
+		        }
+		    });
+		});
+		
 		var socket = new WebSocket('ws://localhost:8080/WebSocketDemo/mvc/websocket');
 
 		socket.onopen = function() {
@@ -20,6 +29,7 @@
 		    let message = JSON.parse(event.data);
 			if(message.type == 'stocks' ) {
 				let stocks = message.content;
+				console.log(stocks);
 				$('#stock ol li').remove();
 				$('#spinner').addClass('d-none');
 				$.each(stocks, function(index,stock){
