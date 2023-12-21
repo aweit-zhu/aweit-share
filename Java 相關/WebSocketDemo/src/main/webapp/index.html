@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Stock Socket Demo</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    
+	<script>
+		
+		$(function() {
+			$.ajax({
+		        url: 'http://localhost:8080/WebSocketDemo/mvc/stock',
+		        success: function ( data ){
+					console.log(data);
+		        }
+		    });
+		});
+		
+		var socket = new WebSocket('ws://localhost:8080/WebSocketDemo/mvc/websocket');
+
+		socket.onopen = function() {
+		    console.log('WebSocket連線已建立');
+		};
+		
+		socket.onmessage = function(event) {
+		    let message = JSON.parse(event.data);
+			if(message.type == 'stocks' ) {
+				let stocks = message.content;
+				console.log(stocks);
+				$('#stock ol li').remove();
+				$('#spinner').addClass('d-none');
+				$.each(stocks, function(index,stock){
+					$('#stock ol').append(
+						`		  
+						   <li class="list-group-item d-flex justify-content-between align-items-start">
+						    <div class="ms-2 me-auto">
+						      <div class="fw-bold">${stock.stockName} (${stock.stockNumber})</div>
+						      <div class="fw-bold">${stock.price} (${stock.priceChange})</div>
+						    </div>
+						    <span class="badge bg-primary rounded-pill"> 
+								${stock.trading}
+							</span>
+						  </li>
+				  		`
+					);
+				});
+			}
+		};
+		
+		socket.onclose = function() {
+		    console.log('WebSocket連線已關閉');
+		};
+
+	</script>	
+</head>
+<body>
+	<div id="stock" class="mx-auto mt-5">
+		<div class="d-flex flex-column justify-content-center align-items-center">
+			<p class="h4">半導體股票排行</p>
+			<div class="spinner-border" role="status" id="spinner">
+			  <span class="visually-hidden">Loading...</span>
+			</div>
+		</div>
+		<ol class="list-group list-group-numbered"></ol>
+	</div>
+</body>
+</html>
