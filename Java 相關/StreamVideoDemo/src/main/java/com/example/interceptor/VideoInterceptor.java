@@ -12,11 +12,9 @@ public class VideoInterceptor extends HandlerInterceptorAdapter{
 	@Override
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
 			throws Exception {
-		
 		HttpSession session = request.getSession();
 		if(session.getAttribute("user") == null) {
-			System.out.println(request.getContextPath()+"/mvc/login");
-			response.sendRedirect(request.getContextPath()+"/mvc/login");
+			response.sendRedirect("./");
 			return false;
 		}
 		return true;

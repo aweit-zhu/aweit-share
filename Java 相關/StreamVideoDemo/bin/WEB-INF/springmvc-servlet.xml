@@ -14,9 +14,9 @@
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd
 		http://www.springframework.org/schema/data/jpa https://www.springframework.org/schema/data/jpa/spring-jpa.xsd">
 
-	<context:component-scan base-package="com.example" />
-	
 	<mvc:annotation-driven />
+	
+	<context:component-scan base-package="com.example" />
 	
 	<!-- 設定 Spring AOP 切面程式自動實現代理 -->
 	<aop:aspectj-autoproxy proxy-target-class="true" />
@@ -60,16 +60,5 @@
     
     <!-- 開啟註解驅動，對事務相關的註解進行掃描與解析 -->
     <tx:annotation-driven transaction-manager="transactionManager"></tx:annotation-driven>
- 
- 	<!-- mvc:resources 映射 -->
-    <mvc:resources mapping="/videos/**" location="classpath:/WEB-INF/videos/"/>
- 
- 	<!-- 攔截器 -->
-    <mvc:interceptors>
-        <mvc:interceptor>
-            <mvc:mapping path="/videos/**"/>
-            <mvc:mapping path="/video/**"/>
-            <bean class="com.example.interceptor.VideoInterceptor"/>
-        </mvc:interceptor>
-    </mvc:interceptors>
+	
 </beans>		
