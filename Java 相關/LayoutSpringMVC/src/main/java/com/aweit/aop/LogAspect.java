@@ -28,6 +28,9 @@ public class LogAspect {
 	@Pointcut("execution(* com.aweit.controller.*.*(..))")
 	public void p1() {}
 	
+	@Pointcut("execution(* com.aweit.controller.LogoutController.*(..))")
+	public void p2() {}
+	
 	//@Before("p1()")
 	public void logBefore(JoinPoint joinPoint) {
 		String methodName = joinPoint.getTarget().getClass().getName()+"."+joinPoint.getSignature().getName();
@@ -35,14 +38,14 @@ public class LogAspect {
 		logger.info("exec: {}, {}, {}",session.getAttribute("username"), methodName, Arrays.toString(args));
 	}
 	
-	@AfterReturning(value = "p1()", returning = "result")
+	@AfterReturning(value = "p1() && !p2()", returning = "result")
 	public void logAfter(JoinPoint joinPoint, Object result) {
 		String methodName = joinPoint.getTarget().getClass().getName()+"."+joinPoint.getSignature().getName();
 		Object[] args = joinPoint.getArgs();
 		logger.info("exec: {}, {}, {}",session.getAttribute("username"), methodName, Arrays.toString(args),result);
 	}
 	
-	@AfterThrowing(value = "p1()", throwing = "ex")
+	@AfterThrowing(value = "p1() && !p2()", throwing = "ex")
 	public void afterThrowingAdvice(JoinPoint joinPoint, Exception ex) {
 		logger.error("ex: {} Log: {}",session.getAttribute("username"), ex);
 	}
