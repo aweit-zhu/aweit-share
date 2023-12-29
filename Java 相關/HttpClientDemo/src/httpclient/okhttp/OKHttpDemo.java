@@ -1,20 +1,15 @@
 package httpclient.okhttp;
 
 import java.io.IOException;
-import java.nio.charset.StandardCharsets;
-
-import org.apache.http.HttpEntity;
-import org.apache.http.client.methods.CloseableHttpResponse;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.entity.StringEntity;
-import org.apache.http.impl.client.CloseableHttpClient;
-import org.apache.http.impl.client.HttpClients;
-import org.apache.http.util.EntityUtils;
 
 import com.google.gson.Gson;
 
 import bean.Post;
+import okhttp3.MediaType;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.RequestBody;
+import okhttp3.Response;
 
 public class OKHttpDemo {
 
@@ -22,55 +17,53 @@ public class OKHttpDemo {
 		getMethod();
 		postMethod();
 	}
-
+	
 	public static void getMethod() throws IOException {
-		try (CloseableHttpClient httpClient = HttpClients.createDefault()) {
-			HttpGet httpGet = new HttpGet("https://jsonplaceholder.typicode.com/posts/1");
+        OkHttpClient client = new OkHttpClient();
 
-			try (CloseableHttpResponse response = httpClient.execute(httpGet)) {
-				int statusCode = response.getStatusLine().getStatusCode();
+        Request request = new Request.Builder()
+                .url("https://jsonplaceholder.typicode.com/posts/1")
+                .build();
 
-				if (statusCode == 200) {
-					HttpEntity entity = response.getEntity();
-					String jsonResponse = EntityUtils.toString(entity);
-					Post post = new Gson().fromJson(jsonResponse, Post.class);
-					System.out.println(post);
-				} else {
-					System.out.println("GET request did not work. Status code: " + statusCode);
-				}
-			}
-		}
-	}
+        try (Response response = client.newCall(request).execute()) {
+            if (response.isSuccessful()) {
+                String jsonResponse = response.body().string();
+                Post post = new Gson().fromJson(jsonResponse, Post.class);
+                System.out.println(post);
+            } else {
+                System.out.println("GET request did not work. Response code: " + response.code());
+            }
+        }
+    }
 
-	public static void postMethod() throws IOException {
-		try (CloseableHttpClient httpClient = HttpClients.createDefault()) {
-			HttpPost httpPost = new HttpPost("https://jsonplaceholder.typicode.com/posts");
+    public static void postMethod() throws IOException {
+        OkHttpClient client = new OkHttpClient();
 
-			// Set headers
-			httpPost.setHeader("Content-Type", "application/json; charset=UTF-8");
+        // Create Post object
+        Post nPost = Post.builder().id(101).title("foo").body("bar").userId(1).build();
 
-			// Create Post object
-			Post nPost = Post.builder().id(101).title("foo").body("bar").userId(1).build();
+        // Convert Post object to JSON string
+        String jsonInputString = new Gson().toJson(nPost);
 
-			// Convert Post object to JSON string
-			String jsonInputString = new Gson().toJson(nPost);
+        // Set the request body
+        RequestBody requestBody = RequestBody.create(jsonInputString, MediaType.parse("application/json; charset=utf-8"));
 
-			// Set the request body
-			httpPost.setEntity(new StringEntity(jsonInputString, StandardCharsets.UTF_8));
+        Request request = new Request.Builder()
+                .url("https://jsonplaceholder.typicode.com/posts")
+                .post(requestBody)
+                .build();
 
-			try (CloseableHttpResponse response = httpClient.execute(httpPost)) {
-				int statusCode = response.getStatusLine().getStatusCode();
+        try (Response response = client.newCall(request).execute()) {
+            if (response.isSuccessful()) {
+                String jsonResponse = response.body().string();
+                Post post = new Gson().fromJson(jsonResponse, Post.class);
+                System.out.println(post);
+            } else {
+                System.out.println("POST request did not work. Response code: " + response.code());
+            }
+        }
+    }
 
-				if (statusCode == 201) {
-					HttpEntity entity = response.getEntity();
-					String jsonResponse = EntityUtils.toString(entity);
-					Post post = new Gson().fromJson(jsonResponse, Post.class);
-					System.out.println(post);
-				} else {
-					System.out.println("POST request did not work. Status code: " + statusCode);
-				}
-			}
-		}
-	}
+	
 
 }
