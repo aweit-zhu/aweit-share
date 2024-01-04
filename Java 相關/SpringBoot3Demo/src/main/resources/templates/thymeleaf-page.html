@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Hello</title>
+</head>
+<body>
+	[Thyemelaef] Hello, <span th:text="${ username }"></span>
+	
+	<p th:each="text: ${ texts }">
+		<span th:text="${ text }"></span>
+	</p>
+</body>
+</html>
