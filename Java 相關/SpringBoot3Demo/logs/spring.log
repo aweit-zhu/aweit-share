@@ -5568,3 +5568,453 @@ Caused by: org.springframework.beans.factory.support.BeanDefinitionOverrideExcep
 2024-01-05T19:52:30.780+08:00  INFO 9872 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-01-05T19:52:30.782+08:00  INFO 9872 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2024-01-05T19:52:30.795+08:00  INFO 9872 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-01-05T19:56:27.485+08:00  INFO 23384 --- [restartedMain] com.example.SpringBoot3DemoApplication   : Starting SpringBoot3DemoApplication using Java 17.0.8 with PID 23384 (D:\workspace\aweit-share\Java 相關\SpringBoot3Demo\target\classes started by user in D:\workspace\aweit-share\Java 相關\SpringBoot3Demo)
+2024-01-05T19:56:27.488+08:00  INFO 23384 --- [restartedMain] com.example.SpringBoot3DemoApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-01-05T19:56:27.538+08:00  INFO 23384 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-01-05T19:56:27.538+08:00  INFO 23384 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-01-05T19:56:28.209+08:00  INFO 23384 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-01-05T19:56:28.210+08:00  INFO 23384 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-01-05T19:56:28.245+08:00  INFO 23384 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.dao.EmployeeResposity; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-01-05T19:56:28.247+08:00  INFO 23384 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.dao.TaskResposity; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-01-05T19:56:28.248+08:00  INFO 23384 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 32 ms. Found 0 JDBC repository interfaces.
+2024-01-05T19:56:28.267+08:00  INFO 23384 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-01-05T19:56:28.268+08:00  INFO 23384 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-05T19:56:28.294+08:00  INFO 23384 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 2 JPA repository interfaces.
+2024-01-05T19:56:29.454+08:00  INFO 23384 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9090 (http)
+2024-01-05T19:56:29.473+08:00  INFO 23384 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-05T19:56:29.474+08:00  INFO 23384 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-01-05T19:56:29.745+08:00  INFO 23384 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2024-01-05T19:56:29.759+08:00  INFO 23384 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-05T19:56:29.760+08:00  INFO 23384 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2221 ms
+2024-01-05T19:56:30.283+08:00  INFO 23384 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-05T19:56:30.309+08:00  INFO 23384 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-01-05T19:56:30.464+08:00  INFO 23384 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2f8688ae
+2024-01-05T19:56:30.467+08:00  INFO 23384 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-01-05T19:56:31.406+08:00  INFO 23384 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-05T19:56:31.470+08:00  WARN 23384 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-05T19:56:31.613+08:00 DEBUG 23384 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 4 mappings in 'requestMappingHandlerMapping'
+2024-01-05T19:56:31.704+08:00 DEBUG 23384 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-01-05T19:56:31.747+08:00 DEBUG 23384 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-01-05T19:56:32.709+08:00  INFO 23384 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-01-05T19:56:32.782+08:00  INFO 23384 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9090 (http) with context path ''
+2024-01-05T19:56:32.792+08:00  INFO 23384 --- [restartedMain] com.example.SpringBoot3DemoApplication   : Started SpringBoot3DemoApplication in 5.713 seconds (process running for 6.148)
+2024-01-05T19:56:44.237+08:00  INFO 23384 --- [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-05T19:56:44.238+08:00  INFO 23384 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-01-05T19:56:44.238+08:00 DEBUG 23384 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2024-01-05T19:56:44.238+08:00 DEBUG 23384 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2024-01-05T19:56:44.238+08:00 DEBUG 23384 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2024-01-05T19:56:44.239+08:00 DEBUG 23384 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@3e22f4e5
+2024-01-05T19:56:44.240+08:00 DEBUG 23384 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@49a0f921
+2024-01-05T19:56:44.240+08:00 DEBUG 23384 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-01-05T19:56:44.240+08:00  INFO 23384 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-01-05T19:56:44.246+08:00 DEBUG 23384 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/mvc/hello/jsp-page", parameters={}
+2024-01-05T19:56:44.264+08:00 DEBUG 23384 --- [http-nio-9090-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.controller.HelloController#jspPage(Model, HttpServletRequest, HttpServletResponse)
+2024-01-05T19:56:44.301+08:00 DEBUG 23384 --- [http-nio-9090-exec-1] o.s.web.servlet.view.JstlView            : View name 'views/jsp-page', model {username=aweit, texts=[a, b, c]}
+2024-01-05T19:56:44.305+08:00 DEBUG 23384 --- [http-nio-9090-exec-1] o.s.web.servlet.view.JstlView            : Forwarding to [/WEB-INF/views/jsp-page.jsp]
+2024-01-05T19:56:45.079+08:00 DEBUG 23384 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-01-05T19:56:45.253+08:00 DEBUG 23384 --- [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/mvc/error", parameters={}
+2024-01-05T19:56:45.255+08:00 DEBUG 23384 --- [http-nio-9090-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2024-01-05T19:56:45.279+08:00 DEBUG 23384 --- [http-nio-9090-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json;q=0.8', given [image/avif, image/webp, image/apng, image/svg+xml, image/*, */*;q=0.8] and supported [application/json, application/*+json]
+2024-01-05T19:56:45.286+08:00 DEBUG 23384 --- [http-nio-9090-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Fri Jan 05 19:56:45 GMT+08:00 2024, status=404, error=Not Found, message=No message avail (truncated)...]
+2024-01-05T19:56:45.337+08:00 DEBUG 23384 --- [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2024-01-05T19:57:02.409+08:00 DEBUG 23384 --- [http-nio-9090-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/mvc/hello/thymeleaf-page", parameters={}
+2024-01-05T19:57:02.410+08:00 DEBUG 23384 --- [http-nio-9090-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.controller.HelloController#thymeleafPage(Model)
+2024-01-05T19:57:02.696+08:00 DEBUG 23384 --- [http-nio-9090-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-01-05T19:58:01.311+08:00  INFO 23384 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-01-05T19:58:01.332+08:00  INFO 23384 --- [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-05T19:58:01.336+08:00  INFO 23384 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-01-05T19:58:01.343+08:00  INFO 23384 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-01-05T19:58:01.418+08:00  INFO 23384 --- [restartedMain] com.example.SpringBoot3DemoApplication   : Starting SpringBoot3DemoApplication using Java 17.0.8 with PID 23384 (D:\workspace\aweit-share\Java 相關\SpringBoot3Demo\target\classes started by user in D:\workspace\aweit-share\Java 相關\SpringBoot3Demo)
+2024-01-05T19:58:01.419+08:00  INFO 23384 --- [restartedMain] com.example.SpringBoot3DemoApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-01-05T19:58:01.574+08:00  INFO 23384 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-01-05T19:58:01.574+08:00  INFO 23384 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-01-05T19:58:01.580+08:00  INFO 23384 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.dao.EmployeeResposity; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-01-05T19:58:01.582+08:00  INFO 23384 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.dao.TaskResposity; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-01-05T19:58:01.582+08:00  INFO 23384 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 JDBC repository interfaces.
+2024-01-05T19:58:01.585+08:00  INFO 23384 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-01-05T19:58:01.585+08:00  INFO 23384 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-05T19:58:01.591+08:00  INFO 23384 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 2 JPA repository interfaces.
+2024-01-05T19:58:01.745+08:00  INFO 23384 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9090 (http)
+2024-01-05T19:58:01.746+08:00  INFO 23384 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-05T19:58:01.746+08:00  INFO 23384 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-01-05T19:58:01.850+08:00  INFO 23384 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2024-01-05T19:58:01.854+08:00  INFO 23384 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-05T19:58:01.855+08:00  INFO 23384 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 434 ms
+2024-01-05T19:58:01.916+08:00  INFO 23384 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-05T19:58:01.917+08:00  INFO 23384 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2024-01-05T19:58:01.933+08:00  INFO 23384 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2bf1b7d7
+2024-01-05T19:58:01.933+08:00  INFO 23384 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2024-01-05T19:58:02.020+08:00  INFO 23384 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-05T19:58:02.045+08:00  WARN 23384 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-05T19:58:02.084+08:00 DEBUG 23384 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 4 mappings in 'requestMappingHandlerMapping'
+2024-01-05T19:58:02.129+08:00 DEBUG 23384 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-01-05T19:58:02.148+08:00 DEBUG 23384 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-01-05T19:58:02.512+08:00  INFO 23384 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-01-05T19:58:02.532+08:00  INFO 23384 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9090 (http) with context path ''
+2024-01-05T19:58:02.536+08:00  INFO 23384 --- [restartedMain] com.example.SpringBoot3DemoApplication   : Started SpringBoot3DemoApplication in 1.143 seconds (process running for 95.892)
+2024-01-05T19:58:02.539+08:00  INFO 23384 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-01-05T19:58:04.833+08:00  INFO 23384 --- [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-05T19:58:04.833+08:00  INFO 23384 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-01-05T19:58:04.833+08:00 DEBUG 23384 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2024-01-05T19:58:04.834+08:00 DEBUG 23384 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2024-01-05T19:58:04.834+08:00 DEBUG 23384 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2024-01-05T19:58:04.834+08:00 DEBUG 23384 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@2761251d
+2024-01-05T19:58:04.834+08:00 DEBUG 23384 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@7accd252
+2024-01-05T19:58:04.834+08:00 DEBUG 23384 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-01-05T19:58:04.834+08:00  INFO 23384 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-01-05T19:58:04.834+08:00 DEBUG 23384 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/mvc/hello/thymeleaf-page", parameters={}
+2024-01-05T19:58:04.836+08:00 DEBUG 23384 --- [http-nio-9090-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.controller.HelloController#thymeleafPage(Model)
+2024-01-05T19:58:04.837+08:00  INFO 23384 --- [http-nio-9090-exec-1] com.example.aop.LogAspect                : Executing: HelloController.thymeleafPage(..)
+2024-01-05T19:58:04.838+08:00  INFO 23384 --- [http-nio-9090-exec-1] com.example.aop.LogAspect                : HelloController.thymeleafPage(..) executed in 1ms
+2024-01-05T19:58:04.854+08:00 DEBUG 23384 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-01-05T19:58:07.967+08:00 DEBUG 23384 --- [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/mvc/hello/thymeleaf-page", parameters={}
+2024-01-05T19:58:07.968+08:00 DEBUG 23384 --- [http-nio-9090-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.controller.HelloController#thymeleafPage(Model)
+2024-01-05T19:58:07.968+08:00  INFO 23384 --- [http-nio-9090-exec-2] com.example.aop.LogAspect                : Executing: HelloController.thymeleafPage(..)
+2024-01-05T19:58:07.968+08:00  INFO 23384 --- [http-nio-9090-exec-2] com.example.aop.LogAspect                : HelloController.thymeleafPage(..) executed in 0ms
+2024-01-05T19:58:07.971+08:00 DEBUG 23384 --- [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-01-05T19:58:10.287+08:00 DEBUG 23384 --- [http-nio-9090-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/mvc/hello/thymeleaf-page", parameters={}
+2024-01-05T19:58:10.288+08:00 DEBUG 23384 --- [http-nio-9090-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.controller.HelloController#thymeleafPage(Model)
+2024-01-05T19:58:10.288+08:00  INFO 23384 --- [http-nio-9090-exec-3] com.example.aop.LogAspect                : Executing: HelloController.thymeleafPage(..)
+2024-01-05T19:58:10.288+08:00  INFO 23384 --- [http-nio-9090-exec-3] com.example.aop.LogAspect                : HelloController.thymeleafPage(..) executed in 0ms
+2024-01-05T19:58:10.291+08:00 DEBUG 23384 --- [http-nio-9090-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-01-05T19:58:18.674+08:00  INFO 24504 --- [restartedMain] com.example.SpringBoot3DemoApplication   : Starting SpringBoot3DemoApplication using Java 17.0.8 with PID 24504 (D:\workspace\aweit-share\Java 相關\SpringBoot3Demo\target\classes started by user in D:\workspace\aweit-share\Java 相關\SpringBoot3Demo)
+2024-01-05T19:58:18.677+08:00  INFO 24504 --- [restartedMain] com.example.SpringBoot3DemoApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-01-05T19:58:18.719+08:00  INFO 24504 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-01-05T19:58:18.719+08:00  INFO 24504 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-01-05T19:58:19.218+08:00  INFO 24504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-01-05T19:58:19.219+08:00  INFO 24504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-01-05T19:58:19.246+08:00  INFO 24504 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.dao.EmployeeResposity; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-01-05T19:58:19.247+08:00  INFO 24504 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.dao.TaskResposity; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-01-05T19:58:19.248+08:00  INFO 24504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 25 ms. Found 0 JDBC repository interfaces.
+2024-01-05T19:58:19.255+08:00  INFO 24504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-01-05T19:58:19.256+08:00  INFO 24504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-05T19:58:19.276+08:00  INFO 24504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 2 JPA repository interfaces.
+2024-01-05T19:58:19.893+08:00  INFO 24504 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9090 (http)
+2024-01-05T19:58:19.903+08:00  INFO 24504 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-05T19:58:19.903+08:00  INFO 24504 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-01-05T19:58:20.070+08:00  INFO 24504 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2024-01-05T19:58:20.076+08:00  INFO 24504 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-05T19:58:20.076+08:00  INFO 24504 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1357 ms
+2024-01-05T19:58:20.468+08:00  INFO 24504 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-05T19:58:20.487+08:00  INFO 24504 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-01-05T19:58:20.605+08:00  INFO 24504 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7febd52
+2024-01-05T19:58:20.607+08:00  INFO 24504 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-01-05T19:58:21.338+08:00  INFO 24504 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-05T19:58:21.376+08:00  WARN 24504 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-05T19:58:21.452+08:00 DEBUG 24504 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 4 mappings in 'requestMappingHandlerMapping'
+2024-01-05T19:58:21.514+08:00 DEBUG 24504 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-01-05T19:58:21.548+08:00 DEBUG 24504 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-01-05T19:58:22.224+08:00  INFO 24504 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-01-05T19:58:22.280+08:00  INFO 24504 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9090 (http) with context path ''
+2024-01-05T19:58:22.288+08:00  INFO 24504 --- [restartedMain] com.example.SpringBoot3DemoApplication   : Started SpringBoot3DemoApplication in 3.94 seconds (process running for 4.497)
+2024-01-05T19:58:39.933+08:00  INFO 24504 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-01-05T19:58:39.952+08:00  INFO 24504 --- [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-05T19:58:39.955+08:00  INFO 24504 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-01-05T19:58:39.962+08:00  INFO 24504 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-01-05T19:58:40.016+08:00  INFO 24504 --- [restartedMain] com.example.SpringBoot3DemoApplication   : Starting SpringBoot3DemoApplication using Java 17.0.8 with PID 24504 (D:\workspace\aweit-share\Java 相關\SpringBoot3Demo\target\classes started by user in D:\workspace\aweit-share\Java 相關\SpringBoot3Demo)
+2024-01-05T19:58:40.017+08:00  INFO 24504 --- [restartedMain] com.example.SpringBoot3DemoApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-01-05T19:58:40.126+08:00  INFO 24504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-01-05T19:58:40.126+08:00  INFO 24504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-01-05T19:58:40.130+08:00  INFO 24504 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.dao.EmployeeResposity; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-01-05T19:58:40.131+08:00  INFO 24504 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.dao.TaskResposity; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-01-05T19:58:40.131+08:00  INFO 24504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 JDBC repository interfaces.
+2024-01-05T19:58:40.134+08:00  INFO 24504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-01-05T19:58:40.134+08:00  INFO 24504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-05T19:58:40.138+08:00  INFO 24504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 2 JPA repository interfaces.
+2024-01-05T19:58:40.266+08:00  INFO 24504 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9090 (http)
+2024-01-05T19:58:40.267+08:00  INFO 24504 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-05T19:58:40.267+08:00  INFO 24504 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-01-05T19:58:40.339+08:00  INFO 24504 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2024-01-05T19:58:40.344+08:00  INFO 24504 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-05T19:58:40.344+08:00  INFO 24504 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 325 ms
+2024-01-05T19:58:40.400+08:00  INFO 24504 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-05T19:58:40.401+08:00  INFO 24504 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2024-01-05T19:58:40.412+08:00  INFO 24504 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3548d919
+2024-01-05T19:58:40.412+08:00  INFO 24504 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2024-01-05T19:58:40.473+08:00  INFO 24504 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-05T19:58:40.501+08:00  WARN 24504 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-05T19:58:40.535+08:00 DEBUG 24504 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 4 mappings in 'requestMappingHandlerMapping'
+2024-01-05T19:58:40.577+08:00 DEBUG 24504 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-01-05T19:58:40.591+08:00 DEBUG 24504 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-01-05T19:58:41.012+08:00  INFO 24504 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-01-05T19:58:41.040+08:00  INFO 24504 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9090 (http) with context path ''
+2024-01-05T19:58:41.044+08:00  INFO 24504 --- [restartedMain] com.example.SpringBoot3DemoApplication   : Started SpringBoot3DemoApplication in 1.045 seconds (process running for 23.253)
+2024-01-05T19:58:41.045+08:00  INFO 24504 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-01-05T19:59:00.656+08:00  INFO 24504 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-01-05T19:59:00.671+08:00  INFO 24504 --- [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-05T19:59:00.672+08:00  INFO 24504 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2024-01-05T19:59:00.675+08:00  INFO 24504 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2024-01-05T19:59:00.725+08:00  INFO 24504 --- [restartedMain] com.example.SpringBoot3DemoApplication   : Starting SpringBoot3DemoApplication using Java 17.0.8 with PID 24504 (D:\workspace\aweit-share\Java 相關\SpringBoot3Demo\target\classes started by user in D:\workspace\aweit-share\Java 相關\SpringBoot3Demo)
+2024-01-05T19:59:00.725+08:00  INFO 24504 --- [restartedMain] com.example.SpringBoot3DemoApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-01-05T19:59:00.829+08:00  INFO 24504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-01-05T19:59:00.830+08:00  INFO 24504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-01-05T19:59:00.834+08:00  INFO 24504 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.dao.EmployeeResposity; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-01-05T19:59:00.835+08:00  INFO 24504 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.dao.TaskResposity; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-01-05T19:59:00.835+08:00  INFO 24504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 JDBC repository interfaces.
+2024-01-05T19:59:00.837+08:00  INFO 24504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-01-05T19:59:00.837+08:00  INFO 24504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-05T19:59:00.841+08:00  INFO 24504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 2 JPA repository interfaces.
+2024-01-05T19:59:00.955+08:00  INFO 24504 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9090 (http)
+2024-01-05T19:59:00.956+08:00  INFO 24504 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-05T19:59:00.956+08:00  INFO 24504 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-01-05T19:59:01.037+08:00  INFO 24504 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2024-01-05T19:59:01.040+08:00  INFO 24504 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-05T19:59:01.040+08:00  INFO 24504 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 313 ms
+2024-01-05T19:59:01.091+08:00  INFO 24504 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-05T19:59:01.091+08:00  INFO 24504 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2024-01-05T19:59:01.101+08:00  INFO 24504 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@203c4560
+2024-01-05T19:59:01.101+08:00  INFO 24504 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2024-01-05T19:59:01.157+08:00  INFO 24504 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-05T19:59:01.181+08:00  WARN 24504 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-05T19:59:01.213+08:00 DEBUG 24504 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 4 mappings in 'requestMappingHandlerMapping'
+2024-01-05T19:59:01.258+08:00 DEBUG 24504 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-01-05T19:59:01.271+08:00 DEBUG 24504 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-01-05T19:59:01.655+08:00  INFO 24504 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-01-05T19:59:01.683+08:00  INFO 24504 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9090 (http) with context path ''
+2024-01-05T19:59:01.687+08:00  INFO 24504 --- [restartedMain] com.example.SpringBoot3DemoApplication   : Started SpringBoot3DemoApplication in 0.98 seconds (process running for 43.896)
+2024-01-05T19:59:01.688+08:00  INFO 24504 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-01-05T19:59:45.777+08:00  INFO 24504 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-01-05T19:59:45.790+08:00  INFO 24504 --- [Thread-11] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-05T19:59:45.790+08:00  INFO 24504 --- [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2024-01-05T19:59:45.795+08:00  INFO 24504 --- [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2024-01-05T19:59:45.844+08:00  INFO 24504 --- [restartedMain] com.example.SpringBoot3DemoApplication   : Starting SpringBoot3DemoApplication using Java 17.0.8 with PID 24504 (D:\workspace\aweit-share\Java 相關\SpringBoot3Demo\target\classes started by user in D:\workspace\aweit-share\Java 相關\SpringBoot3Demo)
+2024-01-05T19:59:45.844+08:00  INFO 24504 --- [restartedMain] com.example.SpringBoot3DemoApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-01-05T19:59:45.943+08:00  INFO 24504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-01-05T19:59:45.943+08:00  INFO 24504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-01-05T19:59:45.947+08:00  INFO 24504 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.dao.EmployeeResposity; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-01-05T19:59:45.947+08:00  INFO 24504 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.dao.TaskResposity; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-01-05T19:59:45.948+08:00  INFO 24504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 JDBC repository interfaces.
+2024-01-05T19:59:45.949+08:00  INFO 24504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-01-05T19:59:45.950+08:00  INFO 24504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-05T19:59:45.953+08:00  INFO 24504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 2 JPA repository interfaces.
+2024-01-05T19:59:46.081+08:00  INFO 24504 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9090 (http)
+2024-01-05T19:59:46.082+08:00  INFO 24504 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-05T19:59:46.082+08:00  INFO 24504 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-01-05T19:59:46.161+08:00  INFO 24504 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2024-01-05T19:59:46.164+08:00  INFO 24504 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-05T19:59:46.164+08:00  INFO 24504 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 318 ms
+2024-01-05T19:59:46.221+08:00  INFO 24504 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-05T19:59:46.222+08:00  INFO 24504 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2024-01-05T19:59:46.233+08:00  INFO 24504 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5392a68d
+2024-01-05T19:59:46.233+08:00  INFO 24504 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2024-01-05T19:59:46.289+08:00  INFO 24504 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-05T19:59:46.313+08:00  WARN 24504 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-05T19:59:46.348+08:00 DEBUG 24504 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 4 mappings in 'requestMappingHandlerMapping'
+2024-01-05T19:59:46.387+08:00 DEBUG 24504 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-01-05T19:59:46.401+08:00 DEBUG 24504 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-01-05T19:59:46.769+08:00  INFO 24504 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-01-05T19:59:46.794+08:00  INFO 24504 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9090 (http) with context path ''
+2024-01-05T19:59:46.797+08:00  INFO 24504 --- [restartedMain] com.example.SpringBoot3DemoApplication   : Started SpringBoot3DemoApplication in 0.969 seconds (process running for 89.006)
+2024-01-05T19:59:46.798+08:00  INFO 24504 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-01-05T19:59:52.262+08:00  INFO 24504 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-01-05T19:59:52.277+08:00  INFO 24504 --- [Thread-15] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-05T19:59:52.278+08:00  INFO 24504 --- [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2024-01-05T19:59:52.281+08:00  INFO 24504 --- [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2024-01-05T19:59:52.334+08:00  INFO 24504 --- [restartedMain] com.example.SpringBoot3DemoApplication   : Starting SpringBoot3DemoApplication using Java 17.0.8 with PID 24504 (D:\workspace\aweit-share\Java 相關\SpringBoot3Demo\target\classes started by user in D:\workspace\aweit-share\Java 相關\SpringBoot3Demo)
+2024-01-05T19:59:52.334+08:00  INFO 24504 --- [restartedMain] com.example.SpringBoot3DemoApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-01-05T19:59:52.434+08:00  INFO 24504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-01-05T19:59:52.434+08:00  INFO 24504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-01-05T19:59:52.439+08:00  INFO 24504 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.dao.EmployeeResposity; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-01-05T19:59:52.439+08:00  INFO 24504 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.dao.TaskResposity; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-01-05T19:59:52.440+08:00  INFO 24504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 JDBC repository interfaces.
+2024-01-05T19:59:52.442+08:00  INFO 24504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-01-05T19:59:52.442+08:00  INFO 24504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-05T19:59:52.445+08:00  INFO 24504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 2 JPA repository interfaces.
+2024-01-05T19:59:52.561+08:00  INFO 24504 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9090 (http)
+2024-01-05T19:59:52.562+08:00  INFO 24504 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-05T19:59:52.563+08:00  INFO 24504 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-01-05T19:59:52.623+08:00  INFO 24504 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2024-01-05T19:59:52.626+08:00  INFO 24504 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-05T19:59:52.626+08:00  INFO 24504 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 290 ms
+2024-01-05T19:59:52.674+08:00  INFO 24504 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-05T19:59:52.674+08:00  INFO 24504 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2024-01-05T19:59:52.685+08:00  INFO 24504 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@74ab0d2a
+2024-01-05T19:59:52.685+08:00  INFO 24504 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2024-01-05T19:59:52.732+08:00  INFO 24504 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-05T19:59:52.759+08:00  WARN 24504 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-05T19:59:52.795+08:00 DEBUG 24504 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 4 mappings in 'requestMappingHandlerMapping'
+2024-01-05T19:59:52.835+08:00 DEBUG 24504 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-01-05T19:59:52.848+08:00 DEBUG 24504 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-01-05T19:59:53.221+08:00  INFO 24504 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-01-05T19:59:53.248+08:00  INFO 24504 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9090 (http) with context path ''
+2024-01-05T19:59:53.252+08:00  INFO 24504 --- [restartedMain] com.example.SpringBoot3DemoApplication   : Started SpringBoot3DemoApplication in 0.935 seconds (process running for 95.461)
+2024-01-05T19:59:53.253+08:00  INFO 24504 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-01-05T20:00:03.770+08:00  INFO 24504 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-01-05T20:00:03.786+08:00  INFO 24504 --- [Thread-19] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-05T20:00:03.787+08:00  INFO 24504 --- [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2024-01-05T20:00:03.791+08:00  INFO 24504 --- [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2024-01-05T20:00:03.844+08:00  INFO 24504 --- [restartedMain] com.example.SpringBoot3DemoApplication   : Starting SpringBoot3DemoApplication using Java 17.0.8 with PID 24504 (D:\workspace\aweit-share\Java 相關\SpringBoot3Demo\target\classes started by user in D:\workspace\aweit-share\Java 相關\SpringBoot3Demo)
+2024-01-05T20:00:03.844+08:00  INFO 24504 --- [restartedMain] com.example.SpringBoot3DemoApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-01-05T20:00:03.944+08:00  INFO 24504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-01-05T20:00:03.944+08:00  INFO 24504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-01-05T20:00:03.947+08:00  INFO 24504 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.dao.EmployeeResposity; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-01-05T20:00:03.948+08:00  INFO 24504 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.dao.TaskResposity; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-01-05T20:00:03.948+08:00  INFO 24504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 JDBC repository interfaces.
+2024-01-05T20:00:03.950+08:00  INFO 24504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-01-05T20:00:03.950+08:00  INFO 24504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-05T20:00:03.953+08:00  INFO 24504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 2 JPA repository interfaces.
+2024-01-05T20:00:04.079+08:00  INFO 24504 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9090 (http)
+2024-01-05T20:00:04.079+08:00  INFO 24504 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-05T20:00:04.080+08:00  INFO 24504 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-01-05T20:00:04.153+08:00  INFO 24504 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2024-01-05T20:00:04.155+08:00  INFO 24504 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-05T20:00:04.156+08:00  INFO 24504 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 312 ms
+2024-01-05T20:00:04.204+08:00  INFO 24504 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-05T20:00:04.204+08:00  INFO 24504 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2024-01-05T20:00:04.215+08:00  INFO 24504 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-6 - Added connection com.mysql.cj.jdbc.ConnectionImpl@147772f3
+2024-01-05T20:00:04.215+08:00  INFO 24504 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2024-01-05T20:00:04.261+08:00  INFO 24504 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-05T20:00:04.283+08:00  WARN 24504 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-05T20:00:04.317+08:00 DEBUG 24504 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 4 mappings in 'requestMappingHandlerMapping'
+2024-01-05T20:00:04.358+08:00 DEBUG 24504 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-01-05T20:00:04.371+08:00 DEBUG 24504 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-01-05T20:00:04.744+08:00  INFO 24504 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-01-05T20:00:04.772+08:00  INFO 24504 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9090 (http) with context path ''
+2024-01-05T20:00:04.776+08:00  INFO 24504 --- [restartedMain] com.example.SpringBoot3DemoApplication   : Started SpringBoot3DemoApplication in 0.949 seconds (process running for 106.985)
+2024-01-05T20:00:04.777+08:00  INFO 24504 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-01-05T20:00:36.421+08:00  INFO 24504 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-01-05T20:00:36.435+08:00  INFO 24504 --- [Thread-23] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-05T20:00:36.435+08:00  INFO 24504 --- [Thread-23] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2024-01-05T20:00:36.438+08:00  INFO 24504 --- [Thread-23] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2024-01-05T20:00:36.488+08:00  INFO 24504 --- [restartedMain] com.example.SpringBoot3DemoApplication   : Starting SpringBoot3DemoApplication using Java 17.0.8 with PID 24504 (D:\workspace\aweit-share\Java 相關\SpringBoot3Demo\target\classes started by user in D:\workspace\aweit-share\Java 相關\SpringBoot3Demo)
+2024-01-05T20:00:36.488+08:00  INFO 24504 --- [restartedMain] com.example.SpringBoot3DemoApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-01-05T20:00:36.584+08:00  INFO 24504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-01-05T20:00:36.584+08:00  INFO 24504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-01-05T20:00:36.588+08:00  INFO 24504 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.dao.EmployeeResposity; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-01-05T20:00:36.589+08:00  INFO 24504 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.dao.TaskResposity; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-01-05T20:00:36.589+08:00  INFO 24504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 JDBC repository interfaces.
+2024-01-05T20:00:36.590+08:00  INFO 24504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-01-05T20:00:36.591+08:00  INFO 24504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-05T20:00:36.594+08:00  INFO 24504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 2 JPA repository interfaces.
+2024-01-05T20:00:36.702+08:00  INFO 24504 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9090 (http)
+2024-01-05T20:00:36.703+08:00  INFO 24504 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-05T20:00:36.703+08:00  INFO 24504 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-01-05T20:00:36.774+08:00  INFO 24504 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2024-01-05T20:00:36.777+08:00  INFO 24504 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-05T20:00:36.777+08:00  INFO 24504 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 288 ms
+2024-01-05T20:00:36.824+08:00  INFO 24504 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-05T20:00:36.825+08:00  INFO 24504 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2024-01-05T20:00:36.835+08:00  INFO 24504 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-7 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1a1c4e96
+2024-01-05T20:00:36.835+08:00  INFO 24504 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2024-01-05T20:00:36.878+08:00  INFO 24504 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-05T20:00:36.900+08:00  WARN 24504 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-05T20:00:36.934+08:00 DEBUG 24504 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 4 mappings in 'requestMappingHandlerMapping'
+2024-01-05T20:00:36.989+08:00 DEBUG 24504 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-01-05T20:00:37.006+08:00 DEBUG 24504 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-01-05T20:00:37.376+08:00  INFO 24504 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-01-05T20:00:37.574+08:00  INFO 24504 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9090 (http) with context path ''
+2024-01-05T20:00:37.577+08:00  INFO 24504 --- [restartedMain] com.example.SpringBoot3DemoApplication   : Started SpringBoot3DemoApplication in 1.105 seconds (process running for 139.786)
+2024-01-05T20:00:37.578+08:00  INFO 24504 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-01-05T20:00:43.799+08:00  INFO 24504 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-01-05T20:00:43.816+08:00  INFO 24504 --- [Thread-27] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-05T20:00:43.816+08:00  INFO 24504 --- [Thread-27] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2024-01-05T20:00:43.820+08:00  INFO 24504 --- [Thread-27] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
+2024-01-05T20:00:43.867+08:00  INFO 24504 --- [restartedMain] com.example.SpringBoot3DemoApplication   : Starting SpringBoot3DemoApplication using Java 17.0.8 with PID 24504 (D:\workspace\aweit-share\Java 相關\SpringBoot3Demo\target\classes started by user in D:\workspace\aweit-share\Java 相關\SpringBoot3Demo)
+2024-01-05T20:00:43.867+08:00  INFO 24504 --- [restartedMain] com.example.SpringBoot3DemoApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-01-05T20:00:43.959+08:00  INFO 24504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-01-05T20:00:43.960+08:00  INFO 24504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-01-05T20:00:43.963+08:00  INFO 24504 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.dao.EmployeeResposity; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-01-05T20:00:43.964+08:00  INFO 24504 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.dao.TaskResposity; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-01-05T20:00:43.965+08:00  INFO 24504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 JDBC repository interfaces.
+2024-01-05T20:00:43.966+08:00  INFO 24504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-01-05T20:00:43.966+08:00  INFO 24504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-05T20:00:43.969+08:00  INFO 24504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 2 JPA repository interfaces.
+2024-01-05T20:00:44.083+08:00  INFO 24504 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9090 (http)
+2024-01-05T20:00:44.096+08:00  INFO 24504 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-05T20:00:44.096+08:00  INFO 24504 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-01-05T20:00:44.156+08:00  INFO 24504 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2024-01-05T20:00:44.160+08:00  INFO 24504 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-05T20:00:44.160+08:00  INFO 24504 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 292 ms
+2024-01-05T20:00:44.215+08:00  INFO 24504 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-05T20:00:44.216+08:00  INFO 24504 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
+2024-01-05T20:00:44.226+08:00  INFO 24504 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-8 - Added connection com.mysql.cj.jdbc.ConnectionImpl@76df6a7e
+2024-01-05T20:00:44.226+08:00  INFO 24504 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Start completed.
+2024-01-05T20:00:44.273+08:00  INFO 24504 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-05T20:00:44.297+08:00  WARN 24504 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-05T20:00:44.339+08:00 DEBUG 24504 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 4 mappings in 'requestMappingHandlerMapping'
+2024-01-05T20:00:44.377+08:00 DEBUG 24504 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-01-05T20:00:44.391+08:00 DEBUG 24504 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-01-05T20:00:44.755+08:00  INFO 24504 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-01-05T20:00:44.781+08:00  INFO 24504 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9090 (http) with context path ''
+2024-01-05T20:00:44.787+08:00  INFO 24504 --- [restartedMain] com.example.SpringBoot3DemoApplication   : Started SpringBoot3DemoApplication in 0.936 seconds (process running for 146.996)
+2024-01-05T20:00:44.789+08:00  INFO 24504 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-01-05T20:00:48.169+08:00  INFO 24504 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-01-05T20:00:48.185+08:00  INFO 24504 --- [Thread-31] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-05T20:00:48.185+08:00  INFO 24504 --- [Thread-31] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown initiated...
+2024-01-05T20:00:48.189+08:00  INFO 24504 --- [Thread-31] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown completed.
+2024-01-05T20:00:48.407+08:00  INFO 24504 --- [restartedMain] com.example.SpringBoot3DemoApplication   : Starting SpringBoot3DemoApplication using Java 17.0.8 with PID 24504 (D:\workspace\aweit-share\Java 相關\SpringBoot3Demo\target\classes started by user in D:\workspace\aweit-share\Java 相關\SpringBoot3Demo)
+2024-01-05T20:00:48.407+08:00  INFO 24504 --- [restartedMain] com.example.SpringBoot3DemoApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-01-05T20:00:48.503+08:00  INFO 24504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-01-05T20:00:48.503+08:00  INFO 24504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-01-05T20:00:48.506+08:00  INFO 24504 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.dao.EmployeeResposity; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-01-05T20:00:48.507+08:00  INFO 24504 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.dao.TaskResposity; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-01-05T20:00:48.507+08:00  INFO 24504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 JDBC repository interfaces.
+2024-01-05T20:00:48.509+08:00  INFO 24504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-01-05T20:00:48.509+08:00  INFO 24504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-05T20:00:48.512+08:00  INFO 24504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 2 JPA repository interfaces.
+2024-01-05T20:00:48.622+08:00  INFO 24504 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9090 (http)
+2024-01-05T20:00:48.622+08:00  INFO 24504 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-05T20:00:48.622+08:00  INFO 24504 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-01-05T20:00:48.687+08:00  INFO 24504 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2024-01-05T20:00:48.690+08:00  INFO 24504 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-05T20:00:48.690+08:00  INFO 24504 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 280 ms
+2024-01-05T20:00:48.736+08:00  INFO 24504 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-05T20:00:48.736+08:00  INFO 24504 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Starting...
+2024-01-05T20:00:48.747+08:00  INFO 24504 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-9 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3441b332
+2024-01-05T20:00:48.747+08:00  INFO 24504 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Start completed.
+2024-01-05T20:00:48.791+08:00  INFO 24504 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-05T20:00:48.814+08:00  WARN 24504 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-05T20:00:48.849+08:00 DEBUG 24504 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 4 mappings in 'requestMappingHandlerMapping'
+2024-01-05T20:00:48.887+08:00 DEBUG 24504 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-01-05T20:00:48.900+08:00 DEBUG 24504 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-01-05T20:00:49.283+08:00  INFO 24504 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-01-05T20:00:49.305+08:00  INFO 24504 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9090 (http) with context path ''
+2024-01-05T20:00:49.309+08:00  INFO 24504 --- [restartedMain] com.example.SpringBoot3DemoApplication   : Started SpringBoot3DemoApplication in 1.083 seconds (process running for 151.518)
+2024-01-05T20:00:49.309+08:00  INFO 24504 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-01-05T20:01:01.737+08:00  INFO 24504 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-01-05T20:01:01.752+08:00  INFO 24504 --- [Thread-35] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-05T20:01:01.752+08:00  INFO 24504 --- [Thread-35] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown initiated...
+2024-01-05T20:01:01.755+08:00  INFO 24504 --- [Thread-35] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown completed.
+2024-01-05T20:01:01.805+08:00  INFO 24504 --- [restartedMain] com.example.SpringBoot3DemoApplication   : Starting SpringBoot3DemoApplication using Java 17.0.8 with PID 24504 (D:\workspace\aweit-share\Java 相關\SpringBoot3Demo\target\classes started by user in D:\workspace\aweit-share\Java 相關\SpringBoot3Demo)
+2024-01-05T20:01:01.805+08:00  INFO 24504 --- [restartedMain] com.example.SpringBoot3DemoApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-01-05T20:01:01.900+08:00  INFO 24504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-01-05T20:01:01.900+08:00  INFO 24504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-01-05T20:01:01.904+08:00  INFO 24504 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.dao.EmployeeResposity; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-01-05T20:01:01.905+08:00  INFO 24504 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.dao.TaskResposity; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-01-05T20:01:01.905+08:00  INFO 24504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 JDBC repository interfaces.
+2024-01-05T20:01:01.906+08:00  INFO 24504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-01-05T20:01:01.906+08:00  INFO 24504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-05T20:01:01.909+08:00  INFO 24504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 2 JPA repository interfaces.
+2024-01-05T20:01:02.022+08:00  INFO 24504 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9090 (http)
+2024-01-05T20:01:02.022+08:00  INFO 24504 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-05T20:01:02.022+08:00  INFO 24504 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-01-05T20:01:02.089+08:00  INFO 24504 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2024-01-05T20:01:02.091+08:00  INFO 24504 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-05T20:01:02.091+08:00  INFO 24504 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 285 ms
+2024-01-05T20:01:02.152+08:00  INFO 24504 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-05T20:01:02.152+08:00  INFO 24504 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Starting...
+2024-01-05T20:01:02.164+08:00  INFO 24504 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-10 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5aa8ebef
+2024-01-05T20:01:02.164+08:00  INFO 24504 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Start completed.
+2024-01-05T20:01:02.212+08:00  INFO 24504 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-05T20:01:02.238+08:00  WARN 24504 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-05T20:01:02.284+08:00 DEBUG 24504 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 4 mappings in 'requestMappingHandlerMapping'
+2024-01-05T20:01:02.327+08:00 DEBUG 24504 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-01-05T20:01:02.342+08:00 DEBUG 24504 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-01-05T20:01:02.718+08:00  INFO 24504 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-01-05T20:01:02.742+08:00  INFO 24504 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9090 (http) with context path ''
+2024-01-05T20:01:02.745+08:00  INFO 24504 --- [restartedMain] com.example.SpringBoot3DemoApplication   : Started SpringBoot3DemoApplication in 0.956 seconds (process running for 164.954)
+2024-01-05T20:01:02.746+08:00  INFO 24504 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-01-05T20:01:10.259+08:00  INFO 24504 --- [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-05T20:01:10.260+08:00  INFO 24504 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-01-05T20:01:10.260+08:00 DEBUG 24504 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2024-01-05T20:01:10.260+08:00 DEBUG 24504 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2024-01-05T20:01:10.260+08:00 DEBUG 24504 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2024-01-05T20:01:10.261+08:00 DEBUG 24504 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@61c46b0d
+2024-01-05T20:01:10.261+08:00 DEBUG 24504 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@72e1552e
+2024-01-05T20:01:10.262+08:00 DEBUG 24504 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-01-05T20:01:10.263+08:00  INFO 24504 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-01-05T20:01:10.272+08:00 DEBUG 24504 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/mvc/hello/thymeleaf-page", parameters={}
+2024-01-05T20:01:10.286+08:00 DEBUG 24504 --- [http-nio-9090-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.controller.HelloController#thymeleafPage(Model)
+2024-01-05T20:01:10.300+08:00  INFO 24504 --- [http-nio-9090-exec-1] com.example.aop.LogAspect                : Executing: HelloController.thymeleafPage(..)
+2024-01-05T20:01:10.301+08:00  INFO 24504 --- [http-nio-9090-exec-1] com.example.aop.LogAspect                : HelloController.thymeleafPage(..) executed in 1ms 
+2024-01-05T20:01:10.515+08:00 DEBUG 24504 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
