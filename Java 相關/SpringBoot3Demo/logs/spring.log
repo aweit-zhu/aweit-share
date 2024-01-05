@@ -5143,3 +5143,378 @@ Caused by: org.springframework.beans.factory.support.BeanDefinitionOverrideExcep
 2024-01-05T18:10:47.621+08:00  INFO 10932 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-01-05T18:10:47.623+08:00  INFO 10932 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2024-01-05T18:10:47.633+08:00  INFO 10932 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-01-05T18:21:34.678+08:00  INFO 4264 --- [main] com.example.SpringDataJpaTest            : Starting SpringDataJpaTest using Java 17.0.8 with PID 4264 (started by user in D:\workspace\aweit-share\Java 相關\SpringBoot3Demo)
+2024-01-05T18:21:34.902+08:00  INFO 4264 --- [main] com.example.SpringDataJpaTest            : No active profile set, falling back to 1 default profile: "default"
+2024-01-05T18:21:34.938+08:00 DEBUG 4264 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@411341bd
+2024-01-05T18:21:35.551+08:00  INFO 4264 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-01-05T18:21:35.552+08:00  INFO 4264 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-01-05T18:21:35.592+08:00  INFO 4264 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.dao.EmployeeResposity; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-01-05T18:21:35.593+08:00  INFO 4264 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.dao.TaskResposity; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-01-05T18:21:35.594+08:00  INFO 4264 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 36 ms. Found 0 JDBC repository interfaces.
+2024-01-05T18:21:35.605+08:00  INFO 4264 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-01-05T18:21:35.605+08:00  INFO 4264 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-05T18:21:35.636+08:00  INFO 4264 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 25 ms. Found 2 JPA repository interfaces.
+2024-01-05T18:21:37.064+08:00  INFO 4264 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-05T18:21:37.131+08:00  INFO 4264 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-01-05T18:21:37.329+08:00  INFO 4264 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@25ae1f80
+2024-01-05T18:21:37.331+08:00  INFO 4264 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-01-05T18:21:39.311+08:00  INFO 4264 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-05T18:21:39.326+08:00  WARN 4264 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-05T18:21:39.417+08:00 DEBUG 4264 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 4 mappings in 'requestMappingHandlerMapping'
+2024-01-05T18:21:39.559+08:00 DEBUG 4264 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-01-05T18:21:39.592+08:00 DEBUG 4264 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-01-05T18:21:40.494+08:00  INFO 4264 --- [main] com.example.SpringDataJpaTest            : Started SpringDataJpaTest in 6.111 seconds (process running for 7.172)
+2024-01-05T18:21:42.062+08:00 DEBUG 4264 --- [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@411341bd, started on Fri Jan 05 18:21:34 GMT+08:00 2024
+2024-01-05T18:21:42.066+08:00  INFO 4264 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-05T18:21:42.068+08:00  INFO 4264 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-01-05T18:21:42.080+08:00  INFO 4264 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-01-05T18:23:02.439+08:00  INFO 6840 --- [main] com.example.SpringDataJpaTest            : Starting SpringDataJpaTest using Java 17.0.8 with PID 6840 (started by user in D:\workspace\aweit-share\Java 相關\SpringBoot3Demo)
+2024-01-05T18:23:02.441+08:00  INFO 6840 --- [main] com.example.SpringDataJpaTest            : No active profile set, falling back to 1 default profile: "default"
+2024-01-05T18:23:02.487+08:00 DEBUG 6840 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@1b5bc39d
+2024-01-05T18:23:03.175+08:00  INFO 6840 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-01-05T18:23:03.176+08:00  INFO 6840 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-01-05T18:23:03.227+08:00  INFO 6840 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.dao.EmployeeResposity; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-01-05T18:23:03.228+08:00  INFO 6840 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.dao.TaskResposity; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-01-05T18:23:03.229+08:00  INFO 6840 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 46 ms. Found 0 JDBC repository interfaces.
+2024-01-05T18:23:03.242+08:00  INFO 6840 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-01-05T18:23:03.365+08:00  INFO 6840 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-05T18:23:03.393+08:00  INFO 6840 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 25 ms. Found 2 JPA repository interfaces.
+2024-01-05T18:23:04.299+08:00  INFO 6840 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-05T18:23:04.328+08:00  INFO 6840 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-01-05T18:23:04.499+08:00  INFO 6840 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@44da7eb3
+2024-01-05T18:23:04.501+08:00  INFO 6840 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-01-05T18:23:05.525+08:00  INFO 6840 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-05T18:23:05.538+08:00  WARN 6840 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-05T18:23:05.620+08:00 DEBUG 6840 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 4 mappings in 'requestMappingHandlerMapping'
+2024-01-05T18:23:05.737+08:00 DEBUG 6840 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-01-05T18:23:05.767+08:00 DEBUG 6840 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-01-05T18:23:06.384+08:00  INFO 6840 --- [main] com.example.SpringDataJpaTest            : Started SpringDataJpaTest in 4.284 seconds (process running for 5.316)
+2024-01-05T18:23:06.986+08:00 DEBUG 6840 --- [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@1b5bc39d, started on Fri Jan 05 18:23:02 GMT+08:00 2024
+2024-01-05T18:23:06.988+08:00  INFO 6840 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-05T18:23:06.991+08:00  INFO 6840 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-01-05T18:23:07.003+08:00  INFO 6840 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-01-05T18:23:19.031+08:00  INFO 10772 --- [main] com.example.SpringDataJpaTest            : Starting SpringDataJpaTest using Java 17.0.8 with PID 10772 (started by user in D:\workspace\aweit-share\Java 相關\SpringBoot3Demo)
+2024-01-05T18:23:19.033+08:00  INFO 10772 --- [main] com.example.SpringDataJpaTest            : No active profile set, falling back to 1 default profile: "default"
+2024-01-05T18:23:19.077+08:00 DEBUG 10772 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@21ca139c
+2024-01-05T18:23:19.778+08:00  INFO 10772 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-01-05T18:23:19.779+08:00  INFO 10772 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-01-05T18:23:19.817+08:00  INFO 10772 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.dao.EmployeeResposity; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-01-05T18:23:19.818+08:00  INFO 10772 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.dao.TaskResposity; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-01-05T18:23:19.818+08:00  INFO 10772 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33 ms. Found 0 JDBC repository interfaces.
+2024-01-05T18:23:19.828+08:00  INFO 10772 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-01-05T18:23:19.829+08:00  INFO 10772 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-05T18:23:19.862+08:00  INFO 10772 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 28 ms. Found 2 JPA repository interfaces.
+2024-01-05T18:23:20.637+08:00  INFO 10772 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-05T18:23:20.664+08:00  INFO 10772 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-01-05T18:23:20.828+08:00  INFO 10772 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@28bf82d9
+2024-01-05T18:23:20.830+08:00  INFO 10772 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-01-05T18:23:21.762+08:00  INFO 10772 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-05T18:23:21.775+08:00  WARN 10772 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-05T18:23:21.858+08:00 DEBUG 10772 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 4 mappings in 'requestMappingHandlerMapping'
+2024-01-05T18:23:21.994+08:00 DEBUG 10772 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-01-05T18:23:22.024+08:00 DEBUG 10772 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-01-05T18:23:22.656+08:00  INFO 10772 --- [main] com.example.SpringDataJpaTest            : Started SpringDataJpaTest in 3.956 seconds (process running for 4.926)
+2024-01-05T18:23:23.239+08:00 DEBUG 10772 --- [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@21ca139c, started on Fri Jan 05 18:23:19 GMT+08:00 2024
+2024-01-05T18:23:23.243+08:00  INFO 10772 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-05T18:23:23.246+08:00  INFO 10772 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-01-05T18:23:23.258+08:00  INFO 10772 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-01-05T18:23:41.764+08:00  INFO 11584 --- [main] com.example.SpringDataJpaTest            : Starting SpringDataJpaTest using Java 17.0.8 with PID 11584 (started by user in D:\workspace\aweit-share\Java 相關\SpringBoot3Demo)
+2024-01-05T18:23:41.766+08:00  INFO 11584 --- [main] com.example.SpringDataJpaTest            : No active profile set, falling back to 1 default profile: "default"
+2024-01-05T18:23:41.804+08:00 DEBUG 11584 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@1b5bc39d
+2024-01-05T18:23:42.445+08:00  INFO 11584 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-01-05T18:23:42.446+08:00  INFO 11584 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-01-05T18:23:42.487+08:00  INFO 11584 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.dao.EmployeeResposity; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-01-05T18:23:42.489+08:00  INFO 11584 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.dao.TaskResposity; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-01-05T18:23:42.489+08:00  INFO 11584 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 38 ms. Found 0 JDBC repository interfaces.
+2024-01-05T18:23:42.502+08:00  INFO 11584 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-01-05T18:23:42.503+08:00  INFO 11584 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-05T18:23:42.529+08:00  INFO 11584 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 2 JPA repository interfaces.
+2024-01-05T18:23:43.458+08:00  INFO 11584 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-05T18:23:43.489+08:00  INFO 11584 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-01-05T18:23:43.677+08:00  INFO 11584 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3c60c681
+2024-01-05T18:23:43.680+08:00  INFO 11584 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-01-05T18:23:44.743+08:00  INFO 11584 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-05T18:23:44.759+08:00  WARN 11584 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-05T18:23:44.846+08:00 DEBUG 11584 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 4 mappings in 'requestMappingHandlerMapping'
+2024-01-05T18:23:44.975+08:00 DEBUG 11584 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-01-05T18:23:45.007+08:00 DEBUG 11584 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-01-05T18:23:45.666+08:00  INFO 11584 --- [main] com.example.SpringDataJpaTest            : Started SpringDataJpaTest in 4.238 seconds (process running for 5.154)
+2024-01-05T18:23:46.294+08:00 DEBUG 11584 --- [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@1b5bc39d, started on Fri Jan 05 18:23:41 GMT+08:00 2024
+2024-01-05T18:23:46.297+08:00  INFO 11584 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-05T18:23:46.299+08:00  INFO 11584 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-01-05T18:23:46.311+08:00  INFO 11584 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-01-05T18:24:23.517+08:00  INFO 12096 --- [main] com.example.SpringDataJpaTest            : Starting SpringDataJpaTest using Java 17.0.8 with PID 12096 (started by user in D:\workspace\aweit-share\Java 相關\SpringBoot3Demo)
+2024-01-05T18:24:23.519+08:00  INFO 12096 --- [main] com.example.SpringDataJpaTest            : No active profile set, falling back to 1 default profile: "default"
+2024-01-05T18:24:23.554+08:00 DEBUG 12096 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@21ca139c
+2024-01-05T18:24:24.254+08:00  INFO 12096 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-01-05T18:24:24.256+08:00  INFO 12096 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-01-05T18:24:24.297+08:00  INFO 12096 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.dao.EmployeeResposity; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-01-05T18:24:24.299+08:00  INFO 12096 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.dao.TaskResposity; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-01-05T18:24:24.300+08:00  INFO 12096 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 38 ms. Found 0 JDBC repository interfaces.
+2024-01-05T18:24:24.317+08:00  INFO 12096 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-01-05T18:24:24.318+08:00  INFO 12096 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-05T18:24:24.352+08:00  INFO 12096 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 29 ms. Found 2 JPA repository interfaces.
+2024-01-05T18:24:25.237+08:00  INFO 12096 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-05T18:24:25.261+08:00  INFO 12096 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-01-05T18:24:25.434+08:00  INFO 12096 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@37d0d373
+2024-01-05T18:24:25.436+08:00  INFO 12096 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-01-05T18:24:26.376+08:00  INFO 12096 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-05T18:24:26.388+08:00  WARN 12096 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-05T18:24:26.470+08:00 DEBUG 12096 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 4 mappings in 'requestMappingHandlerMapping'
+2024-01-05T18:24:26.577+08:00 DEBUG 12096 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-01-05T18:24:26.605+08:00 DEBUG 12096 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-01-05T18:24:27.203+08:00  INFO 12096 --- [main] com.example.SpringDataJpaTest            : Started SpringDataJpaTest in 4.017 seconds (process running for 4.942)
+2024-01-05T18:24:27.793+08:00 DEBUG 12096 --- [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@21ca139c, started on Fri Jan 05 18:24:23 GMT+08:00 2024
+2024-01-05T18:24:27.796+08:00  INFO 12096 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-05T18:24:27.798+08:00  INFO 12096 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-01-05T18:24:27.808+08:00  INFO 12096 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-01-05T18:25:07.645+08:00  INFO 14604 --- [main] com.example.SpringDataJpaTest            : Starting SpringDataJpaTest using Java 17.0.8 with PID 14604 (started by user in D:\workspace\aweit-share\Java 相關\SpringBoot3Demo)
+2024-01-05T18:25:07.647+08:00  INFO 14604 --- [main] com.example.SpringDataJpaTest            : No active profile set, falling back to 1 default profile: "default"
+2024-01-05T18:25:07.682+08:00 DEBUG 14604 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@21ca139c
+2024-01-05T18:25:08.395+08:00  INFO 14604 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-01-05T18:25:08.397+08:00  INFO 14604 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-01-05T18:25:08.433+08:00  INFO 14604 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.dao.EmployeeResposity; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-01-05T18:25:08.434+08:00  INFO 14604 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.dao.TaskResposity; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-01-05T18:25:08.438+08:00  INFO 14604 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 30 ms. Found 0 JDBC repository interfaces.
+2024-01-05T18:25:08.447+08:00  INFO 14604 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-01-05T18:25:08.448+08:00  INFO 14604 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-05T18:25:08.477+08:00  INFO 14604 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 25 ms. Found 2 JPA repository interfaces.
+2024-01-05T18:25:09.350+08:00  INFO 14604 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-05T18:25:09.389+08:00  INFO 14604 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-01-05T18:25:09.598+08:00  INFO 14604 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2de3b052
+2024-01-05T18:25:09.600+08:00  INFO 14604 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-01-05T18:25:10.618+08:00  INFO 14604 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-05T18:25:10.634+08:00  WARN 14604 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-05T18:25:10.720+08:00 DEBUG 14604 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 4 mappings in 'requestMappingHandlerMapping'
+2024-01-05T18:25:10.844+08:00 DEBUG 14604 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-01-05T18:25:10.876+08:00 DEBUG 14604 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-01-05T18:25:11.525+08:00  INFO 14604 --- [main] com.example.SpringDataJpaTest            : Started SpringDataJpaTest in 4.245 seconds (process running for 5.201)
+2024-01-05T18:25:12.164+08:00 DEBUG 14604 --- [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@21ca139c, started on Fri Jan 05 18:25:07 GMT+08:00 2024
+2024-01-05T18:25:12.167+08:00  INFO 14604 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-05T18:25:12.169+08:00  INFO 14604 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-01-05T18:25:12.178+08:00  INFO 14604 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-01-05T18:25:40.972+08:00  INFO 7280 --- [main] com.example.SpringDataJpaTest            : Starting SpringDataJpaTest using Java 17.0.8 with PID 7280 (started by user in D:\workspace\aweit-share\Java 相關\SpringBoot3Demo)
+2024-01-05T18:25:40.973+08:00  INFO 7280 --- [main] com.example.SpringDataJpaTest            : No active profile set, falling back to 1 default profile: "default"
+2024-01-05T18:25:41.009+08:00 DEBUG 7280 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@21ca139c
+2024-01-05T18:25:41.582+08:00  INFO 7280 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-01-05T18:25:41.584+08:00  INFO 7280 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-01-05T18:25:41.614+08:00  INFO 7280 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.dao.EmployeeResposity; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-01-05T18:25:41.616+08:00  INFO 7280 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.dao.TaskResposity; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-01-05T18:25:41.617+08:00  INFO 7280 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 29 ms. Found 0 JDBC repository interfaces.
+2024-01-05T18:25:41.627+08:00  INFO 7280 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-01-05T18:25:41.628+08:00  INFO 7280 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-05T18:25:41.653+08:00  INFO 7280 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 2 JPA repository interfaces.
+2024-01-05T18:25:42.613+08:00  INFO 7280 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-05T18:25:42.651+08:00  INFO 7280 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-01-05T18:25:42.819+08:00  INFO 7280 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@16bbaab3
+2024-01-05T18:25:42.821+08:00  INFO 7280 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-01-05T18:25:44.292+08:00  INFO 7280 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-05T18:25:44.306+08:00  WARN 7280 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-05T18:25:44.379+08:00 DEBUG 7280 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 4 mappings in 'requestMappingHandlerMapping'
+2024-01-05T18:25:44.494+08:00 DEBUG 7280 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-01-05T18:25:44.521+08:00 DEBUG 7280 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-01-05T18:25:45.120+08:00  INFO 7280 --- [main] com.example.SpringDataJpaTest            : Started SpringDataJpaTest in 4.438 seconds (process running for 5.367)
+2024-01-05T18:25:45.785+08:00 DEBUG 7280 --- [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@21ca139c, started on Fri Jan 05 18:25:41 GMT+08:00 2024
+2024-01-05T18:25:45.788+08:00  INFO 7280 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-05T18:25:45.791+08:00  INFO 7280 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-01-05T18:25:45.801+08:00  INFO 7280 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-01-05T18:26:22.156+08:00  INFO 10704 --- [main] com.example.SpringDataJpaTest            : Starting SpringDataJpaTest using Java 17.0.8 with PID 10704 (started by user in D:\workspace\aweit-share\Java 相關\SpringBoot3Demo)
+2024-01-05T18:26:22.158+08:00  INFO 10704 --- [main] com.example.SpringDataJpaTest            : No active profile set, falling back to 1 default profile: "default"
+2024-01-05T18:26:22.188+08:00 DEBUG 10704 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@5aa0dbf4
+2024-01-05T18:26:22.888+08:00  INFO 10704 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-01-05T18:26:22.889+08:00  INFO 10704 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-01-05T18:26:22.930+08:00  INFO 10704 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.dao.EmployeeResposity; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-01-05T18:26:22.931+08:00  INFO 10704 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.dao.TaskResposity; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-01-05T18:26:22.932+08:00  INFO 10704 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 36 ms. Found 0 JDBC repository interfaces.
+2024-01-05T18:26:22.945+08:00  INFO 10704 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-01-05T18:26:22.946+08:00  INFO 10704 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-05T18:26:22.972+08:00  INFO 10704 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 2 JPA repository interfaces.
+2024-01-05T18:26:23.879+08:00  INFO 10704 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-05T18:26:23.913+08:00  INFO 10704 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-01-05T18:26:24.111+08:00  INFO 10704 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@568f4faa
+2024-01-05T18:26:24.113+08:00  INFO 10704 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-01-05T18:26:25.210+08:00  INFO 10704 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-05T18:26:25.222+08:00  WARN 10704 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-05T18:26:25.295+08:00 DEBUG 10704 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 4 mappings in 'requestMappingHandlerMapping'
+2024-01-05T18:26:25.418+08:00 DEBUG 10704 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-01-05T18:26:25.450+08:00 DEBUG 10704 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-01-05T18:26:26.087+08:00  INFO 10704 --- [main] com.example.SpringDataJpaTest            : Started SpringDataJpaTest in 4.183 seconds (process running for 5.066)
+2024-01-05T18:26:26.786+08:00 DEBUG 10704 --- [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@5aa0dbf4, started on Fri Jan 05 18:26:22 GMT+08:00 2024
+2024-01-05T18:26:26.789+08:00  INFO 10704 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-05T18:26:26.791+08:00  INFO 10704 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-01-05T18:26:26.800+08:00  INFO 10704 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-01-05T18:30:01.957+08:00  INFO 8712 --- [main] com.example.SpringDataJpaTest            : Starting SpringDataJpaTest using Java 17.0.8 with PID 8712 (started by user in D:\workspace\aweit-share\Java 相關\SpringBoot3Demo)
+2024-01-05T18:30:02.280+08:00  INFO 8712 --- [main] com.example.SpringDataJpaTest            : No active profile set, falling back to 1 default profile: "default"
+2024-01-05T18:30:02.310+08:00 DEBUG 8712 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@21ca139c
+2024-01-05T18:30:02.960+08:00  INFO 8712 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-01-05T18:30:02.962+08:00  INFO 8712 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-01-05T18:30:03.001+08:00  INFO 8712 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.dao.EmployeeResposity; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-01-05T18:30:03.002+08:00  INFO 8712 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.dao.TaskResposity; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-01-05T18:30:03.003+08:00  INFO 8712 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33 ms. Found 0 JDBC repository interfaces.
+2024-01-05T18:30:03.013+08:00  INFO 8712 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-01-05T18:30:03.015+08:00  INFO 8712 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-05T18:30:03.041+08:00  INFO 8712 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 2 JPA repository interfaces.
+2024-01-05T18:30:03.976+08:00  INFO 8712 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-05T18:30:04.003+08:00  INFO 8712 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-01-05T18:30:04.193+08:00  INFO 8712 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3f3c8b60
+2024-01-05T18:30:04.195+08:00  INFO 8712 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-01-05T18:30:05.216+08:00  INFO 8712 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-05T18:30:05.228+08:00  WARN 8712 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-05T18:30:05.313+08:00 DEBUG 8712 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 4 mappings in 'requestMappingHandlerMapping'
+2024-01-05T18:30:05.432+08:00 DEBUG 8712 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-01-05T18:30:05.462+08:00 DEBUG 8712 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-01-05T18:30:06.101+08:00  INFO 8712 --- [main] com.example.SpringDataJpaTest            : Started SpringDataJpaTest in 4.463 seconds (process running for 5.392)
+2024-01-05T18:30:06.814+08:00 DEBUG 8712 --- [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@21ca139c, started on Fri Jan 05 18:30:02 GMT+08:00 2024
+2024-01-05T18:30:06.818+08:00  INFO 8712 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-05T18:30:06.821+08:00  INFO 8712 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-01-05T18:30:06.837+08:00  INFO 8712 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-01-05T18:31:34.064+08:00  INFO 24028 --- [main] com.example.SpringDataJpaTest            : Starting SpringDataJpaTest using Java 17.0.8 with PID 24028 (started by user in D:\workspace\aweit-share\Java 相關\SpringBoot3Demo)
+2024-01-05T18:31:34.067+08:00  INFO 24028 --- [main] com.example.SpringDataJpaTest            : No active profile set, falling back to 1 default profile: "default"
+2024-01-05T18:31:34.108+08:00 DEBUG 24028 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@21ca139c
+2024-01-05T18:31:34.710+08:00  INFO 24028 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-01-05T18:31:34.711+08:00  INFO 24028 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-01-05T18:31:34.752+08:00  INFO 24028 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.dao.EmployeeResposity; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-01-05T18:31:34.753+08:00  INFO 24028 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.dao.TaskResposity; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-01-05T18:31:34.754+08:00  INFO 24028 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 38 ms. Found 0 JDBC repository interfaces.
+2024-01-05T18:31:34.767+08:00  INFO 24028 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-01-05T18:31:34.769+08:00  INFO 24028 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-05T18:31:34.798+08:00  INFO 24028 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 25 ms. Found 2 JPA repository interfaces.
+2024-01-05T18:31:35.624+08:00  INFO 24028 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-05T18:31:35.650+08:00  INFO 24028 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-01-05T18:31:35.815+08:00  INFO 24028 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@16bbaab3
+2024-01-05T18:31:35.816+08:00  INFO 24028 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-01-05T18:31:36.689+08:00  INFO 24028 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-05T18:31:36.699+08:00  WARN 24028 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-05T18:31:36.772+08:00 DEBUG 24028 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 4 mappings in 'requestMappingHandlerMapping'
+2024-01-05T18:31:36.887+08:00 DEBUG 24028 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-01-05T18:31:36.915+08:00 DEBUG 24028 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-01-05T18:31:37.536+08:00  INFO 24028 --- [main] com.example.SpringDataJpaTest            : Started SpringDataJpaTest in 3.805 seconds (process running for 4.691)
+2024-01-05T18:31:38.225+08:00 DEBUG 24028 --- [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@21ca139c, started on Fri Jan 05 18:31:34 GMT+08:00 2024
+2024-01-05T18:31:38.227+08:00  INFO 24028 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-05T18:31:38.230+08:00  INFO 24028 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-01-05T18:31:38.239+08:00  INFO 24028 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-01-05T18:32:20.019+08:00  INFO 13844 --- [main] com.example.SpringDataJpaTest            : Starting SpringDataJpaTest using Java 17.0.8 with PID 13844 (started by user in D:\workspace\aweit-share\Java 相關\SpringBoot3Demo)
+2024-01-05T18:32:20.023+08:00  INFO 13844 --- [main] com.example.SpringDataJpaTest            : No active profile set, falling back to 1 default profile: "default"
+2024-01-05T18:32:20.065+08:00 DEBUG 13844 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@21ca139c
+2024-01-05T18:32:20.686+08:00  INFO 13844 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-01-05T18:32:20.688+08:00  INFO 13844 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-01-05T18:32:20.731+08:00  INFO 13844 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.dao.EmployeeResposity; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-01-05T18:32:20.732+08:00  INFO 13844 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.dao.TaskResposity; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-01-05T18:32:20.733+08:00  INFO 13844 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 41 ms. Found 0 JDBC repository interfaces.
+2024-01-05T18:32:20.746+08:00  INFO 13844 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-01-05T18:32:20.747+08:00  INFO 13844 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-05T18:32:20.776+08:00  INFO 13844 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 25 ms. Found 2 JPA repository interfaces.
+2024-01-05T18:32:21.622+08:00  INFO 13844 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-05T18:32:21.649+08:00  INFO 13844 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-01-05T18:32:21.841+08:00  INFO 13844 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@16bbaab3
+2024-01-05T18:32:21.843+08:00  INFO 13844 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-01-05T18:32:22.753+08:00  INFO 13844 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-05T18:32:22.764+08:00  WARN 13844 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-05T18:32:22.840+08:00 DEBUG 13844 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 4 mappings in 'requestMappingHandlerMapping'
+2024-01-05T18:32:22.973+08:00 DEBUG 13844 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-01-05T18:32:23.010+08:00 DEBUG 13844 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-01-05T18:32:23.613+08:00  INFO 13844 --- [main] com.example.SpringDataJpaTest            : Started SpringDataJpaTest in 3.939 seconds (process running for 4.87)
+2024-01-05T18:32:24.301+08:00 DEBUG 13844 --- [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@21ca139c, started on Fri Jan 05 18:32:20 GMT+08:00 2024
+2024-01-05T18:32:24.305+08:00  INFO 13844 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-05T18:32:24.307+08:00  INFO 13844 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-01-05T18:32:24.317+08:00  INFO 13844 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-01-05T18:33:38.138+08:00  INFO 24184 --- [main] com.example.SpringDataJpaTest            : Starting SpringDataJpaTest using Java 17.0.8 with PID 24184 (started by user in D:\workspace\aweit-share\Java 相關\SpringBoot3Demo)
+2024-01-05T18:33:38.140+08:00  INFO 24184 --- [main] com.example.SpringDataJpaTest            : No active profile set, falling back to 1 default profile: "default"
+2024-01-05T18:33:38.179+08:00 DEBUG 24184 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@21ca139c
+2024-01-05T18:33:38.760+08:00  INFO 24184 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-01-05T18:33:38.761+08:00  INFO 24184 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-01-05T18:33:38.796+08:00  INFO 24184 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.dao.EmployeeResposity; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-01-05T18:33:38.797+08:00  INFO 24184 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.dao.TaskResposity; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-01-05T18:33:38.798+08:00  INFO 24184 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33 ms. Found 0 JDBC repository interfaces.
+2024-01-05T18:33:38.808+08:00  INFO 24184 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-01-05T18:33:38.809+08:00  INFO 24184 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-05T18:33:38.837+08:00  INFO 24184 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24 ms. Found 2 JPA repository interfaces.
+2024-01-05T18:33:39.679+08:00  INFO 24184 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-05T18:33:39.709+08:00  INFO 24184 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-01-05T18:33:39.878+08:00  INFO 24184 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@99c4993
+2024-01-05T18:33:39.880+08:00  INFO 24184 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-01-05T18:33:40.802+08:00  INFO 24184 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-05T18:33:40.813+08:00  WARN 24184 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-05T18:33:40.894+08:00 DEBUG 24184 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 4 mappings in 'requestMappingHandlerMapping'
+2024-01-05T18:33:41.009+08:00 DEBUG 24184 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-01-05T18:33:41.040+08:00 DEBUG 24184 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-01-05T18:33:41.675+08:00  INFO 24184 --- [main] com.example.SpringDataJpaTest            : Started SpringDataJpaTest in 3.864 seconds (process running for 4.859)
+2024-01-05T18:33:42.366+08:00 DEBUG 24184 --- [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@21ca139c, started on Fri Jan 05 18:33:38 GMT+08:00 2024
+2024-01-05T18:33:42.369+08:00  INFO 24184 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-05T18:33:42.371+08:00  INFO 24184 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-01-05T18:33:42.381+08:00  INFO 24184 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-01-05T18:36:28.780+08:00  INFO 16168 --- [main] com.example.SpringDataJpaTest            : Starting SpringDataJpaTest using Java 17.0.8 with PID 16168 (started by user in D:\workspace\aweit-share\Java 相關\SpringBoot3Demo)
+2024-01-05T18:36:28.782+08:00  INFO 16168 --- [main] com.example.SpringDataJpaTest            : No active profile set, falling back to 1 default profile: "default"
+2024-01-05T18:36:28.823+08:00 DEBUG 16168 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@21ca139c
+2024-01-05T18:36:29.425+08:00  INFO 16168 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-01-05T18:36:29.427+08:00  INFO 16168 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-01-05T18:36:29.465+08:00  INFO 16168 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.dao.EmployeeResposity; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-01-05T18:36:29.467+08:00  INFO 16168 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.dao.TaskResposity; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-01-05T18:36:29.467+08:00  INFO 16168 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33 ms. Found 0 JDBC repository interfaces.
+2024-01-05T18:36:29.478+08:00  INFO 16168 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-01-05T18:36:29.479+08:00  INFO 16168 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-05T18:36:29.505+08:00  INFO 16168 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23 ms. Found 2 JPA repository interfaces.
+2024-01-05T18:36:30.314+08:00  INFO 16168 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-05T18:36:30.341+08:00  INFO 16168 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-01-05T18:36:30.507+08:00  INFO 16168 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@16bbaab3
+2024-01-05T18:36:30.509+08:00  INFO 16168 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-01-05T18:36:31.363+08:00  INFO 16168 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-05T18:36:31.375+08:00  WARN 16168 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-05T18:36:31.461+08:00 DEBUG 16168 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 4 mappings in 'requestMappingHandlerMapping'
+2024-01-05T18:36:31.567+08:00 DEBUG 16168 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-01-05T18:36:31.597+08:00 DEBUG 16168 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-01-05T18:36:32.182+08:00  INFO 16168 --- [main] com.example.SpringDataJpaTest            : Started SpringDataJpaTest in 3.724 seconds (process running for 4.629)
+2024-01-05T18:36:32.849+08:00 DEBUG 16168 --- [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@21ca139c, started on Fri Jan 05 18:36:28 GMT+08:00 2024
+2024-01-05T18:36:32.852+08:00  INFO 16168 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-05T18:36:32.855+08:00  INFO 16168 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-01-05T18:36:32.867+08:00  INFO 16168 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-01-05T18:37:08.833+08:00  INFO 7108 --- [main] com.example.SpringDataJpaTest            : Starting SpringDataJpaTest using Java 17.0.8 with PID 7108 (started by user in D:\workspace\aweit-share\Java 相關\SpringBoot3Demo)
+2024-01-05T18:37:08.835+08:00  INFO 7108 --- [main] com.example.SpringDataJpaTest            : No active profile set, falling back to 1 default profile: "default"
+2024-01-05T18:37:08.875+08:00 DEBUG 7108 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@21ca139c
+2024-01-05T18:37:09.491+08:00  INFO 7108 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-01-05T18:37:09.492+08:00  INFO 7108 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-01-05T18:37:09.528+08:00  INFO 7108 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.dao.EmployeeResposity; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-01-05T18:37:09.529+08:00  INFO 7108 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.dao.TaskResposity; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-01-05T18:37:09.530+08:00  INFO 7108 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33 ms. Found 0 JDBC repository interfaces.
+2024-01-05T18:37:09.541+08:00  INFO 7108 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-01-05T18:37:09.542+08:00  INFO 7108 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-05T18:37:09.575+08:00  INFO 7108 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 28 ms. Found 2 JPA repository interfaces.
+2024-01-05T18:37:10.389+08:00  INFO 7108 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-05T18:37:10.418+08:00  INFO 7108 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-01-05T18:37:10.591+08:00  INFO 7108 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@16bbaab3
+2024-01-05T18:37:10.592+08:00  INFO 7108 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-01-05T18:37:11.490+08:00  INFO 7108 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-05T18:37:11.501+08:00  WARN 7108 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-05T18:37:11.585+08:00 DEBUG 7108 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 4 mappings in 'requestMappingHandlerMapping'
+2024-01-05T18:37:11.705+08:00 DEBUG 7108 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-01-05T18:37:11.732+08:00 DEBUG 7108 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-01-05T18:37:12.345+08:00  INFO 7108 --- [main] com.example.SpringDataJpaTest            : Started SpringDataJpaTest in 3.854 seconds (process running for 4.758)
+2024-01-05T18:37:12.965+08:00 DEBUG 7108 --- [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@21ca139c, started on Fri Jan 05 18:37:08 GMT+08:00 2024
+2024-01-05T18:37:12.969+08:00  INFO 7108 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-05T18:37:12.971+08:00  INFO 7108 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-01-05T18:37:12.981+08:00  INFO 7108 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-01-05T18:38:31.450+08:00  INFO 23904 --- [main] com.example.SpringDataJpaTest            : Starting SpringDataJpaTest using Java 17.0.8 with PID 23904 (started by user in D:\workspace\aweit-share\Java 相關\SpringBoot3Demo)
+2024-01-05T18:38:31.452+08:00  INFO 23904 --- [main] com.example.SpringDataJpaTest            : No active profile set, falling back to 1 default profile: "default"
+2024-01-05T18:38:31.487+08:00 DEBUG 23904 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@2c5d601e
+2024-01-05T18:38:32.088+08:00  INFO 23904 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-01-05T18:38:32.089+08:00  INFO 23904 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-01-05T18:38:32.128+08:00  INFO 23904 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.dao.EmployeeResposity; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-01-05T18:38:32.133+08:00  INFO 23904 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.dao.TaskResposity; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-01-05T18:38:32.134+08:00  INFO 23904 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 35 ms. Found 0 JDBC repository interfaces.
+2024-01-05T18:38:32.143+08:00  INFO 23904 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-01-05T18:38:32.144+08:00  INFO 23904 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-05T18:38:32.180+08:00  INFO 23904 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31 ms. Found 2 JPA repository interfaces.
+2024-01-05T18:38:33.015+08:00  INFO 23904 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-05T18:38:33.048+08:00  INFO 23904 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-01-05T18:38:33.214+08:00  INFO 23904 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4c56644f
+2024-01-05T18:38:33.217+08:00  INFO 23904 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-01-05T18:38:34.107+08:00  INFO 23904 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-05T18:38:34.119+08:00  WARN 23904 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-05T18:38:34.200+08:00 DEBUG 23904 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 4 mappings in 'requestMappingHandlerMapping'
+2024-01-05T18:38:34.309+08:00 DEBUG 23904 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-01-05T18:38:34.341+08:00 DEBUG 23904 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-01-05T18:38:34.964+08:00  INFO 23904 --- [main] com.example.SpringDataJpaTest            : Started SpringDataJpaTest in 3.844 seconds (process running for 4.732)
+2024-01-05T18:38:35.700+08:00 DEBUG 23904 --- [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@2c5d601e, started on Fri Jan 05 18:38:31 GMT+08:00 2024
+2024-01-05T18:38:35.704+08:00  INFO 23904 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-05T18:38:35.705+08:00  INFO 23904 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-01-05T18:38:35.716+08:00  INFO 23904 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

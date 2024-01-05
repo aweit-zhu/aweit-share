@@ -5,6 +5,7 @@ import java.util.Optional;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.example.dao.Employee;
@@ -22,6 +23,7 @@ public class SpringDataJpaTest {
 	TaskResposity taskResposity;
 	
 	@Test
+	@Transactional(isolation = Isolation.READ_UNCOMMITTED) // Junit 中，加上 @Transactional，無論如何都會進行回滾，以防止資料被汙染。
 	void save() {
 		
 		Employee employee = Employee.builder().name("alex").build();
@@ -32,6 +34,16 @@ public class SpringDataJpaTest {
 		
 		taskResposity.save(task1);
 		taskResposity.save(task2);
+		
+		System.out.println(task1);
+		System.out.println(task2);
+		
+		Optional<Employee> empOptional = employeeResposity.findById(employee.getId());
+	    if (empOptional.isPresent()) {
+	        System.out.println(empOptional.get());
+	    } else {
+	        System.out.println("無此筆員工");
+	    }
 	}
 	
 	@Test
