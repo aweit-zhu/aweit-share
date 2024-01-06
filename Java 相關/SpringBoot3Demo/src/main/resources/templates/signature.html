@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signature Canvas</title>
+    <style>
+        #signatureCanvas {
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+
+<canvas id="signatureCanvas" width="400" height="200"></canvas>
+<button onclick="saveSignature()">Save Signature</button>
+<img id="signatureImage" alt="Signature">
+<img th:src="${SIGN_DEMO}">
+
+<script>
+    // 获取 canvas 元素和上下文
+    var canvas = document.getElementById('signatureCanvas');
+    var ctx = canvas.getContext('2d');
+
+    // 设置绘图样式
+    ctx.lineWidth = 2;
+    ctx.strokeStyle = '#000';
+
+    // 定义变量来跟踪鼠标位置
+    var isDrawing = false;
+    var lastX = 0;
+    var lastY = 0;
+
+    // 监听鼠标移动事件
+    canvas.addEventListener('mousemove', draw);
+    canvas.addEventListener('mousedown', (e) => {
+        isDrawing = true;
+        [lastX, lastY] = [e.offsetX, e.offsetY];
+    });
+    canvas.addEventListener('mouseup', () => isDrawing = false);
+    canvas.addEventListener('mouseout', () => isDrawing = false);
+
+    // 处理绘图逻辑
+    function draw(e) {
+        if (!isDrawing) return;
+        ctx.beginPath();
+        ctx.moveTo(lastX, lastY);
+        ctx.lineTo(e.offsetX, e.offsetY);
+        ctx.stroke();
+        [lastX, lastY] = [e.offsetX, e.offsetY];
+    }
+
+    // 保存签名图像
+    function saveSignature() {
+        var signatureImage = document.getElementById('signatureImage');
+        signatureImage.src = canvas.toDataURL(); // 将 canvas 内容转为 data URL
+        sendDataToBackend(canvas.toDataURL());
+    }
+    
+    function sendDataToBackend(signatureDataUrl) {
+        fetch('http://localhost:9090/mvc/sign', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ signatureDataUrl }),
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Signature sent successfully:', data);
+        })
+        .catch(error => {
+            console.error('Error sending signature:', error);
+        });
+    }
+</script>
+
+</body>
+</html>
