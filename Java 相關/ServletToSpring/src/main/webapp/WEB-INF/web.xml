@@ -39,16 +39,6 @@
 		<load-on-startup>1</load-on-startup>
 	</servlet>
 	
-	<!-- 
-  		受 spring mvc 管轄的路徑 
-  		http://localhost:8080/SpringMVC/mvc/....
-  		http://localhost:8080/SpringMVC/mvc/foo/bar/...
-  		
-  		不受 spring mvc 管轄
-  		http://localhost:8080/SpringMVC/css/...
-  		http://localhost:8080/SpringMVC/hello/...
-  	-->
-	
 	<servlet-mapping>
 		<servlet-name>springmvc</servlet-name>
 		<url-pattern>/mvc/*</url-pattern>
