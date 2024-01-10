@@ -79,3 +79,5 @@ public class SwaggerConfig extends WebMvcConfigurerAdapter {
 ```
 http://localhost:8080/{專案名稱}/mvc/swagger-ui.html
 ```
+
+![RUNOOB 图标](swagger.png)
