@@ -1,7 +1,10 @@
 package com.example.test;
 
+import java.util.List;
+
 import com.example.dao.PersonDao;
 import com.example.dao.PersonDaoResposity;
+import com.example.entity.Person;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
@@ -24,8 +27,8 @@ public class PersonTest {
 			// Developer.builder().firstName("吳").lastName("玉舒").programmingLanguage("Java").build();
 			// personDao.save(entityManager, developer);
 
-			// List<Person> persons = personDao.findAllPersons(entityManager);
-			// persons.stream().forEach(System.out::println);
+			List<Person> persons = personDao.findAllPersons(entityManager);
+			persons.stream().forEach(System.out::println);
 
 			// IdCard idCard = IdCard.builder().idNumber("A127753814").issueDate(new
 			// Date()).build();
