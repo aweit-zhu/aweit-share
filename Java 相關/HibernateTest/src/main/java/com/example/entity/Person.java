@@ -34,8 +34,8 @@ import lombok.experimental.SuperBuilder;
 @SuperBuilder
 @Entity
 @Table(name = "T_PERSON")
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-//@Inheritance(strategy = InheritanceType.JOINED)
+//@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@Inheritance(strategy = InheritanceType.JOINED)
 //@ToString(exclude = {"idCard"})
 public class Person {
 

@@ -8,7 +8,7 @@
         <properties>
             <!-- Database connection settings -->
             <property name="jakarta.persistence.jdbc.Driver" value="com.mysql.cj.jdbc.Driver"/>
-            <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/demo" />
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/test" />
             <property name="jakarta.persistence.jdbc.user" value="web" />
             <property name="jakarta.persistence.jdbc.password" value="12345678" />
 

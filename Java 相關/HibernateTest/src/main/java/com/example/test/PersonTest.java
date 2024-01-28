@@ -1,9 +1,12 @@
 package com.example.test;
 
+import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
 
 import com.example.dao.PersonDao;
 import com.example.dao.PersonDaoResposity;
+import com.example.entity.Developer;
 import com.example.entity.Person;
 
 import jakarta.persistence.EntityManager;
@@ -20,12 +23,16 @@ public class PersonTest {
 				.createEntityManagerFactory("org.hibernate.tutorial.jpa");
 				EntityManager entityManager = emfEntityManagerFactory.createEntityManager();) {
 
-			// Person person = Person.builder().firstName("朱").lastName("偉誌").build();
-			// personDao.save(entityManager, person);
+			Person person = Person.builder().firstName("朱").lastName("偉誌").build();
+			personDao.save(entityManager, person);
 
-			// Developer developer =
-			// Developer.builder().firstName("吳").lastName("玉舒").programmingLanguage("Java").build();
-			// personDao.save(entityManager, developer);
+			Developer developer =
+			Developer.builder()
+			         .firstName("吳")
+			         .lastName("玉舒")
+                     .programmingLanguages(new HashSet(Arrays.asList("Java","C#")))
+                     .build();
+			personDao.save(entityManager, developer);
 
 			List<Person> persons = personDao.findAllPersons(entityManager);
 			persons.stream().forEach(System.out::println);

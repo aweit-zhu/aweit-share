@@ -1,10 +1,13 @@
 package com.example.entity;
 
 import java.util.List;
+import java.util.Set;
 
 import jakarta.persistence.Access;
 import jakarta.persistence.AccessType;
+import jakarta.persistence.CollectionTable;
 import jakarta.persistence.Column;
+import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.JoinTable;
@@ -25,11 +28,15 @@ import lombok.experimental.SuperBuilder;
 @AllArgsConstructor
 @Entity
 @Table(name = "T_DEVELOPER")
-//@Access(AccessType.PROPERTY)
 public class Developer extends Person {
 
+	//@Column(name = "PROG_LANG")
+	//String programmingLanguage;
+	
 	@Column(name = "PROG_LANG")
-	private String programmingLanguage;
+	@ElementCollection
+	@CollectionTable(name = "T_DEVELOPER_PROGRAMLANGUAGE", joinColumns = @JoinColumn(name="PERSON_ID"))
+	Set<String> programmingLanguages;
 
 	@ManyToMany(mappedBy = "developers")
 	List<Project> projects;
