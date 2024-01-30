@@ -1,0 +1,7 @@
+{
+    "liveServer.settings.proxy": {
+        "enable": true,
+        "baseUri": "/mvc",
+        "proxyUri": "http://localhost:8080/"
+    }
+}

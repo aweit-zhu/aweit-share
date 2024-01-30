@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+</head>
+
+<body>
+    <input type="file" id="fileInput" multiple="multiple"/>
+    <button onclick="submit()">提交</button>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <p id="p3"></p>
+</body>
+
+</html>
+
+<script>
+
+    function submit() {
+        var  files = document.getElementById('fileInput').files;
+        var formData2 = new FormData();
+        formData2.append("name", "Alex3");
+        [...files].map(file => {
+            formData2.append('file', file);
+        });
+        fetch("/mvc/ServletToSpring/mvc/data", {
+            method: "POST",
+            body: formData2,
+        })
+        .then((response) => response.json())
+        .catch((error) => console.error("Error:", error))
+        .then((response) => {
+            document.querySelector('#p3').innerHTML = response.name;
+        });
+    }
+
+    // //1. AJAX POST ( application/x-www-form-urlencoded -> @RequestParam)
+    // $.ajax({
+    //     type: "POST",
+    //     url: '/mvc/ServletToSpring/mvc/data',
+    //     data: {
+    //         "name": "Alex"
+    //     },
+    //     success: function (data) {
+    //         document.querySelector('#p1').innerHTML = data.name;
+    //     },
+    //     dataType: 'json'
+    // });
+
+
+    //2. AJAX POST ( multipart/form-data -> @RequestParam)
+    // var formData1 = new FormData();
+    // formData1.append("name", "Alex2");
+    // formData1.append('file', document.getElementById('fileInput').files[0]);
+    // $.ajax({
+    //     url: '/mvc/ServletToSpring/mvc/data',
+    //     data: formData1,
+    //     processData: false,
+    //     contentType: false,
+    //     type: 'POST',
+    //     success: function (data) {
+    //         document.querySelector('#p2').innerHTML = data.name;
+    //     }
+    // })
+
+    //3.fetch POST ( multipart/form-data -> @RequestParam)
+    // var formData2 = new FormData();
+    // formData2.append("name", "Alex3");
+    // formData2.append('file', document.getElementById('fileInput').files[0]);
+    // fetch("/mvc/ServletToSpring/mvc/data", {
+    //     method: "POST",
+    //     body: formData2,
+    // })
+    // .then((response) => response.json())
+    // .catch((error) => console.error("Error:", error))
+    // .then((response) => {
+    //     document.querySelector('#p3').innerHTML = response.name;
+    // });
+
+    // 4. 多筆檔案的處理方式
+    // var  files = document.getElementById('fileInput').files;
+    // var formData2 = new FormData();
+    // formData2.append("name", "Alex3");
+    // [...files].map(file => {
+    //     formData2.append('file', file);
+    // });
+    // fetch("/mvc/ServletToSpring/mvc/data", {
+    //     method: "POST",
+    //     body: formData2,
+    // })
+    // .then((response) => response.json())
+    // .catch((error) => console.error("Error:", error))
+    // .then((response) => {
+    //     document.querySelector('#p3').innerHTML = response.name;
+    // });
+
+
+</script>
