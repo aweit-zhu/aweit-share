@@ -7,3 +7,4 @@ build/**
 .settings
 /Java 相關/LayoutDemo/build
 target
+node_modules

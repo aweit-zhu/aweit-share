@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+    <script src="/util.js"></script>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .myCanvas {
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <canvas class="myCanvas">
+        <p>卧槽你的浏览器竟然不支持 canvas！</p>
+    </canvas>
+
+    <script>
+        var canvas = document.querySelector(".myCanvas");
+        var width = (canvas.width = window.innerWidth);
+        var height = (canvas.height = window.innerHeight);
+        var ctx = /** @type {CanvasRenderingContext2D} */ (canvas.getContext('2d')); // 加了這行，就會有提示訊息
+
+        ctx.translate(width / 2, height / 2);
+
+        const text = "跑马灯效果 - 这是一条滚动的文字。";
+        let x = canvas.width; // 初始 x 坐标
+
+        function draw() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height); // 清空画布
+            ctx.font = '20px Arial';
+            ctx.fillText(text, x, 30); // 绘制文字
+
+            // 更新 x 坐标，控制滚动速度
+            x--;
+            if (x + ctx.measureText(text).width < 0) {
+                x = canvas.width; // 当文字滚动到画布左侧时，重置 x 坐标
+            }
+            requestAnimationFrame(draw);
+        }
+
+        draw();
+    </script>
+</body>
+
+</html>

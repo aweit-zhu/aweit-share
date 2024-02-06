@@ -1,0 +1,47 @@
+{
+    "company": "XYZ Inc",
+    "departments": [
+      {
+        "name": "Development",
+        "teams": [
+          {
+            "teamName": "Frontend",
+            "members": [
+              {"name": "Alice", "position": "Developer"},
+              {"name": "Bob", "position": "Designer"}
+            ]
+          },
+          {
+            "teamName": "Backend",
+            "members": [
+              {"name": "Charlie", "position": "Developer"},
+              {"name": "David", "position": "Database Admin"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Sales",
+        "teams": [
+          {
+            "teamName": "North Region",
+            "members": [
+              {"name": "Eve", "position": "Sales Representative"},
+              {"name": "Frank", "position": "Sales Manager"}
+            ]
+          },
+          {
+            "teamName": "South Region",
+            "members": [
+              {"name": "Grace", "position": "Sales Representative"},
+              {"name": "Harry", "position": "Sales Coordinator"}
+            ]
+          }
+        ]
+      }
+    ],
+    "location": {
+      "city": "Metropolis",
+      "country": "Atlantis"
+    }
+  }

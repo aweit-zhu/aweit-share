@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>對象原型</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+</head>
+
+<body>
+
+
+
+</body>
+
+</html>
+
+<script>
+
+    // 物件字面量
+    const person = {
+        name: ["Bob", "Smith"],
+        age: 32,
+        bio: function () {
+            console.log(`${this.name[0]} ${this.name[1]} 现在 ${this.age} 岁了。`);
+        },
+        introduceSelf: function () {
+            console.log(`你好！我是 ${this.name[0]}。`);
+        },
+    };
+
+    //console.log(Object.getPrototypeOf(person));
+
+    // 構造函數與原型
+    function Person(first, last, age, gender, interests) {
+        this.name = {
+            'first': first,
+            'last': last
+        };
+        this.age = age;
+        this.gender = gender;
+        this.interests = interests;
+        this.interests_string = [...this.interests].join(',');
+    }
+
+    Person.prototype.greeting = function () {
+        alert(`Hi, I am ${this.name.first}`);
+    }
+
+    Person.prototype.valueOf = function () {
+        return this.name;
+    }
+
+    const personPrototype = {
+        greeting() {
+            console.log(`你好，我的名字是 ${this.name.first}！`);
+        },
+    };
+
+    Object.assign(Person.prototype,personPrototype); // 将一个或者多个源对象中所有可枚举的自有属性复制到目标对象，并返回修改后的目标对象
+
+    console.log(Person.prototype);
+
+    var person1 = new Person("Bob", "Smith", 32, "male", ["music", "skiing"]);
+
+</script>

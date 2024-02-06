@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>類別物件</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<script>
+
+    // 本質還是原型
+    class Person {
+        name;
+
+        constructor(name) {
+            this.name = name;
+        }
+
+        introduceSelf() {
+            console.log(`Hi! I'm ${this.name}`);
+        }
+    }
+
+    // 本質還是原型
+    class Professor extends Person {
+        teaches;
+
+        constructor(name, teaches) {
+            super(name);
+            this.teaches = teaches;
+        }
+
+        introduceSelf() {
+            console.log(
+                `My name is ${this.name}, and I will be your ${this.teaches} professor.`,
+            );
+        }
+
+        grade(paper) {
+            const grade = Math.floor(Math.random() * (5 - 1) + 1);
+            console.log(grade);
+        }
+    }
+
+    class Student extends Person {
+        #year;
+
+        constructor(name, year) {
+            super(name);
+            this.#year = year;
+        }
+
+        introduceSelf() {
+            console.log(`Hi! I'm ${this.name}, and I'm in year ${this.#year}.`);
+        }
+
+        canStudyArchery() {
+            return this.#year > 1;
+        }
+
+        getYear() {
+            return this.#year;
+        }
+    }
+
+    const giles = new Person("Giles");
+    const walsh = new Professor("Walsh", "Psychology");
+    const summers = new Student("Summers", 2);
+    summers.getYear();
+</script>

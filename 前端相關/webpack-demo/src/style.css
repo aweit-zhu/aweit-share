@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'NotoSansTC';
+    src: url('./NotoSansTC-VariableFont_wght.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+.hello {
+    color: red;
+    /* background-image: url('./icon.png'); */
+    font-family: 'NotoSansTC';
+}
