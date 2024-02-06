@@ -1,0 +1,16 @@
+:root {
+    --demoColor: blue;
+}
+
+body {
+    display: flex;
+    width: 10vw;
+    width: 10vi;
+	height: 20vh;
+	height: 20vb;
+}
+
+.demo {
+    color: blue;
+    color: var(--demoColor);
+}
