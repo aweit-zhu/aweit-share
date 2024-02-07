@@ -5,16 +5,25 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "http-server ./dist",
-    "build": "webpack"
+    "dev": "webpack serve --open --mode development",
+    "build": "webpack --mode development"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "http-server": "^14.1.1",
+    "autoprefixer": "^10.4.17",
+    "compression-webpack-plugin": "^11.0.0",
+    "copy-webpack-plugin": "^12.0.2",
+    "css-loader": "^6.10.0",
     "lodash": "^4.17.21",
+    "postcss-loader": "^8.1.0",
+    "style-loader": "^3.3.4",
     "webpack": "^5.90.1",
-    "webpack-cli": "^5.1.4"
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  },
+  "dependencies": {
+    "tailwindcss": "^3.4.1"
   }
 }
