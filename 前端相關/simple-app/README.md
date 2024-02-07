@@ -16,6 +16,7 @@
 ### tailwind css <https://gsc13.medium.com/how-to-configure-webpack-5-to-work-with-tailwindcss-and-postcss-905f335aac2>
 
 1. 安裝postcss: `npm install --save-dev css-loader style-loader postcss-loader autoprefixer`
+   (可選) `npm install --save-dev mini-css-extract-plugin html-webpack-plugin`
 2. 調整webpack.config.js: 
 
 ```

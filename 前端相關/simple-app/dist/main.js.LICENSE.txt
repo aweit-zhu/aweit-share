@@ -1,0 +1,36 @@
+/*! @/data.js */
+
+/*! @/styles.css */
+
+/*! @/test.js */
+
+/*! lodash */
+
+/*!*********************!*\
+  !*** ./src/data.js ***!
+  \*********************/
+
+/*!*********************!*\
+  !*** ./src/test.js ***!
+  \*********************/
+
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/
+
+/*!************************!*\
+  !*** ./src/styles.css ***!
+  \************************/
+
+/*!***************************************!*\
+  !*** ./node_modules/lodash/lodash.js ***!
+  \***************************************/
+
+/**
+ * @license
+ * Lodash <https://lodash.com/>
+ * Copyright OpenJS Foundation and other contributors <https://openjsf.org/>
+ * Released under MIT license <https://lodash.com/license>
+ * Based on Underscore.js 1.8.3 <http://underscorejs.org/LICENSE>
+ * Copyright Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
+ */
