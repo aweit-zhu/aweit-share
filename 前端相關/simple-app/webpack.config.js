@@ -4,6 +4,11 @@ const CompressionPlugin = require("compression-webpack-plugin");
 
 module.exports = {
     mode: 'development',
+    resolve: {
+        alias: {
+            '@': path.resolve(__dirname,'src'),
+        }
+    },
     plugins: [
         new CompressionPlugin(),
         new CopyWebPackPlugin({
@@ -17,14 +22,7 @@ module.exports = {
         rules: [
             {
                 test: /\.css$/i,
-                use: ['style-loader',
-                {
-                  loader: 'css-loader',
-                  options: {
-                    importLoaders: 1
-                  }
-                },
-                'postcss-loader'],
+                use: ['style-loader', 'css-loader', 'postcss-loader'],
             }
         ] 
     },
