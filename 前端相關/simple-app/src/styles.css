@@ -4,6 +4,15 @@
 
 @tailwind utilities;
 
-div {
-    background-color: antiquewhite;
+@layer components {
+
+}
+
+@layer base {
+
+    @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+    html {
+        font-family: "Inter", system-ui, sans-serif;
+    }
 }

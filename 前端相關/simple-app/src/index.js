@@ -5,13 +5,13 @@ import _ from 'lodash';
 import '@/test.js';
 import '@/test.js';
 import '@/data.js';
-
+import header from '@/header.html';
 
 function component() {
     const element = document.createElement('div');
-    element.innerHTML = _.join(['Hello', 'webpack', '!'], ' ');
+    element.innerHTML = header;
     return element;
 }
 
-document.body.appendChild(component());
+document.body.prepend(component());
 
