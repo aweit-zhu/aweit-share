@@ -1,5 +1,3 @@
-// eslint-disable-next-line no-unused-vars
-import React from "react";
 import { getImageUrl } from "./util.js";
 import PropTypes from 'prop-types';
 
