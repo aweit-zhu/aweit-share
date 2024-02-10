@@ -5,7 +5,6 @@ const CopyWebPackPlugin = require("copy-webpack-plugin");
 const CompressionPlugin = require("compression-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const { types } = require("util");
 
 module.exports = {
   mode: "development",
