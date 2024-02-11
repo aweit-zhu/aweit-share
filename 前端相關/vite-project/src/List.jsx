@@ -15,7 +15,7 @@ export default function List() {
     ));
 
     return (
-        <div className=" w-1/3 p-2 shadow mx-auto m-2">
+        <div className=" w-1/3 p-2 shadow">
             <h1>Scientists</h1>
             <ul>{listItems}</ul>
         </div>

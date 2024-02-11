@@ -30,3 +30,15 @@ export const people = [{
     imageId: 'lrWQx8l'
   }];
   
+export const menuList = [
+    {
+        id: 1,
+        name: '首頁',
+        href: '#'
+    },
+    {
+        id: 2,
+        name: '關於我們',
+        href: '#'
+    },
+];
