@@ -16,8 +16,8 @@ export default function SideBar() {
     }
 
     return (
-        <div className={` border-l-2 absolute right-0 h-lvh shadow z-50 p-2 bg-white ${close ? 'w-8 transition-all duration-600': 'w-1/5'}`}>
-            <button className={`absolute rounded border-2 border-green-500 w-8 ${close ? 'right-0': 'right-2'}`} onClick={handleClose} data-close={close} >
+        <div className={`border-l-2 fixed right-0 h-screen shadow z-50 p-2 bg-white ${close ? 'w-8 transition-all duration-600': 'w-1/5'}`}>
+            <button className={`absolute rounded border-2 w-8 ${close ? 'right-0': 'right-2'}`} onClick={handleClose} data-close={close} >
                 { close ? '☰' : 'X'}
             </button>
             <p className={`absolute top-3 ${close ? 'hidden' : ''} left-2 font-bold`}>

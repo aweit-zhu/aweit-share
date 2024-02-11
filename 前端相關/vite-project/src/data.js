@@ -117,16 +117,6 @@ export const menuList = [
         name: '關於我們',
         href: '#'
     },
-    {
-        id: 3,
-        name: '關於我們',
-        href: '#'
-    },
-    {
-        id: 4,
-        name: '關於我們',
-        href: '#'
-    },
 ];
 
 export const sculptureList = [{

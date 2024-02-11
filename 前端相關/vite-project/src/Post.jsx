@@ -17,8 +17,8 @@ export default function Post() {
     }
 
     return (
-        <div className='className=" w-1/3 p-2 shadow overflow-y-auto h-96"'>
-           <div className='flex flex-col items-center mx-2 relative h-96'>
+        <div className='w-1/3 p-2 shadow overflow-y-auto h-96'>
+           <div className='flex flex-col items-center mx-2 relative'>
                 <img src={sculpture.url} alt={sculpture.name} className=" w-1/4"/>
                 <p className=' text-lg font-bold'>{sculpture.name}</p>
                 <p>{sculpture.description}</p>
