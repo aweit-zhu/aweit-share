@@ -1,9 +1,12 @@
 import { useState } from "react"
 import { menuList } from "./data.js";
+import { formatDate } from "./util.js";
+
+const today = new Date();
 
 export default function SideBar() {
 
-    let sessionClose = (sessionStorage.getItem('side-bar-close')?.toLocaleLowerCase?.() === 'true'); // 從 session storage 去取出他是要打開還是關閉。
+    const sessionClose = (sessionStorage.getItem('side-bar-close')?.toLocaleLowerCase?.() === 'true'); // 從 session storage 去取出他是要打開還是關閉。
 
     const [close, setClose] = useState(sessionClose);
 
@@ -13,10 +16,13 @@ export default function SideBar() {
     }
 
     return (
-        <div className={` border-l-2 absolute right-0 h-lvh shadow z-50 p-2 bg-white ${close ? 'w-8 transition-all duration-300': 'w-1/5 transition-all duration-300'}`}>
+        <div className={` border-l-2 absolute right-0 h-lvh shadow z-50 p-2 bg-white ${close ? 'w-8 transition-all duration-600': 'w-1/5'}`}>
             <button className={`absolute rounded border-2 border-green-500 w-8 ${close ? 'right-0': 'right-2'}`} onClick={handleClose} data-close={close} >
                 { close ? '☰' : 'X'}
             </button>
+            <p className={`absolute top-3 ${close ? 'hidden' : ''} left-2 font-bold`}>
+                { formatDate(today) }
+            </p>
             <hr className={`border-2 border-green-700 absolute top-12 w-full left-0 ${close ? 'hidden' : ''}`}></hr>
             <ul className="mt-14 mx-0">
                 {

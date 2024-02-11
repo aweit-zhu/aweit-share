@@ -1,3 +1,66 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+
+    .btn-primary {
+        @apply rounded-lg w-full bg-blue-500 px-4 py-2 font-semibold text-white shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75;
+    }
+
+    .btn-success {
+        @apply rounded-lg w-full bg-green-500 px-4 py-2 font-semibold text-white shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75;
+    }
+
+    .btn-danger {
+        @apply rounded-lg w-full bg-red-500 px-4 py-2 font-semibold text-white shadow-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-opacity-75;
+    }
+
+    .btn-link {
+        @apply mx-1 cursor-pointer hover:text-green-600 text-nowrap
+    }
+
+    .section {
+        @apply mx-auto px-5 mt-2 rounded w-1/2
+    }
+
+    .section-success {
+        @apply mx-auto border-green-600 bg-green-50 px-5 mt-2 rounded w-1/2
+    }
+
+    footer {
+        @apply mx-auto bg-gray-100 mt-2 rounded w-1/2 mt-4 text-center h-20 flex flex-col justify-center
+    }
+
+    .input {
+        @apply my-2 h-10 w-full rounded p-3 outline-none border-2 border-green-400  focus:border-green-600
+    }
+
+    a {
+        @apply text-blue-600 visited:text-purple-600
+    }
+
+    .absolute-center {
+        @apply absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform;
+    }
+
+    .absolute-y-center {
+        @apply absolute top-1/2 -translate-y-1/2 transform;
+    }
+
+    .absolute-x-center {
+        @apply absolute left-1/2 -translate-x-1/2 transform;
+    }
+
+    .modal {
+        @apply absolute z-50 absolute-center w-1/2 h-2/3 mx-auto bg-white rounded border-2 border-gray-400 drop-shadow p-2
+    }
+
+    .modal-open {
+       @apply fixed z-40 w-screen h-screen inset-0 bg-gray-900 bg-opacity-60
+    }
+
+    .modal-close {
+        @apply sticky top-1 left-full cursor-pointer text-2xl bg-white
+    }
+}

@@ -25,8 +25,17 @@ Item.propTypes = {
  * @param {boolean} props.isPacked 
  */
 export function Item({name,isPacked}){
+
+    // if(!isPacked){
+    //     return null; // 如果不想回傳任何的JSX，可以回傳 null。
+    // }
+
     return (
-        <li className='ms-4 list-disc'>{name} {isPacked? '✔': ''}</li>
+        <li className='ms-4 list-disc'> 
+            {/* { isPacked ? <del>{name}✔</del> : name } */}
+            {name} {isPacked && '✔'}
+            {/* <del>{name} {isPacked? '✔': ''} </del> */}
+        </li>
     )
 }
 

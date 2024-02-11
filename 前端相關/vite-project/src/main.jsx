@@ -6,6 +6,8 @@ import Card from './Card.jsx';
 import PackingList from './PackingList.jsx';
 import List from './List.jsx';
 import SideBar from './SideBar.jsx';
+import Search from './Search.jsx';
+import Toolbar from './Toolbar.jsx';
 import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -16,6 +18,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <PackingList/>
       <List/>
       <SideBar/>
+      <Search/>
+      <Toolbar onPlayMovie={()=> alert('Playing Movie')} onUploadImage={()=> alert('Uploading Image...')}/>
     </div>
   </React.StrictMode>,
 )

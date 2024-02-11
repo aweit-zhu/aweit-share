@@ -12,3 +12,11 @@ export function getImageUrl(width, height) {
 export function rand(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+
+export function formatDate(date) {
+    return new Intl.DateTimeFormat(
+      'zh-CN',
+      { year: 'numeric', month: 'long', day: 'numeric',weekday: 'long' }
+    ).format(date);
+}
+  

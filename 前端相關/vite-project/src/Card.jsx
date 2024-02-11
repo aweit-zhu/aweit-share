@@ -24,7 +24,7 @@ export default function Card() {
  * @param {number} props.size
  * @param {Person} props.person
  */
-export function Avatar({ size, person }) {
+export function Avatar({ size = 50, person }) {
     return (
         <img src={getImageUrl(size, size)} className="rounded-full" alt={person.name} />
     );
@@ -33,8 +33,4 @@ export function Avatar({ size, person }) {
 Avatar.propTypes = {
     size: PropTypes.number,
     person: PropTypes.objectOf(PropTypes.string),
-};
-
-Avatar.defaultProps = {
-    size: 50
 };

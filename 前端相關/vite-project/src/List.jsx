@@ -15,7 +15,7 @@ export default function List() {
     ));
 
     return (
-        <div className=" w-1/3 p-2 shadow">
+        <div className=" w-1/3 p-2 shadow overflow-y-auto h-96">
             <h1>Scientists</h1>
             <ul>{listItems}</ul>
         </div>
