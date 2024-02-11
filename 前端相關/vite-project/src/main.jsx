@@ -8,6 +8,7 @@ import List from './List.jsx';
 import SideBar from './SideBar.jsx';
 import Search from './Search.jsx';
 import Toolbar from './Toolbar.jsx';
+import Post from './Post.jsx';
 import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -20,6 +21,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <SideBar/>
       <Search/>
       <Toolbar onPlayMovie={()=> alert('Playing Movie')} onUploadImage={()=> alert('Uploading Image...')}/>
+      <Post/>
     </div>
   </React.StrictMode>,
 )
