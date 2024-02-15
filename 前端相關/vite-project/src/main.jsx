@@ -16,6 +16,7 @@ import CounterApp from "./Counter.jsx";
 import MovingDot from "./MovingDot.jsx";
 import FormTezz from "./FormTezz.jsx";
 import ShortMsg from "./ShortMsg.jsx";
+import Task from "./Task.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -38,6 +39,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         {/* <MovingDot/> */}
         <FormTezz/>
         <ShortMsg/>
+        <Task/>
       </div>
     </>
   </React.StrictMode>
