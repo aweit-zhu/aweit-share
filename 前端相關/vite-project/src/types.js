@@ -17,3 +17,16 @@
  * @property {number} id
  * @property {string} [text]
  */
+
+/**
+ * @typedef {Object} User
+ * @property {string} username
+ * @property {number} id
+ */
+
+/**
+ * @typedef {Object} UserAction
+ * @property {string} type
+ * @property {string} username
+ * @property {number} id
+ */

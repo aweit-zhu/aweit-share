@@ -17,30 +17,35 @@ import MovingDot from "./MovingDot.jsx";
 import FormTezz from "./FormTezz.jsx";
 import ShortMsg from "./ShortMsg.jsx";
 import Task from "./Task.jsx";
+import UserProvder from "./provider/UserProvider.jsx";
+import Login from "./login.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <>
-      <SideBar />
-      <div className=" flex items-start flex-wrap justify-start">
-        <Gallery />
-        <Card />
-        <PackingList />
-        <List />
-        <Search />
-        <Toolbar
-          onPlayMovie={() => alert("Playing Movie")}
-          onUploadImage={() => alert("Uploading Image...")}
-        />
-        <Post />
-        <Form />
-        <ClockApp/> 
-        <CounterApp/>
-        {/* <MovingDot/> */}
-        <FormTezz/>
-        <ShortMsg/>
-        <Task/>
-      </div>
+      <UserProvder>
+        <SideBar />
+        <div className=" flex items-start flex-wrap justify-start">
+          <Gallery />
+          <Card />
+          <PackingList />
+          <List />
+          <Search />
+          <Toolbar
+            onPlayMovie={() => alert("Playing Movie")}
+            onUploadImage={() => alert("Uploading Image...")}
+          />
+          <Post />
+          <Form />
+          <ClockApp />
+          <CounterApp />
+          {/* <MovingDot/> */}
+          <FormTezz />
+          <ShortMsg />
+          <Task />
+          <Login/>
+        </div>
+      </UserProvder>
     </>
   </React.StrictMode>
 );

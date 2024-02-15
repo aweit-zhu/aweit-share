@@ -1,7 +1,10 @@
 import { useReducer, useState } from "react";
 import './types.js';
+import { useUser } from "./provider/UserProvider.jsx";
 
 export default function Task() {
+
+    const user = useUser();
 
     const [tasks, dispatch] = useReducer(tasksReducer,initialTasks);
 
@@ -25,6 +28,7 @@ export default function Task() {
     return (
         <>
             <div className="w-1/3 p-2 shadow overflow-y-auto h-96">
+                登入者：{user.username}
                 <input type="text" className="input" onChange={e => seText(e.target.value)}/>
                 <button className="btn-success disabled:bg-gray-500" onClick={handleAddTask} disabled={text == ''}>添加</button>
                 <ul className="list-decimal list-inside">
