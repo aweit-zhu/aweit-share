@@ -11,6 +11,9 @@ import Toolbar from "./Toolbar.jsx";
 import Post from "./Post.jsx";
 import Form from "./Form.jsx";
 import "./index.css";
+import ClockApp from "./Clock.jsx";
+import CounterApp from "./Counter.jsx";
+import MovingDot from "./MovingDot.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -28,6 +31,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         />
         <Post />
         <Form />
+        <ClockApp/> 
+        <CounterApp/>
+        <MovingDot/>
       </div>
     </>
   </React.StrictMode>
