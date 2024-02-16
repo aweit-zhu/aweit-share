@@ -19,6 +19,7 @@ import ShortMsg from "./ShortMsg.jsx";
 import Task from "./Task.jsx";
 import UserProvder from "./provider/UserProvider.jsx";
 import Login from "./login.jsx";
+import { VideoPlayerApp } from "./VideoPlayer.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -44,6 +45,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           <ShortMsg />
           <Task />
           <Login/>
+          <VideoPlayerApp/>
         </div>
       </UserProvder>
     </>

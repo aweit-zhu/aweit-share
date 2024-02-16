@@ -2,7 +2,6 @@ import { useState } from "react";
 import { useUser, useUserDispatcher } from "./provider/UserProvider";
 
 export default function Login() {
-
     const user = useUser();
 
     const userDispatcher = useUserDispatcher();

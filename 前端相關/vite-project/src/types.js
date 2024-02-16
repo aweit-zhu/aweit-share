@@ -1,4 +1,5 @@
 /**
+import { type } from './../node_modules/immer/src/types/types-internal';
  * @typedef {Object} Contact
  * @property {string} name - 聯絡人姓名
  * @property {string} email - 聯絡人郵箱
@@ -29,4 +30,10 @@
  * @property {string} type
  * @property {string} username
  * @property {number} id
+ */
+
+/**
+ * @typedef {Object} CounterAction
+ * @property {string} type
+ * @property {number} num
  */
