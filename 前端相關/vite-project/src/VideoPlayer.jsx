@@ -19,13 +19,11 @@ export default function VideoPlayer({src,isPlaying}) {
     const ref = useRef(null);
 
     useEffect(() => {
-        
         if(isPlaying) {
             ref.current.play();
         } else {
             ref.current.pause();
         }
-        
     }, [isPlaying]);
     
     return <video ref={ref} src={src} loop playsInline />;
@@ -39,7 +37,7 @@ export function VideoPlayerApp() {
         <>
             <div className='w-1/3 p-2 shadow overflow-y-auto h-96'>
                <div className='flex flex-col'>
-                    <button onClick={()=> setIsPlaying(!isPlaying)} className='btn-primary p-2'>
+                    <button onClick={()=> setIsPlaying(!isPlaying)} className='btn-primary p-2 mb-2'>
                         {isPlaying ? '暫停': '播放'}
                     </button>
                     <div>
