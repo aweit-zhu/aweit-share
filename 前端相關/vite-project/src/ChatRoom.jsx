@@ -33,9 +33,9 @@ export function ChatRoomApp(){
                         value={roomId}
                         onChange={e => setRoomId(e.target.value)}
                     >
-                    <option value="general">所有</option>
-                    <option value="travel">旅游</option>
-                    <option value="music">音乐</option>
+                        <option value="general">所有</option>
+                        <option value="travel">旅游</option>
+                        <option value="music">音乐</option>
                     </select>
                 </label>
                 <hr />
