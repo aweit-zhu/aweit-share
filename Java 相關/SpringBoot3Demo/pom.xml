@@ -95,6 +95,18 @@
 	    	<artifactId>nimbus-jose-jwt</artifactId>
 	    	<version>9.15.1</version>
 		</dependency>
+		
+		<!-- Redis -->
+		<dependency>
+		    <groupId>org.springframework.data</groupId>
+		    <artifactId>spring-data-redis</artifactId>
+		    </dependency>
+		
+		<dependency>
+		    <groupId>redis.clients</groupId>
+		    <artifactId>jedis</artifactId>
+		    <type>jar</type>
+		</dependency>
 	</dependencies>
 
 	<build>
